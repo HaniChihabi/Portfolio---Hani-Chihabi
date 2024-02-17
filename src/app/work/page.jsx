@@ -99,13 +99,11 @@ function Services() {
   return (
     <>
       <SectionIntro
-        eyebrow="Services"
-        title="We help you identify, explore and respond to new opportunities."
-        className="mt-24 sm:mt-32 lg:mt-40"
+                title="My Work"
+
+        className="mt-24 sm:mt-32 lg:mt-28"
       >
         <p>
-          As long as those opportunities involve giving us money to re-purpose
-          old projects — we can come up with an endless number of those.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -146,6 +144,92 @@ function Services() {
   )
 }
 
+const team = [
+  {
+    title: 'Projects',
+    people: [
+      {
+        name: 'Chelsea Hagon',
+        role: 'Senior Developer',
+        image: { src: imageLaptop },
+      },
+      {
+        name: 'Emma Dorsey',
+        role: 'Senior Designer',
+        image: { src: imageLaptop },
+      },
+      {
+        name: 'Leonard Krasner',
+        role: 'VP, User Experience',
+        image: { src: imageLaptop },
+      },
+      {
+        name: 'Blake Reid',
+        role: 'Junior Copywriter',
+        image: { src: imageLaptop },
+      },
+      {
+        name: 'Kathryn Murphy',
+        role: 'VP, Human Resources',
+        image: { src: imageLaptop },
+      },
+      {
+        name: 'Whitney Francis',
+        role: 'Content Specialist',
+        image: { src: imageLaptop },
+      }
+    ],
+  },
+]
+
+function Team() {
+  return (
+    <Container className="mt-24 sm:mt-32 lg:mt-40">
+      <div className="space-y-24">
+        {team.map((group) => (
+          <FadeInStagger key={group.title}>
+            <Border as={FadeIn} />
+            <div className="grid grid-cols-1 gap-6 pt-12 sm:pt-16 lg:grid-cols-4 xl:gap-8">
+              <FadeIn>
+                <h2 className="font-display text-2xl font-semibold text-neutral-950">
+                  {group.title}
+                </h2>
+              </FadeIn>
+              <div className="lg:col-span-3">
+                <ul
+                  role="list"
+                  className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8"
+                >
+                  {group.people.map((person) => (
+                    <li key={person.name}>
+                      <FadeIn>
+                        <div className="group relative overflow-hidden rounded-3xl bg-neutral-100">
+                          <Image
+                            alt=""
+                            {...person.image}
+                            className="h-96 w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105"
+                          />
+                          <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
+                            <p className="font-display text-base/6 font-semibold tracking-wide text-white">
+                              {person.name}
+                            </p>
+                            <p className="mt-2 text-sm text-white">
+                              {person.role}
+                            </p>
+                          </div>
+                        </div>
+                      </FadeIn>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </FadeInStagger>
+        ))}
+      </div>
+    </Container>
+  )
+}
 
 const clients = [
   ['Phobia', logoPhobia],
@@ -158,71 +242,25 @@ const clients = [
   ['North Adventures', logoNorthAdventures],
 ]
 
-function Clients() {
-  return (
-    
-    <Container className="mt-24 sm:mt-32 lg:mt-40">
-      <FadeIn>
-        <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          You’re in good company
-        </h2>
-      </FadeIn>
-      <FadeInStagger className="mt-10" faster>
-        <Border as={FadeIn} />
-        <ul
-          role="list"
-          className="grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-4"
-        >
-          {clients.map(([client, logo]) => (
-            <li key={client} className="group">
-              <FadeIn className="overflow-hidden">
-                <Border className="pt-12 group-[&:nth-child(-n+2)]:-mt-px sm:group-[&:nth-child(3)]:-mt-px lg:group-[&:nth-child(4)]:-mt-px">
-                  <Image src={logo} alt={client} unoptimized />
-                </Border>
-              </FadeIn>
-            </li>
-          ))}
-        </ul>
-      </FadeInStagger>
-    </Container>
-  )
-}
-
-export const metadata = {
-  title: 'Our Work',
-  description:
-    'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
-}
-
 export default async function Work() {
   let caseStudies = await loadCaseStudies()
 
   return (
     <>
-          <Services />
-
-      <PageIntro
-        eyebrow="Our work"
-        title="Proven solutions for real-world problems."
-      >
-        <p>
-          We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
-        </p>
-      </PageIntro>
-
-      <CaseStudies caseStudies={caseStudies} />
-
-      <Testimonial
+      <Services />
+<Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Mail Smirk', logo: logoMailSmirk }}
       >
         We approached <em>Studio</em> because we loved their past work. They
         delivered something remarkably similar in record time.
       </Testimonial>
+      <Team />
 
-      <Clients />
+
+{/* projects */}
+      
+
 
       <ContactSection />
     </>
