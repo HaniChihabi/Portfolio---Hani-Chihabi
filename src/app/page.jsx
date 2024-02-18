@@ -66,8 +66,8 @@ export default async function Home() {
 
         {/* Image Container */}
         <div className="flex-1 h-full flex items-center justify-center">
-          <div className="relative right-8 top-32 h-full w-full max-w-lg">   
-          <div className='flex-1 h-[400px] w-[400px] relative rounded-xl overflow-hidden'>
+          <div className="relative left-4 top-[153px] h-full w-full max-w-lg">   
+          <div className='flex-1 h-[355px] w-[350px] relative rounded-xl overflow-hidden'>
               <Image 
                 src={imageMe} // Adjust the path to your image
                 alt="A descriptive alt text"

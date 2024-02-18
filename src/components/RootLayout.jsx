@@ -20,6 +20,7 @@ import { GridPattern } from '@/components/GridPattern'
 import { Logo, Logomark } from '@/components/Logo'
 import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
+import { button } from '@nextui-org/react'
 
 
 const RootLayoutContext = createContext(null)
@@ -35,6 +36,7 @@ function XIcon(props) {
 
 function MenuIcon(props) {
   return (
+    
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
       <path d="M2 6h20v2H2zM2 16h20v2H2z" />
     </svg>
