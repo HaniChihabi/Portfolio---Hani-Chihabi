@@ -17,7 +17,6 @@ export function GrayscaleTransitionImage(props) {
     target: ref,
     offset: ['start 65%', 'end 35%'],
   })
-  let grayscale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0, 1])
   let filter = useMotionTemplate`grayscale(${grayscale})`
 
   return (
