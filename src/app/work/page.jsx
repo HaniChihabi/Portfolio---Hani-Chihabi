@@ -25,6 +25,7 @@ import imageLaptop from '@/images/laptop.jpg'
 import { List, ListItem } from '@/components/List'
 import imagePacman from '@/images/pacman.jpg'
 import imageCanIBall from '@/images/caniball.jpg'
+import imagePrayertimes from '@/images/prayertimes.jpg'
 
 function CaseStudies({ caseStudies }) {
   return (
@@ -119,8 +120,8 @@ function Services() {
               />
             </FadeIn>
           </div>
-          <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-            <ListItem title="Web development">
+          <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4 text-2xl">
+            <ListItem    title="Web development" className="text-xl p-4">
             Custom, responsive websites with secure hosting. Prioritizing user-friendly designs and reliable support.
             </ListItem>
             <ListItem title="Application development">
@@ -141,19 +142,19 @@ const team = [
     title: 'Projects',
     people: [
       {
-        name: 'Chelsea Hagon',
-        role: 'Senior Developer',
+        name: 'Pac-Man',
+        role: 'Recreated Game',
         image: { src: imagePacman },
       },
       {
-        name: 'Emma Dorsey',
-        role: 'Senior Designer',
+        name: 'Can I Ball',
+        role: 'Basketball Weather App',
         image: { src: imageCanIBall },
       },
       {
-        name: 'Leonard Krasner',
-        role: 'VP, User Experience',
-        image: { src: imageLaptop },
+        name: 'Prayer Mauaqit',
+        role: 'Prayer Times App',
+        image: { src: imagePrayertimes },
       },
       {
         name: 'Blake Reid',

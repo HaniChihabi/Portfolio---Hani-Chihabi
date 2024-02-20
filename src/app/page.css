@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'path/to/your/custom.css'; /* Import your custom CSS */
+
+
+/* In your CSS file */
+.custom-shake-duration {
+    @apply duration-500; /* Example: duration-500 for 500ms */
+  }
+  

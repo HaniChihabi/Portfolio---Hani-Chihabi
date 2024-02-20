@@ -21,6 +21,7 @@ import { Logo, Logomark } from '@/components/Logo'
 import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
 import { button } from '@nextui-org/react'
+import 'animate.css';
 
 
 const RootLayoutContext = createContext(null)
@@ -43,6 +44,7 @@ function MenuIcon(props) {
   )
 }
 
+
 function Header({
   panelId,
   icon: Icon,
@@ -51,7 +53,18 @@ function Header({
   toggleRef,
   invert = false,
 }) {
-  let { logoHovered, setLogoHovered } = useContext(RootLayoutContext)
+   const [isShaking, setIsShaking] = useState(false);
+
+  useEffect(() => {
+    let interval;
+    if (!expanded) { // Only start the interval if the menu is not expanded
+      interval = setInterval(() => {
+        setIsShaking((prev) => !prev); // Toggle the isShaking state
+      }, 2000); // Change the state every 2 seconds
+    }
+
+    return () => clearInterval(interval); // Clear interval when the component unmounts or expanded changes
+  }, [expanded]); // Re-run effect when expanded changes
 
   return (
     <Container >
@@ -67,30 +80,30 @@ function Header({
           <h1 className='font-bold text-4xl'>HC</h1>
         </Link>
         <div className="flex items-center gap-x-8">
-          <Button href="/contact" invert={invert}>
-            Contact 
-          </Button>
-          <button
+        <button
             ref={toggleRef}
             type="button"
-            onClick={onToggle}
+            onClick={() => {
+              onToggle(); // Ensure onToggle correctly updates the expanded state
+            }}
             aria-expanded={expanded ? 'true' : 'false'}
             aria-controls={panelId}
             className={clsx(
-              'group -m-2.5 rounded-full p-2.5 transition',
-              invert ? 'hover:bg-white/10' : 'hover:bg-neutral-950/10',
+              'group -m-2.5 rounded-full p-2.5 transition animate__animated',
+              expanded ? 'bg-white' : 'bg-black', // Changes background color based on expanded state
+              { 'animate__shakeX': isShaking && !expanded }, // Applies the shake animation
+              'text-white', // Ensures text/icon color contrasts with the background
+              invert ? 'hover:bg-white/10' : 'hover:bg-slate-400'
             )}
             aria-label="Toggle navigation"
           >
-            <Icon
+  <Icon
               className={clsx(
                 'h-6 w-6',
-                invert
-                  ? 'fill-white group-hover:fill-neutral-200'
-                  : 'fill-neutral-950 group-hover:fill-neutral-700',
+                expanded ? 'fill-black' : 'fill-white', // Changes icon color based on expanded state
               )}
             />
-          </button>
+</button>
         </div>
       </div>
       </div>
