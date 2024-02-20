@@ -29,12 +29,12 @@ import { Blockquote } from '@/components/Blockquote'
 import { List, ListItem } from '@/components/List'
 import imageBasketball from '@/images/basketball.jpg'
 import imageCar from '@/images/car.jpeg'
-
-
+import Layout from '@/components/Layout';
 
 function Section({ title, image, children }) {
   return (
     <Container className="group/section [counter-increment:section]">
+      
       <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-20">
         <div className="flex justify-center">
           <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
@@ -96,8 +96,9 @@ function Culture() {
 
 function Discover() {
   return (
-    <Section title="Hello, I'm Hani" image={{ src: imageCar }}>
-      <div className="space-y-6 text-base text-neutral-600">
+    
+    <Section className='text-2xl' title=" My name is Hani" image={{ src: imageCar }}>
+      <div className="space-y-6 text-neutral-600 text-xl">
       <p>
           I'm 22 years old and currently living in Germany. My passion for learning drives me every day.
         </p>
@@ -124,7 +125,7 @@ function Discover() {
 function Build() {
   return (
     <Section title="Basketball - My Therapy" image={{ src: imageBasketball, shape: 1 }}>
-      <div className="space-y-6 text-base text-neutral-600">
+      <div className="space-y-6 text-neutral-600 text-xl">
         <p>
         For me, basketball is more than just a sport; it's a form of therapy. Playing outside every day, I find peace and balance that helps me navigate life's ups and downs. The court is where I clear my mind and rejuvenate my spirit.
 
@@ -149,7 +150,7 @@ function Build() {
 function Deliver() {
   return (
     <Section title="Software Development Journey" image={{ src: imageLaptop, shape: 2 }}>
-      <div className="space-y-6 text-base text-neutral-600">
+      <div className="space-y-6 text-xl text-neutral-600">
         <p>
         Software development has been an exhilarating journey for me. From the thrill of building new projects to the collaboration with talented peers, each aspect has enriched my experience in the tech world.
 
@@ -165,7 +166,7 @@ function Deliver() {
       </div>
 
       <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-        Included in this phase
+        Welcome to my journey
       </h3>
     </Section>
   )
@@ -228,16 +229,23 @@ function Values() {
 
 
 export default async function About() {
+  const intro = (
+    <SectionIntro className='relative font-display top-10 left-0'
+      title="About Us"
+      subtitle="Learn more about our mission and values."
+    />
+  );
 
   return (
     <>
-      
+      <Layout intro={intro}>
       <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-40 lg:space-y-40">
         <Discover />
         <Build />
         <Deliver />
       </div>
       <Culture />
+      </Layout>
 
 
     </>

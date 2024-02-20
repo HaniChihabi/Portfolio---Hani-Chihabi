@@ -8,6 +8,9 @@ import { FadeIn } from '@/components/FadeIn'
 import { Offices } from '@/components/Offices'
 import { PageIntro } from '@/components/PageIntro'
 import { SocialMedia } from '@/components/SocialMedia'
+import Layout from '@/components/Layout';
+import { SectionIntro } from '@/components/SectionIntro'
+
 
 function TextInput({ label, ...props }) {
   let id = useId()
@@ -66,17 +69,7 @@ function ContactForm() {
           />
           <TextInput label="Phone" type="tel" name="phone" autoComplete="tel" />
           <TextInput label="Message" name="message" />
-          <div className="border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
-            <fieldset>
-              <legend className="text-base/6 text-neutral-500">Budget</legend>
-              <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
-                <RadioInput label="$25K – $50K" name="budget" value="25" />
-                <RadioInput label="$50K – $100K" name="budget" value="50" />
-                <RadioInput label="$100K – $150K" name="budget" value="100" />
-                <RadioInput label="More than $150K" name="budget" value="150" />
-              </div>
-            </fieldset>
-          </div>
+          
         </div>
         <Button type="submit" className="mt-10">
           Let’s work together
@@ -124,18 +117,23 @@ function ContactDetails() {
 }
 
 export default function Contact() {
+  const intro = (
+    <SectionIntro className='relative font-display top-10 left-0'
+
+      title="My Work"
+    />
+  );
   return (
     <>
-      <PageIntro eyebrow="Contact us" title="Let’s work together">
-        <p>We can’t wait to hear from you.</p>
-      </PageIntro>
+      <Layout intro={intro}>
 
-      <Container className="mt-24 sm:mt-32 lg:mt-40">
-        <div className="grid grid-cols-1 gap-x-8 gap-y-24 lg:grid-cols-2">
+      <Container className="mt-244 sm:mt-56 lg:mt-72">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-24 lg:grid-cols-2 relative bottom-28">
           <ContactForm />
           <ContactDetails />
         </div>
       </Container>
+      </Layout>
     </>
   )
 }

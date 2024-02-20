@@ -44,7 +44,6 @@ function MenuIcon(props) {
   )
 }
 
-
 function Header({
   panelId,
   icon: Icon,
@@ -53,7 +52,7 @@ function Header({
   toggleRef,
   invert = false,
 }) {
-   const [isShaking, setIsShaking] = useState(false);
+  const [isShaking, setIsShaking] = useState(false);
 
   useEffect(() => {
     let interval;
@@ -67,49 +66,48 @@ function Header({
   }, [expanded]); // Re-run effect when expanded changes
 
   return (
-    <Container >
-          <div>
-
+    <Container>
       <div className="flex items-center justify-between">
-        <Link
-          href="/"
-          aria-label="Home"
-          onMouseEnter={() => setLogoHovered(true)}
-          onMouseLeave={() => setLogoHovered(false)}
-        >
-          <h1 className='font-bold text-4xl'>HC</h1>
-        </Link>
-        <div className="flex items-center gap-x-8">
-        <button
-            ref={toggleRef}
-            type="button"
-            onClick={() => {
-              onToggle(); // Ensure onToggle correctly updates the expanded state
-            }}
-            aria-expanded={expanded ? 'true' : 'false'}
-            aria-controls={panelId}
-            className={clsx(
-              'group -m-2.5 rounded-full p-2.5 transition animate__animated',
-              expanded ? 'bg-white' : 'bg-black', // Changes background color based on expanded state
-              { 'animate__shakeX': isShaking && !expanded }, // Applies the shake animation
-              'text-white', // Ensures text/icon color contrasts with the background
-              invert ? 'hover:bg-white/10' : 'hover:bg-slate-400'
-            )}
-            aria-label="Toggle navigation"
-          >
-  <Icon
-              className={clsx(
-                'h-6 w-6',
-                expanded ? 'fill-black' : 'fill-white', // Changes icon color based on expanded state
-              )}
-            />
-</button>
+        <div className="flex items-center">
+          <Link
+            href="/"
+            aria-label="Home"
+            className="font-bold text-4xl">HC</Link>
+
+          {/* Position your section intro here, to the right of the HC logo */}
+          {/* <div className="ml-4">
+            <h2 className="text-xl font-semibold" >Our Culture</h2>
+          </div> */}
         </div>
-      </div>
+
+        <button
+          ref={toggleRef}
+          type="button"
+          onClick={() => {
+            onToggle(); // Ensure onToggle correctly updates the expanded state
+          }}
+          aria-expanded={expanded ? 'true' : 'false'}
+          aria-controls={panelId}
+          className={clsx(
+            'group -m-2.5 rounded-full p-2.5 transition animate__animated',
+            expanded ? 'bg-white' : 'bg-black', // Changes background color based on expanded state
+            { 'animate__shakeX': isShaking && !expanded }, // Applies the shake animation
+            'text-white', // Ensures text/icon color contrasts with the background
+          )}
+          aria-label="Toggle navigation"
+        >
+          <Icon
+            className={clsx(
+              'h-6 w-6',
+              expanded ? 'fill-black' : 'fill-white', // Changes icon color based on expanded state
+            )}
+          />
+        </button>
       </div>
     </Container>
   )
 }
+
 
 function NavigationRow({ children }) {
   return (
@@ -138,11 +136,11 @@ function Navigation() {
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
         <NavigationItem href="/work">My Work</NavigationItem>
-        <NavigationItem href="/about">About Me</NavigationItem>
+        <NavigationItem href="/process">Our Process</NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        <NavigationItem href="/process">Our Process</NavigationItem>
-        <NavigationItem href="/blog">Blog</NavigationItem>
+      <NavigationItem href="/about">About Me</NavigationItem>
+        <NavigationItem href="/contact">Contact</NavigationItem>
       </NavigationRow>
     </nav>
   )

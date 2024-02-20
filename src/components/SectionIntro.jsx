@@ -7,6 +7,8 @@ export function SectionIntro({
   title,
   eyebrow,
   children,
+  size = 'default', // New size prop with a default value
+
   smaller = false,
   invert = false,
   ...props
@@ -30,10 +32,10 @@ export function SectionIntro({
           )}
           <span
             className={clsx(
-              'block font-display tracking-tight [text-wrap:balance]',
+              'block font-bold tracking-tight items-center align-middle [text-wrap:balance]',
               smaller
                 ? 'text-2xl font-semibold'
-                : 'text-4xl font-medium sm:text-5xl',
+                : 'text-4xl font-medium sm:text-3xl',
               invert ? 'text-white' : 'text-neutral-950',
             )}
           >

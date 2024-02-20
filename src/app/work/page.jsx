@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { GridList, GridListItem } from '@/components/GridList'
+
 import { Blockquote } from '@/components/Blockquote'
 import { Border } from '@/components/Border'
 import { Button } from '@/components/Button'
@@ -26,7 +28,31 @@ import { List, ListItem } from '@/components/List'
 import imagePacman from '@/images/pacman.jpg'
 import imageCanIBall from '@/images/caniball.jpg'
 import imagePrayertimes from '@/images/prayertimes.jpg'
+import Layout from '@/components/Layout';
 
+
+function Culture() {
+  return (
+    <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
+      <Container className="mt-16">
+        <GridList>
+          <GridListItem title="Loyalty" invert>
+            Our team has been with us since the beginning because none of them
+            are allowed to have LinkedIn profiles.
+          </GridListItem>
+          <GridListItem title="Trust" invert>
+            We don’t care when our team works just as long as they are working
+            every waking second.
+          </GridListItem>
+          <GridListItem title="Compassion" invert>
+            You never know what someone is going through at home and we make
+            sure to never find out.
+          </GridListItem>
+        </GridList>
+      </Container>
+    </div>
+  )
+}
 function CaseStudies({ caseStudies }) {
   return (
     <Container className="mt-40">
@@ -101,15 +127,7 @@ function CaseStudies({ caseStudies }) {
 function Services() {
   return (
     <>
-      <SectionIntro
-                title="My Work"
-
-        className="mt-24 sm:mt-18 lg:mt-18"
-      >
-        <p>
-        </p>
-      </SectionIntro>
-      <Container className="mt-16">
+      <Container className="mt-32">
         <div className="lg:flex lg:items-center lg:justify-end">
           <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
             <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
@@ -237,9 +255,16 @@ const clients = [
 
 export default async function Work() {
   let caseStudies = await loadCaseStudies()
+  const intro = (
+    <SectionIntro className='relative font-display top-10 left-0'
+
+      title="My Work"
+    />
+  );
 
   return (
     <>
+    <Layout intro={intro}>
       <Services />
 <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
@@ -255,7 +280,8 @@ export default async function Work() {
       
 
 
-      <ContactSection />
+<Culture />
+</Layout>
     </>
   )
 }

@@ -21,6 +21,9 @@ import imageLaptop from '@/images/laptop.jpg'
 import imageMe from '@/images/me.jpeg'
 import { DownCircleOutlined } from '@ant-design/icons';
 import { Footer } from '@/components/Footer'
+import { Border } from '@/components/Border'
+import { SocialMedia } from '@/components/SocialMedia'
+
 
 
 
@@ -45,20 +48,21 @@ export default async function Home() {
         
       <FadeIn className='h-[1000px] flex flex-col lg:flex-row items-center justify-center overflow-hidden relative top-36'>
         {/* Content Container */}
-        <div className="flex-1 flex items-center justify-center relative bottom-40 left-44 ml-5">
+        <div className="flex-1 flex items-center justify-center relative bottom-40 left-52 ml-5">
           <div className="max-w-3xl">
-          <h1 className="font-display text-9xl font-extralight tracking-tight text-neutral-950 sm:text-7xl">
+          <h1 className="font-display text-xl font-extralight tracking-tight text-neutral-950 sm:text-7xl">
               Hey, my name is 
             </h1>
-            <h1 className="font-display text-9xl font-normal tracking-normal text-neutral-950 sm:text-7xl mb-10 text-center">
+            <h1 className="font-display font-normal tracking-normal text-neutral-950 sm:text-7xl mb-10">
               Hani Chihabi
             </h1>
-            <p className="font-display top-10 text-4xl text-neutral-600 leading-relaxed font-light relative left-20">
+            <Border>
+            <p className="font-display top-10 text-4xl text-neutral-600 leading-relaxed font-light relative">
             I am a passionate software developer, <br /> living in Germany. I build cool projects and<br />  .
             </p>
-            <p className="font-display text-4xl text-neutral-600 leading-relaxed font-semibold relative left-36 bottom-3">
+            <p className="font-display text-4xl text-neutral-600 leading-relaxed font-semibold relative left-0 bottom-3">
             I focus on crafting effective solutions.
-            </p>
+            </p></Border>
             {/* <DownCircleOutlined className='text-[80px] text-center relative left-64 top-20 text-slate-400 hover:text-black'/> */}
             {/* <button className="shadow-[inset_0_0_0_2px_#616467] px-12 py-4 rounded-full tracking-widest uppercase font-bold bg-black text-neutral-200 hover:bg-white hover:text-neutral-900 dark:text-neutral-200 transition duration-200 relative left-[520px] top-[70px]">Get Started</button> */}
           </div>
@@ -77,7 +81,9 @@ export default async function Home() {
             </div>
           </div>
         </div>
+        <SocialMedia className="mt-6 absolute bottom-36" />
       </FadeIn>
+      
       </section>
 
 {/* 
