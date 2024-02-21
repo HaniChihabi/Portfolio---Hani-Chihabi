@@ -97,24 +97,50 @@ export default function Contact() {
   async function handleSubmit(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
-
-    formData.append("access_key", "b4f2f349-72aa-480e-b625-78b24cc2aa24");
-
+  
+    // Basic validation
     const object = Object.fromEntries(formData);
+    let errorMessage = '';
+  
+    // Checking for empty fields
+    if (!object.name) errorMessage += 'Name is required. \n';
+    if (!object.email) errorMessage += 'Email is required. \n';
+    if (!object.company) errorMessage += 'Company is required. \n';
+    if (!object.phone) errorMessage += 'Phone is required. \n';
+    if (!object.message) errorMessage += 'Message is required. ';
+  
+    // Checking for valid email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (object.email && !emailRegex.test(object.email)) errorMessage += 'Email is not valid. ';
+  
+    // If there are errors, alert them and stop the form submission
+    if (errorMessage) {
+      alert(errorMessage);
+      return;
+    }
+  
+    // If all validations pass, proceed with form submission
+    formData.append("access_key", "b4f2f349-72aa-480e-b625-78b24cc2aa24");
     const json = JSON.stringify(object);
-
+  
     const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json"
-        },
-        body: json
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
     });
+  
     const result = await response.json();
     if (result.success) {
-        console.log(result);
+      console.log(result);
+      // Here, you can also implement a success message or redirection
+    } else {
+      // Handle submission error
+      alert('Submission failed. Please try again.');
     }
+  
 }
   return (
     <>
