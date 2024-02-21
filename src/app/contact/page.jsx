@@ -54,13 +54,12 @@ function ContactDetails() {
   return (
     <FadeIn>
     
-      <Border className="mt-16 pt-16">
         <h2 className="font-display text-base font-semibold text-neutral-950">
           Email me
         </h2>
         <dl className="mt-6 grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
           {[
-            ['hanichihabih@gmail.com']
+            ['Email', 'hanichihabih@gmail.com']
           ].map(([label, email]) => (
             <div key={email}>
               <dt className="font-semibold text-neutral-950">{label}</dt>
@@ -75,7 +74,6 @@ function ContactDetails() {
             </div>
           ))}
         </dl>
-      </Border>
 
       <Border className="mt-16 pt-16">
         <h2 className="font-display text-base font-semibold text-neutral-950">
@@ -91,7 +89,7 @@ export default function Contact() {
   const intro = (
     <SectionIntro className='relative font-display top-10 left-0'
 
-      title="My Work"
+      title="Contact"
     />
   );
   async function handleSubmit(event) {
@@ -105,10 +103,10 @@ export default function Contact() {
   let errorMessage = '';
 
   // Checking for empty fields
-  if (!object.name) errorMessage += 'Name is required. ';
-  if (!object.email) errorMessage += 'Email is required. ';
-  if (!object.company) errorMessage += 'Company is required. ';
-  if (!object.phone) errorMessage += 'Phone is required. ';
+  if (!object.name) errorMessage += 'Name is required. \n';
+  if (!object.email) errorMessage += 'Email is required. \n';
+  if (!object.company) errorMessage += 'Company is required. \n';
+  if (!object.phone) errorMessage += 'Phone is required. \n';
   if (!object.message) errorMessage += 'Message is required. ';
 
   // Checking for valid email

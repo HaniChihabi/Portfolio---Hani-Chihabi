@@ -231,7 +231,7 @@ function Values() {
 export default async function About() {
   const intro = (
     <SectionIntro className='relative font-display top-10 left-0'
-      title="About Us"
+      title="About Me"
       subtitle="Learn more about our mission and values."
     />
   );

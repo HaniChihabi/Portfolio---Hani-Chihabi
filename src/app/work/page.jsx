@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { GridList, GridListItem } from '@/components/GridList'
-
+import { GridPattern } from '@/components/GridPattern'
 import { Blockquote } from '@/components/Blockquote'
 import { Border } from '@/components/Border'
 import { Button } from '@/components/Button'
@@ -35,7 +35,7 @@ function Culture() {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
       <Container className="mt-16">
-        <GridList>
+        <GridList className='mb-24'>
           <GridListItem title="Loyalty" invert>
             Our team has been with us since the beginning because none of them
             are allowed to have LinkedIn profiles.
@@ -47,6 +47,43 @@ function Culture() {
           <GridListItem title="Compassion" invert>
             You never know what someone is going through at home and we make
             sure to never find out.
+          </GridListItem>
+        </GridList>
+      </Container>
+    </div>
+  )
+}
+function Values() {
+  return (
+    <div className="relative mt-24 pt-24 sm:mt-32 sm:pt-32 lg:mt-48 lg:pt-20">
+      <div className="absolute inset-x-0 top-0 -z-10 h-[884px] overflow-hidden rounded-t-4xl bg-gradient-to-b from-neutral-50">
+        <GridPattern
+          className="absolute inset-0 h-full w-full fill-neutral-100 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
+          yOffset={-270}
+        />
+      </div>
+
+      <SectionIntro
+        eyebrow="Values"
+        title="Balancing reliability and innovation"
+      >
+        <p>
+           I strive to stay at the forefront of emerging trends and
+          technologies.
+        </p>
+      </SectionIntro>
+
+      <Container className="mt-24">
+        <GridList>
+          
+          <GridListItem title="Efficient">
+          I consistently meet every deadline, upholding a record of punctuality and reliability.
+          </GridListItem>
+          <GridListItem title="Adaptable">
+          "Each business is different, so I work to fit their needs"
+          </GridListItem>
+          <GridListItem title="Innovative">
+          I continuously adapt to the evolving tech landscape by incorporating new open source projects into my work
           </GridListItem>
         </GridList>
       </Container>
@@ -200,13 +237,13 @@ function Team() {
         {team.map((group) => (
           <FadeInStagger key={group.title}>
             <Border as={FadeIn} />
-            <div className="grid grid-cols-1 gap-6 pt-12 sm:pt-16 lg:grid-cols-4 xl:gap-8">
+            <div className="grid grid-cols-1 gap-6 pt-12 sm:pt-40 lg:grid-cols-4 xl:gap-8">
               <FadeIn>
                 <h2 className="font-display text-2xl font-semibold text-neutral-950">
                   {group.title}
                 </h2>
               </FadeIn>
-              <div className="lg:col-span-3">
+              <div className="lg:col-span-4">
                 <ul
                   role="list"
                   className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8"
@@ -265,22 +302,19 @@ export default async function Work() {
   return (
     <>
     <Layout intro={intro}>
-      <Services />
-<Testimonial
-        className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Mail Smirk', logo: logoMailSmirk }}
-      >
-        We approached <em>Studio</em> because we loved their past work. They
-        delivered something remarkably similar in record time.
-      </Testimonial>
-      <Team />
 
+      <Services />
+      <Values />
+     
+
+
+      <Team />
+      <ContactSection />
 
 {/* projects */}
       
 
 
-<Culture />
 </Layout>
     </>
   )
