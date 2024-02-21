@@ -1,3 +1,4 @@
+"use client"
 import { useId } from 'react'
 import Link from 'next/link'
 
@@ -47,37 +48,7 @@ function RadioInput({ label, ...props }) {
   )
 }
 
-function ContactForm() {
-  return (
-    <FadeIn className="lg:order-last">
-      <form>
-        <h2 className="font-display text-base font-semibold text-neutral-950">
-          Work inquiries
-        </h2>
-        <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50">
-          <TextInput label="Name" name="name" autoComplete="name" />
-          <TextInput
-            label="Email"
-            type="email"
-            name="email"
-            autoComplete="email"
-          />
-          <TextInput
-            label="Company"
-            name="company"
-            autoComplete="organization"
-          />
-          <TextInput label="Phone" type="tel" name="phone" autoComplete="tel" />
-          <TextInput label="Message" name="message" />
-          
-        </div>
-        <Button type="submit" className="mt-10">
-          Let’s work together
-        </Button>
-      </form>
-    </FadeIn>
-  )
-}
+
 
 function ContactDetails() {
   return (
@@ -123,13 +94,61 @@ export default function Contact() {
       title="My Work"
     />
   );
+  async function handleSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "b4f2f349-72aa-480e-b625-78b24cc2aa24");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: json
+    });
+    const result = await response.json();
+    if (result.success) {
+        console.log(result);
+    }
+}
   return (
     <>
       <Layout intro={intro}>
-
+        
       <Container className="mt-244 sm:mt-56 lg:mt-72">
         <div className="grid grid-cols-1 gap-x-8 gap-y-24 lg:grid-cols-2 relative bottom-28">
-          <ContactForm />
+        <FadeIn className="lg:order-last">
+      <form onSubmit={handleSubmit}>
+        <h2 className="font-display text-base font-semibold text-neutral-950">
+          Work inquiries
+        </h2>
+        <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50">
+          <TextInput label="Name" name="name" autoComplete="name" />
+          <TextInput
+            label="Email"
+            type="email"
+            name="email"
+            autoComplete="email"
+          />
+          <TextInput
+            label="Company"
+            name="company"
+            autoComplete="organization"
+          />
+          <TextInput label="Phone" type="tel" name="phone" autoComplete="tel" />
+          <TextInput label="Message" name="message" />
+          
+        </div>
+        <Button type="submit" className="mt-10">
+          Let’s work together
+        </Button>
+      </form>
+    </FadeIn>
           <ContactDetails />
         </div>
       </Container>

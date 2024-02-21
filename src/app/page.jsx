@@ -24,9 +24,6 @@ import { Footer } from '@/components/Footer'
 import { Border } from '@/components/Border'
 import { SocialMedia } from '@/components/SocialMedia'
 
-
-
-
 import { loadCaseStudies } from '@/lib/mdx'
 const clients = [
   ['Phobia', logoPhobiaLight],
