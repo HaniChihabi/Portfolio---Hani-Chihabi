@@ -30,6 +30,7 @@ import { List, ListItem } from '@/components/List'
 import imageBasketball from '@/images/basketball.jpg'
 import imageCar from '@/images/car.jpeg'
 import Layout from '@/components/Layout';
+import { Testimonial } from '@/components/Testimonial'
 
 function Section({ title, image, children }) {
   return (
@@ -64,33 +65,13 @@ function Section({ title, image, children }) {
 
 function Culture() {
   return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
-      <SectionIntro
-        eyebrow="Our culture"
-        title="Balance your passion with your passion for life."
-        invert
-      >
-        <p>
-          We are a group of like-minded people who share the same core values.
-        </p>
-      </SectionIntro>
-      <Container className="mt-16">
-        <GridList>
-          <GridListItem title="Loyalty" invert>
-            Our team has been with us since the beginning because none of them
-            are allowed to have LinkedIn profiles.
-          </GridListItem>
-          <GridListItem title="Trust" invert>
-            We don’t care when our team works just as long as they are working
-            every waking second.
-          </GridListItem>
-          <GridListItem title="Compassion" invert>
-            You never know what someone is going through at home and we make
-            sure to never find out.
-          </GridListItem>
-        </GridList>
-      </Container>
-    </div>
+    <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32 relative top-10">
+
+<blockquote className="relative font-display text-3xl font-medium tracking-tight text-white sm:text-4xl">
+              <p className="flex justify-center sm:before:absolute sm:before:right-full text-white mb-10">
+                Welcome to my journey
+              </p>
+      </blockquote>    </div>
   )
 }
 
@@ -165,9 +146,9 @@ function Deliver() {
         </p>
       </div>
 
-      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
+      {/* <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
         Welcome to my journey
-      </h3>
+      </h3> */}
     </Section>
   )
 }
@@ -238,16 +219,15 @@ export default async function About() {
 
   return (
     <>
+    
       <Layout intro={intro}>
-      <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-40 lg:space-y-40">
+      <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-32 lg:space-y-40">
         <Discover />
         <Build />
         <Deliver />
       </div>
       <Culture />
       </Layout>
-
-
     </>
   )
 }
