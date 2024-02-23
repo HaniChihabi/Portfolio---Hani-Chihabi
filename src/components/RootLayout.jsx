@@ -99,7 +99,7 @@ function Header({
           aria-controls={panelId}
           className={clsx(
             'group -m-2.5 rounded-full p-2.5 transition animate__animated ',
-            expanded ? 'bg-white' : 'bg-black', // Changes background color based on expanded state
+            expanded ? 'bg-transparent' : 'bg-black', // Changes background color based on expanded state
             { 'animate__shakeX': isShaking && !expanded }, // Applies the shake animation
             'text-white', // Ensures text/icon color contrasts with the background
           )}
@@ -109,7 +109,7 @@ function Header({
               className={clsx(
                 'h-6 w-6',
                 invert
-                  ? 'fill-black '
+                  ? 'fill-white '
                   : 'fill-white ',
               )}
             />
