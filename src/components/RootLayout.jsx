@@ -65,6 +65,14 @@ function Header({
     return () => clearInterval(interval); // Clear interval when the component unmounts or expanded changes
   }, [expanded]); // Re-run effect when expanded changes
 
+  const hcLogoClass = clsx(
+    'font-bold text-4xl z-50', // Ensure the logo has a high z-index
+    {
+      'text-black': !expanded, // Color when menu is expanded
+      'text-white': expanded, // Color when menu is not expanded
+    }
+  );
+
   return (
     <Container>
       <div className="flex items-center justify-between">
@@ -72,7 +80,7 @@ function Header({
           <Link
             href="/"
             aria-label="Home"
-            className="font-bold text-4xl">HC</Link>
+            className={hcLogoClass}>HC</Link>
 
           {/* Position your section intro here, to the right of the HC logo */}
           {/* <div className="ml-4">
@@ -97,11 +105,13 @@ function Header({
           aria-label="Toggle navigation"
         >
           <Icon
-            className={clsx(
-              'h-6 w-6',
-              expanded ? 'fill-black' : 'fill-white', // Changes icon color based on expanded state
-            )}
-          />
+              className={clsx(
+                'h-6 w-6',
+                invert
+                  ? 'fill-black '
+                  : 'fill-white ',
+              )}
+            />
         </button>
       </div>
     </Container>
@@ -110,42 +120,38 @@ function Header({
 
 
 function NavigationRow({ children }) {
-  // Use Flexbox to distribute navigation items evenly
   return (
     <div className="even:mt-px sm:bg-neutral-950">
       <Container>
-        <div className="flex justify-between items-center">{children}</div>
-      </Container>
+         <div className="flex justify-between items-center">{children}</div>
+       </Container>
     </div>
   )
 }
-
 
 function NavigationItem({ href, children }) {
   return (
     <Link
       href={href}
-      className="group relative isolate bg-neutral-950 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 flex justify-center items-center text-center"
-      // Ensure that the link takes up full width of its container
-      style={{ width: '100%' }}
-    >
+      className="group relative isolate -mx-6 bg-neutral-950 w-1/2 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16 flex justify-center items-center"
+      >
       {children}
       <span className="absolute inset-y-0 -z-10 w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100" />
     </Link>
   )
 }
 
-
 function Navigation() {
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
         <NavigationItem href="/work">My Work</NavigationItem>
-        <NavigationItem className='flex justify-center' href="/contact">Contact</NavigationItem>
+        <NavigationItem className='' href="/about">About Me</NavigationItem>
       </NavigationRow>
-      <NavigationRow>         
-        <NavigationItem className="max-w-[120px]" href="/about">About Me</NavigationItem>
-        <NavigationItem className="max-w-[120px]" href="/"><SocialMedia className="mt-6 flex align-middle relative left-0 bottom-3  text-xl" invert /></NavigationItem>
+      <NavigationRow> 
+         <NavigationItem className='flex justify-center' href="/contact">Contact</NavigationItem>
+         
+        <SocialMedia className=" relative right-40 top-0 text-xl" invert />
       </NavigationRow>
     </nav>
   )
@@ -223,18 +229,7 @@ function RootLayoutInner({ children }) {
               />
             </div>
             <Navigation />
-            {/* <div className="relative bg-neutral-950 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-neutral-800">
-              <Container>
-                <div className="grid grid-cols-1 gap-y-10 pb-16 pt-10 sm:grid-cols-2 sm:pt-16">
-                  <div className="sm:border-l sm:border-transparent sm:pl-16">
-                    <h2 className="font-display text-base font-semibold text-white justify-center align-middle">
-                      Socials
-                    </h2>
-                    <SocialMedia className="mt-6" invert />
-                  </div>
-                </div>
-              </Container>
-            </div> */}
+            
           </motion.div>
         </motion.div>
       </header>
