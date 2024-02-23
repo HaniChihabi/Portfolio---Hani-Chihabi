@@ -130,14 +130,14 @@ function NavigationRow({ children }) {
   )
 }
 
-function NavigationItem({ href, children }) {
+function NavigationItem({ href, children, className }) {
   return (
     <Link
       href={href}
-      className="group relative isolate -mx-6 bg-neutral-950 w-1/2 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16 flex justify-center items-center "
-      >
+      className={`group relative isolate -mx-6 bg-neutral-950 w-1/2 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16 flex items-center ${className}`}
+    >
       {children}
-      <span className="absolute inset-y-0 -z-10 w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100 " />
+      <span className="absolute inset-y-0 -z-10 w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100" />
     </Link>
   )
 }
@@ -146,17 +146,21 @@ function Navigation() {
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
-        <NavigationItem href="/work"><p>My Work</p></NavigationItem>
-        <NavigationItem className='' href="/about"><p></p>About Me</NavigationItem>
+        {/* Apply justify-start to align "My Work" to the start */}
+        <NavigationItem href="/work" className="justify-start"><p>My Work</p></NavigationItem>
+        {/* Apply justify-end to align "About Me" to the end */}
+        <NavigationItem href="/about" className="justify-end"><p>About Me</p></NavigationItem>
       </NavigationRow>
-      <NavigationRow> 
-         <NavigationItem className='flex justify-center ' href="/contact"><p className='transition duration-300 ease-in-out transform hover:scale-105'>Contact</p></NavigationItem>
-         
-        <SocialMedia className=" relative right-40 top-0 text-xl" invert />
+      <NavigationRow>
+        {/* Apply justify-start to align "Contact" to the start */}
+        <NavigationItem href="/contact" className="justify-start"><p>Contact</p></NavigationItem>
+        {/* Adjustments for the SocialMedia component may be needed if you want it aligned in a specific way */}
+        <SocialMedia className="relative right-0 top-0 text-xl" invert />
       </NavigationRow>
     </nav>
   )
 }
+
 
 function RootLayoutInner({ children }) {
   let panelId = useId()
