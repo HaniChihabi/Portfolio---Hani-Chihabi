@@ -66,10 +66,11 @@ function Header({
   }, [expanded]); // Re-run effect when expanded changes
 
   const hcLogoClass = clsx(
-    'font-bold text-4xl z-50', // Ensure the logo has a high z-index
+    'font-bold text-4xl z-50 transition-all transition duration-300 ease-in-out transform hover:scale-105', // Basic classes
     {
-      'text-black': !expanded, // Color when menu is expanded
-      'text-white': expanded, // Color when menu is not expanded
+      'text-black': !expanded, // Color when menu is not expanded
+      'text-white': expanded, // Color when menu is expanded
+      'fade-in scale-up': expanded, // Apply animation classes when expanded
     }
   );
 
@@ -97,7 +98,7 @@ function Header({
           aria-expanded={expanded ? 'true' : 'false'}
           aria-controls={panelId}
           className={clsx(
-            'group -m-2.5 rounded-full p-2.5 transition animate__animated',
+            'group -m-2.5 rounded-full p-2.5 transition animate__animated ',
             expanded ? 'bg-white' : 'bg-black', // Changes background color based on expanded state
             { 'animate__shakeX': isShaking && !expanded }, // Applies the shake animation
             'text-white', // Ensures text/icon color contrasts with the background
@@ -133,10 +134,10 @@ function NavigationItem({ href, children }) {
   return (
     <Link
       href={href}
-      className="group relative isolate -mx-6 bg-neutral-950 w-1/2 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16 flex justify-center items-center"
+      className="group relative isolate -mx-6 bg-neutral-950 w-1/2 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16 flex justify-center items-center "
       >
       {children}
-      <span className="absolute inset-y-0 -z-10 w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100" />
+      <span className="absolute inset-y-0 -z-10 w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100 " />
     </Link>
   )
 }
@@ -145,11 +146,11 @@ function Navigation() {
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
-        <NavigationItem href="/work">My Work</NavigationItem>
-        <NavigationItem className='' href="/about">About Me</NavigationItem>
+        <NavigationItem href="/work"><p>My Work</p></NavigationItem>
+        <NavigationItem className='' href="/about"><p></p>About Me</NavigationItem>
       </NavigationRow>
       <NavigationRow> 
-         <NavigationItem className='flex justify-center' href="/contact">Contact</NavigationItem>
+         <NavigationItem className='flex justify-center ' href="/contact"><p className='transition duration-300 ease-in-out transform hover:scale-105'>Contact</p></NavigationItem>
          
         <SocialMedia className=" relative right-40 top-0 text-xl" invert />
       </NavigationRow>
