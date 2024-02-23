@@ -56,13 +56,21 @@ function Header({
 
   useEffect(() => {
     let interval;
-    if (!expanded) { // Only start the interval if the menu is not expanded
-      interval = setInterval(() => {
-        setIsShaking((prev) => !prev); // Toggle the isShaking state
-      }, 2000); // Change the state every 2 seconds
+    let timeout;
+
+    if (!expanded) {
+      // Start the shake animation with a delay of 1 second
+      timeout = setTimeout(() => {
+        interval = setInterval(() => {
+          setIsShaking(prev => !prev);
+        }, 2000); // Toggle the isShaking state every 2 seconds
+      }, 1000); // Delay of 1 second before the interval starts
     }
 
-    return () => clearInterval(interval); // Clear interval when the component unmounts or expanded changes
+    return () => {
+      clearInterval(interval); // Clear interval when the component unmounts or expanded changes
+      clearTimeout(timeout); // Clear timeout when the component unmounts or expanded changes
+    };
   }, [expanded]); // Re-run effect when expanded changes
 
   const hcLogoClass = clsx(
