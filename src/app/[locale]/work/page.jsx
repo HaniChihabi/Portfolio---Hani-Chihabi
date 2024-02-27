@@ -1,56 +1,26 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { GridList, GridListItem } from '@/components/GridList'
-import { GridPattern } from '@/components/GridPattern'
-import { Blockquote } from '@/components/Blockquote'
-import { Border } from '@/components/Border'
-import { Button } from '@/components/Button'
-import { ContactSection } from '@/components/ContactSection'
-import { Container } from '@/components/Container'
-import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import logoBrightPath from '@/images/clients/bright-path/logo-dark.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-dark.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-dark.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-dark.svg'
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-dark.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-dark.svg'
-import logoPhobia from '@/images/clients/phobia/logo-dark.svg'
-import logoUnseal from '@/images/clients/unseal/logo-dark.svg'
-import { formatDate } from '@/lib/formatDate'
-import { loadCaseStudies } from '@/lib/mdx'
-import { SectionIntro } from '@/components/SectionIntro'
-import { StylizedImage } from '@/components/StylizedImage'
-import imageLaptop from '@/images/laptop.jpg'
-import { List, ListItem } from '@/components/List'
-import imagePacman from '@/images/pacman.jpg'
-import imageCanIBall from '@/images/caniball.jpg'
-import imagePrayertimes from '@/images/prayertimes.jpg'
-import Layout from '@/components/Layout';
-import ButtonUp from '@/components/ButtonUp'
+import { GridList, GridListItem } from '../../../components/GridList'
+import { GridPattern } from '../../../components/GridPattern'
+import { Blockquote } from '../../../components/Blockquote'
+import { Border } from '../../..//components/Border'
+import { Button } from '../../../components/Button'
+import { ContactSection } from '../../../components/ContactSection'
+import { Container } from '../../../components/Container'
+import { FadeIn, FadeInStagger } from '../../../components/FadeIn'
+import { formatDate } from '../../../lib/formatDate'
+import { SectionIntro } from '../../../components/SectionIntro'
+import { StylizedImage } from '../../../components/StylizedImage'
+import imageLaptop from '../../../images/laptop.jpg'
+import { List, ListItem } from '../../../components/List'
+import imagePacman from '../../../images/pacman.jpg'
+import imageCanIBall from '../../../images/caniball.jpg'
+import imagePrayertimes from '../../../images/prayertimes.jpg'
+import Layout from '../../../components/Layout';
+import ButtonUp from '../../../components/ButtonUp'
 
-function Culture() {
-  return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
-      <Container className="mt-16">
-        <GridList className='mb-24'>
-          <GridListItem title="Loyalty" invert>
-            Our team has been with us since the beginning because none of them
-            are allowed to have LinkedIn profiles.
-          </GridListItem>
-          <GridListItem title="Trust" invert>
-            We don’t care when our team works just as long as they are working
-            every waking second.
-          </GridListItem>
-          <GridListItem title="Compassion" invert>
-            You never know what someone is going through at home and we make
-            sure to never find out.
-          </GridListItem>
-        </GridList>
-      </Container>
-    </div>
-  )
-}
+
 function Values() {
   return (
     <div className="relative mt-24 pt-24 sm:mt-32 sm:pt-32 lg:mt-48 lg:pt-20">
@@ -88,76 +58,7 @@ function Values() {
     </div>
   )
 }
-function CaseStudies({ caseStudies }) {
-  return (
-    <Container className="mt-40">
-      <FadeIn>
-        <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          Case studies
-        </h2>
-      </FadeIn>
-      <div className="mt-10 space-y-20 sm:space-y-24 lg:space-y-32">
-        {caseStudies.map((caseStudy) => (
-          <FadeIn key={caseStudy.client}>
-            <article>
-              <Border className="grid grid-cols-3 gap-x-8 gap-y-8 pt-16">
-                <div className="col-span-full sm:flex sm:items-center sm:justify-between sm:gap-x-8 lg:col-span-1 lg:block">
-                  <div className="sm:flex sm:items-center sm:gap-x-6 lg:block">
-                    <Image
-                      src={caseStudy.logo}
-                      alt=""
-                      className="h-16 w-16 flex-none"
-                      unoptimized
-                    />
-                    <h3 className="mt-6 text-sm font-semibold text-neutral-950 sm:mt-0 lg:mt-8">
-                      {caseStudy.client}
-                    </h3>
-                  </div>
-                  <div className="mt-1 flex gap-x-4 sm:mt-0 lg:block">
-                    <p className="text-sm tracking-tight text-neutral-950 after:ml-4 after:font-semibold after:text-neutral-300 after:content-['/'] lg:mt-2 lg:after:hidden">
-                      {caseStudy.service}
-                    </p>
-                    <p className="text-sm text-neutral-950 lg:mt-2">
-                      <time dateTime={caseStudy.date}>
-                        {formatDate(caseStudy.date)}
-                      </time>
-                    </p>
-                  </div>
-                </div>
-                <div className="col-span-full lg:col-span-2 lg:max-w-2xl">
-                  <p className="font-display text-4xl font-medium text-neutral-950">
-                    <Link href={caseStudy.href}>{caseStudy.title}</Link>
-                  </p>
-                  <div className="mt-6 space-y-6 text-base text-neutral-600">
-                    {caseStudy.summary.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
-                  </div>
-                  <div className="mt-8 flex">
-                    <Button
-                      href={caseStudy.href}
-                      aria-label={`Read case study: ${caseStudy.client}`}
-                    >
-                      Read case study
-                    </Button>
-                  </div>
-                  {caseStudy.testimonial && (
-                    <Blockquote
-                      author={caseStudy.testimonial.author}
-                      className="mt-12"
-                    >
-                      {caseStudy.testimonial.content}
-                    </Blockquote>
-                  )}
-                </div>
-              </Border>
-            </article>
-          </FadeIn>
-        ))}
-      </div>
-    </Container>
-  )
-}
+
 
 function Services() {
   return (
@@ -277,19 +178,8 @@ function Team() {
   )
 }
 
-const clients = [
-  ['Phobia', logoPhobia],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
-]
 
 export default async function Work() {
-  let caseStudies = await loadCaseStudies()
   const intro = (
     <SectionIntro className='relative font-display top-10 left-0'
 

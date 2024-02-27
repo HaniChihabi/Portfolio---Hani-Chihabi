@@ -1,13 +1,13 @@
-import { Container } from '@/components/Container'
-import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import { SectionIntro } from '@/components/SectionIntro'
-import imageLaptop from '@/images/laptop.jpg'
-import { StylizedImage } from '@/components/StylizedImage'
-import { Blockquote } from '@/components/Blockquote'
-import imageBasketball from '@/images/basketball.jpg'
-import imageCar from '@/images/car.jpeg'
-import Layout from '@/components/Layout';
-import ButtonUp from '@/components/ButtonUp'
+import { Container } from '../../../components/Container'
+import { FadeIn, FadeInStagger } from '../../../components/FadeIn'
+import { SectionIntro } from '../../../components/SectionIntro'
+import imageLaptop from '../../../images/laptop.jpg'
+import { StylizedImage } from '../../../components/StylizedImage'
+import { Blockquote } from '../../../components/Blockquote'
+import imageBasketball from '../../../images/basketball.jpg'
+import imageCar from '../../../images/car.jpeg'
+import Layout from '../../../components/Layout';
+import ButtonUp from '../../../components/ButtonUp'
 
 function Section({ title, image, children }) {
   return (

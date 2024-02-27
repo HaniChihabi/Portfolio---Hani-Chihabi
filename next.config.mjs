@@ -10,6 +10,9 @@ import { remarkRehypeWrap } from 'remark-rehype-wrap'
 import remarkUnwrapImages from 'remark-unwrap-images'
 import shiki from 'shiki'
 import { unifiedConditional } from 'unified-conditional'
+import createNextIntlPlugin from 'next-intl/plugin';
+ 
+const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -41,7 +44,7 @@ function remarkMDXLayout(source, metaName) {
   }
 }
 
-export default async function config() {
+export async function config() {
   let highlighter = await shiki.getHighlighter({
     theme: 'css-variables',
   })
@@ -81,3 +84,6 @@ export default async function config() {
 
   return withMDX(nextConfig)
 }
+
+export default withNextIntl(nextConfig);
+

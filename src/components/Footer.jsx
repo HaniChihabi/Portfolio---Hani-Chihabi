@@ -1,9 +1,9 @@
 import Link from 'next/link'
 
-import { Container } from '@/components/Container'
-import { FadeIn } from '@/components/FadeIn'
-import { Logo } from '@/components/Logo'
-import { socialMediaProfiles } from '@/components/SocialMedia'
+import { Container } from './Container'
+import { FadeIn } from './FadeIn'
+import { Logo } from './Logo'
+import { socialMediaProfiles } from './SocialMedia'
 
 const navigation = [
   {

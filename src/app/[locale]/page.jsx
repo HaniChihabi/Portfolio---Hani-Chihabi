@@ -1,12 +1,10 @@
 import Image from 'next/image'
-import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import imageMe from '@/images/kolnn.jpeg'
-import { Border } from '@/components/Border'
-import { SocialMedia } from '@/components/SocialMedia'
+import { FadeIn, FadeInStagger } from '../../components/FadeIn'
+import imageMe from '../../images/kolnn.jpeg'
+import { Border } from '../../components/Border'
+import { SocialMedia } from '../../components/SocialMedia'
 
-import { loadCaseStudies } from '@/lib/mdx'
 export default async function Home() {
-  let caseStudies = (await loadCaseStudies()).slice(0, 3)
 
   return (
     <>
