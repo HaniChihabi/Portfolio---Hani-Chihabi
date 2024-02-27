@@ -1,4 +1,4 @@
-
+"use client"
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { GridList, GridListItem } from '@/components/GridList'
@@ -204,6 +204,13 @@ export default async function About() {
         <Deliver />
       </div>
       <Culture />
+      <button
+      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      className="fixed bottom-4 right-4 bg-neutral-950 text-white px-4 py-2 rounded-full hover:bg-neutral-700"
+      aria-label="Scroll to top"
+    >
+      ↑
+    </button>
       </Layout>
     </>
   )
