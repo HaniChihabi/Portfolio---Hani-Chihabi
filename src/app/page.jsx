@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import imageMe from '@/images/me.jpeg'
+import imageMe from '@/images/kolnnew.jpeg'
 import { Border } from '@/components/Border'
 import { SocialMedia } from '@/components/SocialMedia'
 

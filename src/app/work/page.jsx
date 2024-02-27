@@ -301,12 +301,13 @@ export default async function Work() {
     <>
     <Layout intro={intro}>
 
-      <Services />
+      <Services />   
+         <Team />
+
       <Values />
      
 
 
-      <Team />
       <ContactSection />
 
 {/* projects */}

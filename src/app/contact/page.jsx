@@ -50,41 +50,6 @@ function RadioInput({ label, ...props }) {
 
 
 
-function ContactDetails() {
-  return (
-    <FadeIn>
-    
-        <h2 className="font-display text-base font-semibold text-neutral-950">
-          Email me
-        </h2>
-        <dl className="mt-6 grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
-          {[
-            ['Email', 'hanichihabih@gmail.com']
-          ].map(([label, email]) => (
-            <div key={email}>
-              <dt className="font-semibold text-neutral-950">{label}</dt>
-              <dd>
-                <Link
-                  href={`mailto:${email}`}
-                  className="text-neutral-600 hover:text-neutral-950"
-                >
-                  {email}
-                </Link>
-              </dd>
-            </div>
-          ))}
-        </dl>
-
-      <Border className="mt-16 pt-16">
-        <h2 className="font-display text-base font-semibold text-neutral-950">
-          Follow us
-        </h2>
-        <SocialMedia className="mt-6" />
-      </Border>
-    </FadeIn>
-  )
-}
-
 export default function Contact() {
   const intro = (
     <SectionIntro className='relative font-display top-10 left-0'
@@ -147,7 +112,7 @@ export default function Contact() {
     <>
       <Layout intro={intro}>
         
-      <Container className="mt-244 sm:mt-56 lg:mt-72">
+      <Container className="block mt-244 sm:mt-56 lg:mt-72">
         <div className="grid grid-cols-1 gap-x-8 gap-y-24 lg:grid-cols-2 relative bottom-28">
         <FadeIn className="lg:order-last">
       <form onSubmit={handleSubmit}>
@@ -176,7 +141,6 @@ export default function Contact() {
         </Button>
       </form>
     </FadeIn>
-          <ContactDetails />
         </div>
       </Container>
       </Layout>
