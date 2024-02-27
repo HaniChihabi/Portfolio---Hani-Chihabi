@@ -157,11 +157,11 @@ function Navigation() {
         {/* Apply justify-start to align "My Work" to the start */}
         <NavigationItem href="/work" className="justify-start"><p>My Work</p></NavigationItem>
         {/* Apply justify-end to align "About Me" to the end */}
-        <NavigationItem href="/about" className="justify-end"><p>About Me</p></NavigationItem>
+        <NavigationItem href="/contact" className="justify-end"><p>Contact</p></NavigationItem>
       </NavigationRow>
       <NavigationRow>
         {/* Apply justify-start to align "Contact" to the start */}
-        <NavigationItem href="/contact" className="justify-start"><p>Contact</p></NavigationItem>
+        <NavigationItem href="/about" className="justify-start"><p>About Me</p></NavigationItem>
         {/* Adjustments for the SocialMedia component may be needed if you want it aligned in a specific way */}
         <SocialMedia className="relative right-0 top-0 text-xl" invert />
       </NavigationRow>
