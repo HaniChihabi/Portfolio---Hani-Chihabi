@@ -1,11 +1,13 @@
 import Image from 'next/image'
-import { FadeIn, FadeInStagger } from '../../components/FadeIn'
-import imageMe from '../../images/kolnn.jpeg'
-import { Border } from '../../components/Border'
-import { SocialMedia } from '../../components/SocialMedia'
+import { FadeIn, FadeInStagger } from './components/FadeIn'
+import imageMe from './images/kolnn.jpeg'
+import { Border } from './components/Border'
+import { SocialMedia } from './components/SocialMedia'
+import React from 'react';
+import {useTranslations} from 'next-intl';
 
-export default async function Home() {
-
+export default function Home() {
+const t = useTranslations('home');
   return (
     <>
       <section className="overflow-hidden">
@@ -13,19 +15,21 @@ export default async function Home() {
       <FadeIn className='h-[1000px] block lg:flex-row items-center justify-center overflow-hidden relative top-48'>
         {/* Content Container */}
         <div className="flex-1 flex items-center justify-center ml-5">
-          <div className="max-w-sm md:max-w-3xl lg:max-w-3xl sm:text-center ">
-          <h1 className="font-display font-extralight tracking-tight text-neutral-950 lg:text-6xl md:text-5xl sm:text-5xl">
-              Hey, my name is 
+          <div className="max-w-sm md:max-w-4xl lg:max-w-[680px] sm:text-center ">
+            <h1 className="font-display font-extralight tracking-tight text-neutral-950 lg:text-6xl md:text-5xl sm:text-5xl">
+            {t('header1')}
             </h1>
+            
             <h1 className="font-display font-normal tracking-normal text-neutral-950 lg:text-7xl md:text-6xl sm:text-6xl mb-0">
-              Hani Chihabi
+              {t('header2')}
             </h1>
-           
-            <p className="font-display top-10 text-neutral-600 lg:leading-relaxed md:leading-relaxed sm:leading-relaxed lg:pb-0 sm:pb-8 font-light lg:text-4xl md:text-3xl sm:text-3xl relative">
-            I am a passionate software developer, <br /> living in Germany. I build cool projects and<br />  .
+
+            <p className="font-display top-10 text-neutral-600 lg:leading-relaxed md:leading-relaxed sm:leading-relaxed lg:pb-0 sm:pb-8 font-light lg:text-4xl md:text-3xl sm:text-3xl relative mb-14">
+            {t('intro1')}
             </p>
+
             <p className="font-display text-neutral-600 lg:leading-relaxed md:leading-relaxed sm:leading-relaxed  font-semibold lg:text-4xl md:text-3xl sm:text-3xl relative left-0 bottom-3 lg:pb-0 sm:pb-8">
-            I focus on crafting effective solutions.
+            {t('intro2')}
             </p>
           </div>
         </div>

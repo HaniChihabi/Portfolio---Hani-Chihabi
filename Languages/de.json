@@ -1,3 +1,26 @@
 {
-    "Test" : "Hani ist ein fool"
+    "home" : {
+        "header1" : "Hey, mein Name ist",
+        "header2" : "Hani Chihabi",
+        "intro1": "Ich bin ein Softwareentwickler aus Deutschland.             Ich baue coole Projekte und",
+        "intro2": "ich lege Wert darauf, effektive Lösungen zu entwickeln."
+
+    },
+    "Me":{
+        "title" : "My name is Hani",
+        "text1" : "I'm 22 years old and currently living in Germany. My passion for learning drives me every day.",
+        "text2" : "My goal is simple: to become the best version of myself, exploring new horizons both personally and professionally."
+
+    },
+    "Basketball":{
+        "title" : "My name ist Hani",
+        "text1" : "For me, basketball is more than just a sport; it's a form of therapy. Playing outside every day, I find peace and balance that helps me navigate life's ups and downs. The court is where I clear my mind and rejuvenate my spirit.",
+        "text2" : "Each game is a lesson in teamwork, perseverance, and pushing beyond limits. Whether it's a friendly match or a solo practice, basketball has been a constant source of joy and a testament to the power of dedication."
+    },
+    "Coding":{
+        "title" : "Software Development Journey",
+        "text1" : "Software development has been an exhilarating journey for me. From the thrill of building new projects to the collaboration with talented peers, each aspect has enriched my experience in the tech world.",
+        "text2" : "My laptop is my gateway to creation. It accompanies me everywhere - from cozy cafes to serene green spaces and even on vacations. This mobility allows me to draw inspiration from various environments, keeping my work fresh and innovative.",
+        "text3" : "Engaging in software development has not just been about coding; it's about bringing ideas to life, solving real-world problems, and making an impact through technology."
+    }
 }

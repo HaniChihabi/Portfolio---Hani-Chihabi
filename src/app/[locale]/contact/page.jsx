@@ -2,15 +2,15 @@
 import { useId } from 'react'
 import Link from 'next/link'
 
-import { Border } from '@/components/Border'
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import { FadeIn } from '@/components/FadeIn'
-import { Offices } from '@/components/Offices'
-import { PageIntro } from '@/components/PageIntro'
-import { SocialMedia } from '@/components/SocialMedia'
-import Layout from '@/components/Layout';
-import { SectionIntro } from '@/components/SectionIntro'
+import { Border } from '../components/Border'
+import { Button } from '../components/Button'
+import { Container } from '../components/Container'
+import { FadeIn } from '../components/FadeIn'
+import { Offices } from '../components/Offices'
+import { PageIntro } from '../components/PageIntro'
+import { SocialMedia } from '../components/SocialMedia'
+import Layout from '../components/Layout';
+import { SectionIntro } from '../components/SectionIntro'
 
 
 function TextInput({ label, ...props }) {

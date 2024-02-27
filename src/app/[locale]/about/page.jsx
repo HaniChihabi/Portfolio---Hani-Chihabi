@@ -1,13 +1,14 @@
-import { Container } from '../../../components/Container'
-import { FadeIn, FadeInStagger } from '../../../components/FadeIn'
-import { SectionIntro } from '../../../components/SectionIntro'
-import imageLaptop from '../../../images/laptop.jpg'
-import { StylizedImage } from '../../../components/StylizedImage'
-import { Blockquote } from '../../../components/Blockquote'
-import imageBasketball from '../../../images/basketball.jpg'
-import imageCar from '../../../images/car.jpeg'
-import Layout from '../../../components/Layout';
-import ButtonUp from '../../../components/ButtonUp'
+import { Container } from '../components/Container'
+import { FadeIn, FadeInStagger } from '../components/FadeIn'
+import { SectionIntro } from '../components/SectionIntro'
+import imageLaptop from '../images/laptop.jpg'
+import { StylizedImage } from '../components/StylizedImage'
+import { Blockquote } from '../components/Blockquote'
+import imageBasketball from '../images/basketball.jpg'
+import imageCar from '../images/car.jpeg'
+import Layout from '../components/Layout';
+import ButtonUp from '../components/ButtonUp'
+import {useTranslations} from 'next-intl';
 
 function Section({ title, image, children }) {
   return (
@@ -53,15 +54,17 @@ function Culture() {
 }
 
 function Discover() {
+  const t = useTranslations('Me')
+
   return (
     
-    <Section className='text-2xl' title=" My name is Hani" image={{ src: imageCar }}>
+    <Section className='text-2xl' title={t('title')} image={{ src: imageCar }}>
       <div className="space-y-6 text-neutral-600 text-xl">
       <p>
-          I'm 22 years old and currently living in Germany. My passion for learning drives me every day.
+          {t('text1')}
         </p>
         <p>
-          My goal is simple: to become the best version of myself, exploring new horizons both personally and professionally.
+        {t('text2')}
         </p>
       </div>
 
@@ -81,16 +84,15 @@ function Discover() {
 }
 
 function Build() {
+  const t = useTranslations('Basketball')
   return (
-    <Section title="Basketball - My Therapy" image={{ src: imageBasketball, shape: 1 }}>
+    <Section title={t('title')} image={{ src: imageBasketball, shape: 1 }}>
       <div className="space-y-6 text-neutral-600 text-xl">
         <p>
-        For me, basketball is more than just a sport; it's a form of therapy. Playing outside every day, I find peace and balance that helps me navigate life's ups and downs. The court is where I clear my mind and rejuvenate my spirit.
-
+          {t('text1')}
         </p>
         <p>
-        Each game is a lesson in teamwork, perseverance, and pushing beyond limits. Whether it's a friendly match or a solo practice, basketball has been a constant source of joy and a testament to the power of dedication.
-
+          {t('text2')}
         </p>
       </div>
 
@@ -106,20 +108,19 @@ function Build() {
 }
 
 function Deliver() {
+  const t = useTranslations('Coding')
   return (
-    <Section title="Software Development Journey" image={{ src: imageLaptop, shape: 2 }}>
+    <Section title={t('title')} image={{ src: imageLaptop, shape: 2 }}>
       <div className="space-y-6 text-xl text-neutral-600">
         <p>
-        Software development has been an exhilarating journey for me. From the thrill of building new projects to the collaboration with talented peers, each aspect has enriched my experience in the tech world.
+          {t('text1')}
+        </p>
+        <p>
+          {t('text2')}
 
         </p>
         <p>
-        My laptop is my gateway to creation. It accompanies me everywhere - from cozy cafes to serene green spaces and even on vacations. This mobility allows me to draw inspiration from various environments, keeping my work fresh and innovative.
-
-        </p>
-        <p>
-        Engaging in software development has not just been about coding; it's about bringing ideas to life, solving real-world problems, and making an impact through technology.
-
+          {t('text3')}
         </p>
       </div>
 
