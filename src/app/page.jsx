@@ -16,7 +16,7 @@ export default async function Home() {
         {/* Content Container */}
         <div className="flex-1 flex items-center justify-center ml-5">
           <div className="max-w-sm md:max-w-3xl lg:max-w-3xl sm:text-center ">
-          <h1 className="font-display font-extralight tracking-tight text-neutral-950 lg:text-7xl md:text-5xl sm:text-5xl">
+          <h1 className="font-display font-extralight tracking-tight text-neutral-950 lg:text-6xl md:text-5xl sm:text-5xl">
               Hey, my name is 
             </h1>
             <h1 className="font-display font-normal tracking-normal text-neutral-950 lg:text-7xl md:text-6xl sm:text-6xl mb-0">
