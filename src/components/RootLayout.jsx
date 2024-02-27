@@ -142,7 +142,7 @@ function NavigationItem({ href, children, className }) {
   return (
     <Link
       href={href}
-      className={`group relative isolate -mx-6 bg-neutral-950 w-1/2 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16 flex items-center ${className}`}
+      className={`group relative isolate -mx-6 bg-neutral-950 w-1/2 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-neutral-800 sm:even:pl-16 flex items-center ${className}`}
     >
       {children}
       <span className="absolute inset-y-0 -z-10 w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100" />
