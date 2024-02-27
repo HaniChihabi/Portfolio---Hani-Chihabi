@@ -19,6 +19,7 @@ import imageCanIBall from '../images/caniball.jpg'
 import imagePrayertimes from '../images/prayertimes.jpg'
 import Layout from '../components/Layout';
 import ButtonUp from '../components/ButtonUp'
+import {useTranslations} from 'next-intl';
 
 
 function Values() {
@@ -61,6 +62,7 @@ function Values() {
 
 
 function Services() {
+  const t = useTranslations('work')
   return (
     <>
       <Container className="mt-32">
@@ -75,14 +77,14 @@ function Services() {
             </FadeIn>
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4 text-2xl">
-            <ListItem    title="Web development" className="text-xl p-4">
-            Custom, responsive websites with secure hosting. Prioritizing user-friendly designs and reliable support.
+            <ListItem    title={t('sec1.title')} className="text-xl p-4">
+              {t('sec1.text')}
             </ListItem>
-            <ListItem title="Application development">
-            Custom app development with a focus on UX/UI design, cross-platform compatibility, secure coding, and ongoing support.
+            <ListItem    title={t('sec2.title')} className="text-xl p-4">
+              {t('sec2.text')}
             </ListItem>
-            <ListItem title="Custom Software Solutions">
-            Address custom requests with scalable, secure software solutions and dedicated post-launch support.
+            <ListItem    title={t('sec3.title')} className="text-xl p-4">
+              {t('sec3.text')}
             </ListItem>
           </List>
         </div>
@@ -97,32 +99,32 @@ const team = [
     people: [
       {
         name: 'Pac-Man',
-        role: 'Recreated Game',
+        // role: 'Recreated Game',
         image: { src: imagePacman },
       },
       {
         name: 'Can I Ball',
-        role: 'Basketball Weather App',
+        // role: 'Basketball Weather App',
         image: { src: imageCanIBall },
       },
       {
         name: 'Prayer Mauaqit',
-        role: 'Prayer Times App',
+        // role: 'Prayer Times App',
         image: { src: imagePrayertimes },
       },
       {
         name: 'Blake Reid',
-        role: 'Junior Copywriter',
+        // role: 'Junior Copywriter',
         image: { src: imageLaptop },
       },
       {
         name: 'Kathryn Murphy',
-        role: 'VP, Human Resources',
+        // role: 'VP, Human Resources',
         image: { src: imageLaptop },
       },
       {
         name: 'Whitney Francis',
-        role: 'Content Specialist',
+        // role: 'Content Specialist',
         image: { src: imageLaptop },
       }
     ],
@@ -179,11 +181,11 @@ function Team() {
 }
 
 
-export default async function Work() {
+export default function Work() {
+  const t = useTranslations('work')
   const intro = (
     <SectionIntro className='relative font-display top-10 left-0'
-
-      title="My Work"
+      title={t('header')}
     />
   );
 
