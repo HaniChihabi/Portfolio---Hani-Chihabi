@@ -27,7 +27,7 @@ import imagePacman from '@/images/pacman.jpg'
 import imageCanIBall from '@/images/caniball.jpg'
 import imagePrayertimes from '@/images/prayertimes.jpg'
 import Layout from '@/components/Layout';
-
+import ButtonUp from '@/components/ButtonUp'
 
 function Culture() {
   return (
@@ -312,7 +312,7 @@ export default async function Work() {
 {/* projects */}
       
 
-
+<ButtonUp />
 </Layout>
     </>
   )
