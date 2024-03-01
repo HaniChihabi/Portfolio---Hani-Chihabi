@@ -9,10 +9,9 @@ import {
   useState,
 } from 'react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
-
+import LanguageSwitcher from './LanguageSwitcher'
 import { Button } from './Button'
 import { Container } from '../components/Container'
 import { Footer } from '../components/Footer'
@@ -22,6 +21,8 @@ import { Offices } from './Offices'
 import { SocialMedia } from './SocialMedia'
 import { button } from '@nextui-org/react'
 import 'animate.css';
+import {useTranslations} from 'next-intl';
+import { usePathname } from "next/navigation";
 
 
 const RootLayoutContext = createContext(null)
@@ -82,12 +83,19 @@ function Header({
     }
   );
 
+  useEffect(() => {
+    const language = window.location.pathname.split('/')[1];
+    setCurrentLanguage(language);
+}, []);
+
+const [currentLanguage, setCurrentLanguage] = useState('');
+
   return (
     <Container>
       <div className="flex items-center justify-between">
         <div className="flex items-center">
           <Link
-            href="/"
+            href={`/${currentLanguage}`}
             aria-label="Home"
             className={hcLogoClass}>HC</Link>
 
@@ -96,8 +104,7 @@ function Header({
             <h2 className="text-xl font-semibold" >Our Culture</h2>
           </div> */}
         </div>
-
-        <button
+                <button
           ref={toggleRef}
           type="button"
           onClick={() => {
@@ -129,6 +136,7 @@ function Header({
 
 
 function NavigationRow({ children }) {
+  
   return (
     <div className="even:mt-px sm:bg-neutral-950">
       <Container>
@@ -139,6 +147,7 @@ function NavigationRow({ children }) {
 }
 
 function NavigationItem({ href, children, className }) {
+  
   return (
     <Link
       href={href}
@@ -151,18 +160,21 @@ function NavigationItem({ href, children, className }) {
 }
 
 function Navigation() {
+  useEffect(() => {
+    const language = window.location.pathname.split('/')[1];
+    setCurrentLanguage(language);
+}, []);
+
+const [currentLanguage, setCurrentLanguage] = useState('');
+  
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
-        {/* Apply justify-start to align "My Work" to the start */}
-        <NavigationItem href="/work" className="justify-start"><p>My Work</p></NavigationItem>
-        {/* Apply justify-end to align "About Me" to the end */}
-        <NavigationItem href="/contact" className="justify-end"><p>Contact</p></NavigationItem>
+        <NavigationItem href={`/${currentLanguage}/work`} className="justify-start"><p>My Work</p></NavigationItem>
+        <NavigationItem href={`/${currentLanguage}/contact`} className="justify-end"><p>Contact</p></NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        {/* Apply justify-start to align "Contact" to the start */}
-        <NavigationItem href="/about" className="justify-start"><p>About Me</p></NavigationItem>
-        {/* Adjustments for the SocialMedia component may be needed if you want it aligned in a specific way */}
+        <NavigationItem href={`/${currentLanguage}/about`} className="justify-start"><p>About Me</p></NavigationItem>
         <SocialMedia className="relative right-0 top-0 text-xl" invert />
       </NavigationRow>
     </nav>
@@ -240,6 +252,7 @@ function RootLayoutInner({ children }) {
                   )
                 }}
               />
+              
             </div>
             <Navigation />
             
@@ -273,6 +286,7 @@ function RootLayoutInner({ children }) {
 export function RootLayout({ children }) {
   let pathname = usePathname()
   let [logoHovered, setLogoHovered] = useState(false)
+  
 
   return (
     <RootLayoutContext.Provider value={{ logoHovered, setLogoHovered }}>

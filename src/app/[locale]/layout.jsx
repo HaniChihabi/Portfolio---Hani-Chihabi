@@ -1,5 +1,6 @@
 import { RootLayout } from './components/RootLayout';
 import './styles/tailwind.css';
+import { Providers } from './providers';
 
 export const metadata = {
   title: {
@@ -21,7 +22,11 @@ function LocaleLayout({ children, locale }) {
 export default function Layout({ children, params: { locale } }) {
   return (
     <LocaleLayout locale={locale}>
+            <Providers>
+
       <RootLayout>{children}</RootLayout>
+      </Providers>
+
     </LocaleLayout>
   );
 }
