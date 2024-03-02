@@ -97,21 +97,18 @@ const [currentLanguage, setCurrentLanguage] = useState('');
           <Link
             href={`/${currentLanguage}`}
             aria-label="Home"
-            className={hcLogoClass}>HC</Link>
-
-          {/* Position your section intro here, to the right of the HC logo */}
-          {/* <div className="ml-4">
-            <h2 className="text-xl font-semibold" >Our Culture</h2>
-          </div> */}
-        </div>{expanded && (
-            // LanguageButton only appears when the menu is expanded
+            className={hcLogoClass}
+          >
+            HC
+          </Link>
+        </div>
+        <div className="flex items-center">
+          {!expanded && (
+            // Only show the LanguageButton when the menu is not expanded
             <div className="pr-4">
               <LanguageButton />
             </div>
           )}
-        <div className="flex items-center">
-          
-
           <button
             ref={toggleRef}
             type="button"
