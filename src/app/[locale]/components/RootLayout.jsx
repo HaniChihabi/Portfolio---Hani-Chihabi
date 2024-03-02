@@ -82,11 +82,21 @@ function Header({
       'fade-in scale-up': expanded, // Apply animation classes when expanded
     }
   );
+  // Updated Globe definition
+  const globeClasses = clsx(
+    'font-bold text-4xl z-50 transition-all duration-300 ease-in-out transform hover:scale-105', // Basic classes
+    {
+      'text-black': !expanded, // Color when menu is not expanded
+      'text-white': expanded, // Color when menu is expanded
+      'fade-in scale-up': expanded, // Apply animation classes when expanded
+    }
+  );
 
   useEffect(() => {
     const language = window.location.pathname.split('/')[1];
     setCurrentLanguage(language);
 }, []);
+
 
 const [currentLanguage, setCurrentLanguage] = useState('');
 
@@ -103,12 +113,9 @@ const [currentLanguage, setCurrentLanguage] = useState('');
           </Link>
         </div>
         <div className="flex items-center">
-          {!expanded && (
-            // Only show the LanguageButton when the menu is not expanded
-            <div className="pr-4">
-              <LanguageButton />
+            <div className={""}>
+              <LanguageButton className={globeClasses} />
             </div>
-          )}
           <button
             ref={toggleRef}
             type="button"
