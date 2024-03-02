@@ -38,7 +38,7 @@ const t = useTranslations('home');
        {/* Image Container */}
        <div className="flex-1 flex items-center justify-center">
         <div className="h-full w-full max-w-lg flex justify-center items-center">
-          <div className='h-[200px] w-[200px] relative rounded-4xl overflow-hidden mt-8'>
+          <div className='h-[200px] w-[200px] relative rounded-4xl overflow-hidden mt-0'>
             <Image 
               src={imageMe}
               alt="A descriptive alt text"

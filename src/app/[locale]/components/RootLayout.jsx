@@ -113,9 +113,12 @@ const [currentLanguage, setCurrentLanguage] = useState('');
           </Link>
         </div>
         <div className="flex items-center">
+          {!expanded&&(
             <div className={""}>
               <LanguageButton className={globeClasses} />
-            </div>
+            </div>)}
+            
+            
           <button
             ref={toggleRef}
             type="button"

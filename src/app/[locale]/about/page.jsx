@@ -12,8 +12,7 @@ import {useTranslations} from 'next-intl';
 
 function Section({ title, image, children }) {
   return (
-    <Container className="group/section [counter-increment:section]">
-      
+    <Container className="group/section [counter-increment:section]">      
       <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-20">
         <div className="flex justify-center">
           <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
@@ -44,12 +43,12 @@ function Section({ title, image, children }) {
 function Culture() {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32 relative top-10">
-
-<blockquote className="relative font-display text-3xl font-medium tracking-tight text-white sm:text-4xl">
-              <p className="flex justify-center sm:before:absolute sm:before:right-full text-white mb-10">
-                Welcome to my journey
-              </p>
-      </blockquote>    </div>
+      <blockquote className="relative font-display text-3xl font-medium tracking-tight text-white sm:text-4xl">
+        <p className="flex justify-center sm:before:absolute sm:before:right-full text-white mb-10">
+          Welcome to my journey
+        </p>
+      </blockquote>
+    </div>
   )
 }
 

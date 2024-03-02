@@ -13,7 +13,7 @@ export default function Example() {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex justify-center gap-x-1.5   text-5xl mr-16 font-normal text-black shadow-sm hover:text-gray-500 ">
+        <Menu.Button className="inline-flex justify-center gap-x-1.5   text-4xl mr-16 font-normal text-black shadow-sm hover:text-gray-500 ">
         <GlobalOutlined />
         </Menu.Button>
       </div>
