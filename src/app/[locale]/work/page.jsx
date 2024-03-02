@@ -14,9 +14,11 @@ import { SectionIntro } from '../components/SectionIntro'
 import { StylizedImage } from '../components/StylizedImage'
 import imageLaptop from '../images/laptop.jpg'
 import { List, ListItem } from '../components/List'
-import imagePacman from '../images/pacman.jpg'
+import imagePacman from '../images/pac2.jpg'
 import imageCanIBall from '../images/caniball.jpg'
 import imagePrayertimes from '../images/prayertimes.jpg'
+import imageBg from '../images/Background.jpg'
+import Modal from '../components/Modal'
 import Layout from '../components/Layout';
 import ButtonUp from '../components/ButtonUp'
 import {useTranslations} from 'next-intl';
@@ -67,6 +69,7 @@ function Services() {
         <div className="lg:flex lg:items-center lg:justify-end">
           <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
             <FadeIn className="w-[33.75rem] flex-none lg:w-[40rem]">
+              
               <StylizedImage
                 src={imageLaptop}
                 sizes="(min-width: 1024px) 41rem, 31rem"
@@ -96,11 +99,10 @@ const team = [
     title: '',
     people: [
       {
-        name: 'Pac-Man',
-         role: 'Recreated Game',
-
+        name: 'Pac-Man',   
+             link: 'https://github.com/HaniChihabi/studio-js', // Add your GitHub project URL here       
+             videoLink: 'ef', // Relative path from the public directory
         image: { src: imagePacman },
-        link: 'https://github.com/yourusername/pacman-project', // Add your GitHub project URL here       
       },
       {
         name: 'Can I Ball',
@@ -115,7 +117,7 @@ const team = [
       {
         name: 'Blake Reid',
         // role: 'Junior Copywriter',
-        image: { src: imageLaptop },
+        image: { src: imageBg },
       },
       {
         name: 'Kathryn Murphy',
@@ -132,6 +134,7 @@ const team = [
 ]
 
 function Team() {
+  
   return (
     <Container className="mt-16 sm:mt-32 lg:mt-0 mb-10" >
       <div className="space-y-24">
@@ -163,10 +166,14 @@ function Team() {
                             <p className="font-display text-base/6 font-semibold tracking-wide text-white">
                               {person.name}
                             </p>
-                            <p className="mt-2 text-sm text-white">
-                              {person.role}
-                            </p>
-                            
+                            {person.link && (
+                              <a href={person.link} target="_blank" rel="noopener noreferrer" className="mt-2 text-sm text-white underline">
+                                View Project
+                              </a>
+                            )}
+                            {person.videoLink && (
+                              <Modal/>
+                                    )}
                           </div>
                         </div>
                       </FadeIn>
