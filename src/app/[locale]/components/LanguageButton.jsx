@@ -5,8 +5,9 @@ import {Select, SelectItem, Avatar} from "@nextui-org/react";
 export default function LanguageButton() {
   return (
     <Select
-      className="w-[120px] bg-black "
+      className="w-[120px] bg-background/30 "
       size="sm"
+      color="black"
       
     >
       <SelectItem

@@ -23,6 +23,8 @@ import {useTranslations} from 'next-intl';
 
 
 function Values() {
+  const t = useTranslations('Me')
+
   return (
     <div className="relative mt-24 pt-24 sm:mt-32 sm:pt-32 lg:mt-48 lg:pt-20">
       <div className="absolute inset-x-0 top-0 -z-10 h-[884px] overflow-hidden rounded-t-4xl bg-gradient-to-b from-neutral-50">
@@ -95,8 +97,10 @@ const team = [
     people: [
       {
         name: 'Pac-Man',
-        // role: 'Recreated Game',
+         role: 'Recreated Game',
+
         image: { src: imagePacman },
+        link: 'https://github.com/yourusername/pacman-project', // Add your GitHub project URL here       
       },
       {
         name: 'Can I Ball',
@@ -129,7 +133,7 @@ const team = [
 
 function Team() {
   return (
-    <Container className="mt-24 sm:mt-32 lg:mt-0">
+    <Container className="mt-16 sm:mt-32 lg:mt-0 mb-10" >
       <div className="space-y-24">
         {team.map((group) => (
           <FadeInStagger key={group.title}>
@@ -162,6 +166,7 @@ function Team() {
                             <p className="mt-2 text-sm text-white">
                               {person.role}
                             </p>
+                            
                           </div>
                         </div>
                       </FadeIn>
