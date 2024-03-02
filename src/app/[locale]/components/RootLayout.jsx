@@ -23,7 +23,7 @@ import { button } from '@nextui-org/react'
 import 'animate.css';
 import {useTranslations} from 'next-intl';
 import { usePathname } from "next/navigation";
-
+import LanguageButton from './LanguageButton'
 
 const RootLayoutContext = createContext(null)
 
@@ -103,32 +103,32 @@ const [currentLanguage, setCurrentLanguage] = useState('');
           {/* <div className="ml-4">
             <h2 className="text-xl font-semibold" >Our Culture</h2>
           </div> */}
-        </div>
-                <button
-          ref={toggleRef}
-          type="button"
-          onClick={() => {
-            onToggle(); // Ensure onToggle correctly updates the expanded state
-          }}
-          aria-expanded={expanded ? 'true' : 'false'}
-          aria-controls={panelId}
-          className={clsx(
-            'group -m-2.5 rounded-full p-2.5 transition animate__animated ',
-            expanded ? 'bg-transparent' : 'bg-black', // Changes background color based on expanded state
-            { 'animate__shakeX': isShaking && !expanded }, // Applies the shake animation
-            'text-white', // Ensures text/icon color contrasts with the background
+        </div>{expanded && (
+            // LanguageButton only appears when the menu is expanded
+            <div className="pr-4">
+              <LanguageButton />
+            </div>
           )}
-          aria-label="Toggle navigation"
-        >
-          <Icon
-              className={clsx(
-                'h-6 w-6',
-                invert
-                  ? 'fill-white '
-                  : 'fill-white ',
-              )}
-            />
-        </button>
+        <div className="flex items-center">
+          
+
+          <button
+            ref={toggleRef}
+            type="button"
+            onClick={() => onToggle()}
+            aria-expanded={expanded ? 'true' : 'false'}
+            aria-controls={panelId}
+            className={clsx(
+              'group -m-2.5 rounded-full p-2.5 transition animate__animated',
+              expanded ? 'bg-transparent' : 'bg-black',
+              { 'animate__shakeX': isShaking && !expanded },
+              'text-white',
+            )}
+            aria-label="Toggle navigation"
+          >
+            <Icon className={clsx('h-6 w-6', invert ? 'fill-white' : 'fill-white')} />
+          </button>
+        </div>
       </div>
     </Container>
   )

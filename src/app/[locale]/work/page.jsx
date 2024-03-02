@@ -33,16 +33,12 @@ function Values() {
       </div>
 
       <SectionIntro
-        eyebrow="Values"
-        title="Balancing reliability and innovation"
+      eyebrow="Projects"
+        title="My work brings:"
       >
-        <p>
-           I strive to stay at the forefront of emerging trends and
-          technologies.
-        </p>
       </SectionIntro>
 
-      <Container className="mt-24">
+      <Container className="mt-16">
         <GridList>
           
           <GridListItem title="Efficient">
@@ -95,7 +91,7 @@ function Services() {
 
 const team = [
   {
-    title: 'Projects',
+    title: '',
     people: [
       {
         name: 'Pac-Man',
@@ -133,11 +129,12 @@ const team = [
 
 function Team() {
   return (
-    <Container className="mt-24 sm:mt-32 lg:mt-40">
+    <Container className="mt-24 sm:mt-32 lg:mt-0">
       <div className="space-y-24">
         {team.map((group) => (
           <FadeInStagger key={group.title}>
-            <Border as={FadeIn} />
+            {/* <Border as={FadeIn} /> */}
+            <FadeIn />
             <div className="grid grid-cols-1 gap-6 pt-12 sm:pt-40 lg:grid-cols-4 xl:gap-8">
               <FadeIn>
                 <h2 className="font-display text-2xl font-semibold text-neutral-950">
@@ -194,10 +191,10 @@ export default function Work() {
     <Layout intro={intro}>
 
       <Services />   
-         <Team />
 
       <Values />
-     
+              <Team />
+
 
 
       <ContactSection />
