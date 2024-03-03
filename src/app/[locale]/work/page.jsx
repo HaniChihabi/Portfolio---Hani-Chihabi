@@ -1,5 +1,5 @@
+
 import Image from 'next/image'
-import Link from 'next/link'
 
 import { GridList, GridListItem } from '../components/GridList'
 import { GridPattern } from '../components/GridPattern'
@@ -18,10 +18,15 @@ import imagePacman from '../images/pac2.jpg'
 import imageCanIBall from '../images/caniball.jpg'
 import imagePrayertimes from '../images/prayertimes.jpg'
 import imageBg from '../images/Background.jpg'
-import Modal from '../components/Modal'
+import ModalPac from '../components/ModalPac'
+import ModalBG from '../components/ModalBG'
+
 import Layout from '../components/Layout';
 import ButtonUp from '../components/ButtonUp'
 import {useTranslations} from 'next-intl';
+import VideoPlayer from "../components/VideoPlayer";
+import { Modal } from '@nextui-org/react'
+
 
 
 function Values() {
@@ -70,11 +75,7 @@ function Services() {
           <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
             <FadeIn className="w-[33.75rem] flex-none lg:w-[40rem]">
               
-              <StylizedImage
-                src={imageLaptop}
-                sizes="(min-width: 1024px) 41rem, 31rem"
-                className="justify-center lg:justify-end"
-              />
+            <VideoPlayer />
             </FadeIn>
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4 text-2xl">
@@ -100,33 +101,39 @@ const team = [
     people: [
       {
         name: 'Pac-Man',   
-             link: 'https://github.com/HaniChihabi/studio-js', // Add your GitHub project URL here       
-             videoLink: 'ef', // Relative path from the public directory
+        link: 'https://github.com/HaniChihabi/studio-js', // Add your GitHub project URL here  
+        videoURL: 'Pacman'    ,
         image: { src: imagePacman },
       },
       {
         name: 'Can I Ball',
-        // role: 'Basketball Weather App',
+        link: 'https://github.com/HaniChihabi/studio-js', // Add your GitHub project URL here  
+        videoURL: 'BG'     ,
+
         image: { src: imageCanIBall },
       },
       {
         name: 'Prayer Mauaqit',
-        // role: 'Prayer Times App',
+        link: 'https://github.com/HaniChihabi/studio-js', // Add your GitHub project URL here  
+        videoURL: 'BG'     ,
         image: { src: imagePrayertimes },
       },
       {
         name: 'Blake Reid',
-        // role: 'Junior Copywriter',
+        link: 'https://github.com/HaniChihabi/studio-js', // Add your GitHub project URL here  
+        videoURL: 'BG'     ,
         image: { src: imageBg },
       },
       {
         name: 'Kathryn Murphy',
-        // role: 'VP, Human Resources',
+        link: 'https://github.com/HaniChihabi/studio-js', // Add your GitHub project URL here  
+        videoURL: 'BG'     ,
         image: { src: imageLaptop },
       },
       {
         name: 'Whitney Francis',
-        // role: 'Content Specialist',
+        link: 'https://github.com/HaniChihabi/studio-js', // Add your GitHub project URL here  
+        videoURL: 'BG'     ,
         image: { src: imageLaptop },
       }
     ],
@@ -163,17 +170,26 @@ function Team() {
                             className="h-96 w-full object-cover transition duration-500 motion-safe:group-hover:scale-105"
                           />
                           <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
-                            <p className="font-display text-base/6 font-semibold tracking-wide text-white">
+                            
+                            {person.link && (
+  <div className="flex items-center justify-between mt-2"> {/* Adjust space-x-4 to control spacing */}
+    <p className="font-display text-base/6 font-semibold tracking-wide text-white">
                               {person.name}
                             </p>
-                            {person.link && (
-                              <a href={person.link} target="_blank" rel="noopener noreferrer" className="mt-2 text-sm text-white underline">
-                                View Project
-                              </a>
-                            )}
-                            {person.videoLink && (
-                              <Modal/>
-                                    )}
+    <div>   
+      
+    <a href={person.link} target="_blank" rel="noopener noreferrer" className="text-sm text-white underline">
+      View Code
+    </a>                     
+    {person.videoURL === 'Pacman' && (
+      <ModalPac />
+    )}
+    {person.videoURL === 'BG' && (
+      <ModalBG />
+    )}
+    </div>
+  </div>
+)}
                           </div>
                         </div>
                       </FadeIn>
