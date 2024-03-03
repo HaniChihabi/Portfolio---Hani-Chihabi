@@ -20,6 +20,8 @@ import imagePrayertimes from '../images/prayertimes.jpg'
 import imageBg from '../images/Background.jpg'
 import ModalPac from '../components/ModalPac'
 import ModalBG from '../components/ModalBG'
+import ModalCIB from '../components/ModalCIB'
+
 
 import Layout from '../components/Layout';
 import ButtonUp from '../components/ButtonUp'
@@ -112,7 +114,7 @@ const team = [
       {
         name: 'Can I Ball',
         link: 'https://github.com/HaniChihabi/studio-js', // Add your GitHub project URL here  
-        videoURL: 'BG'     ,
+        videoURL: 'CanIBall'     ,
 
         image: { src: imageCanIBall },
       },
@@ -187,6 +189,9 @@ function Team() {
     </a>                     
     {person.videoURL === 'Pacman' && (
       <ModalPac />
+    )}
+    {person.videoURL === 'CanIBall' && (
+      <ModalCIB />
     )}
     {person.videoURL === 'BG' && (
       <ModalBG />

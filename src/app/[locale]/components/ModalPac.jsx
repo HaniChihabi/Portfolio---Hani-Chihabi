@@ -7,7 +7,7 @@ import ReactPlayer from "react-player";
 export default function modal() {
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
             //   <VideoApps/>
-            let videosrc = "/squirrel.mp4";
+            let videosrc = "/PacmanVideo.mp4";
   return (
     
     <>
