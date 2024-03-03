@@ -22,9 +22,6 @@ export default function modal() {
         </video>
       )}
               </ModalBody>
-              <ModalFooter>
-                
-              </ModalFooter>
             </>
           )}
         </ModalContent>
