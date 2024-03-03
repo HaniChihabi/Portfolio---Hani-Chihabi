@@ -26,6 +26,7 @@ import ButtonUp from '../components/ButtonUp'
 import {useTranslations} from 'next-intl';
 import VideoPlayer from "../components/VideoPlayer";
 import { Modal } from '@nextui-org/react'
+import { GithubOutlined } from '@ant-design/icons'
 
 
 
@@ -73,9 +74,12 @@ function Services() {
       <Container className="mt-40">
         <div className="lg:flex lg:items-center lg:justify-end">
           <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
-            <FadeIn className="w-[33.75rem] flex-none lg:w-[40rem]">
-              
-            <VideoPlayer />
+          <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
+              <StylizedImage
+                src={imageLaptop}
+                sizes="(min-width: 1024px) 41rem, 31rem"
+                className="justify-center lg:justify-end"
+              />
             </FadeIn>
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4 text-2xl">
@@ -179,7 +183,7 @@ function Team() {
     <div>   
       
     <a href={person.link} target="_blank" rel="noopener noreferrer" className="text-sm text-white underline">
-      View Code
+      <GithubOutlined className='mr-5 text-2xl'/>
     </a>                     
     {person.videoURL === 'Pacman' && (
       <ModalPac />

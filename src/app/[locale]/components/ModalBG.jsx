@@ -7,11 +7,11 @@ import ReactPlayer from "react-player";
 export default function modal() {
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
             //   <VideoApps/>
-            let videosrc = "/apps.mp4";
+            let videosrc = "/BGRemoverVid.mp4";
   return (
 
     <>
-      <Button onPress={onOpen}>Open Modal</Button>
+      <Button className="h-7" onPress={onOpen}>Preview</Button>
       <Modal size="5xl" className="pt-10 bg-transparent" shadow='none' radius='none' isOpen={isOpen} isDismissable='true' hideCloseButton="false" backdrop="blur" onOpenChange={onOpenChange} isKeyboardDismissDisabled={true}>
         <ModalContent>
           

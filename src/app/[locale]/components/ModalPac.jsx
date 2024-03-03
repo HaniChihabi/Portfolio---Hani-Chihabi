@@ -11,7 +11,7 @@ export default function modal() {
   return (
     
     <>
-      <Button onPress={onOpen}>Preview</Button>
+      <Button className="h-7" onPress={onOpen}>Preview</Button>
       <Modal size="5xl" className="pt-10 bg-transparent" shadow='none' radius='none' isOpen={isOpen} isDismissable='true' hideCloseButton="false" backdrop="blur" onOpenChange={onOpenChange} isKeyboardDismissDisabled={true}>
         <ModalContent>
           
