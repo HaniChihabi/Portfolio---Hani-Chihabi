@@ -20,7 +20,7 @@ export default function modal() {
                     <ReactPlayer
                     url={videosrc}
                     playing={isOpen} // Control play state based on modal open state
-                    controls={false}
+                    controls={true}
                     light={false}
                     pip={false}
                     loop={true}

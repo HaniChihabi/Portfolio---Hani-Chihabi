@@ -32,7 +32,7 @@ export function SectionIntro({
           )}
           <span
             className={clsx(
-              'block font-bold tracking-tight items-center align-middle [text-wrap:balance]',
+              'block font-bold font-display tracking-tight items-center align-middle [text-wrap:balance]',
               smaller
                 ? 'text-2xl font-semibold'
                 : 'text-4xl font-medium sm:text-3xl',

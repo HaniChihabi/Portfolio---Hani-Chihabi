@@ -1,15 +1,10 @@
 
 import Image from 'next/image'
-
 import { GridList, GridListItem } from '../components/GridList'
 import { GridPattern } from '../components/GridPattern'
-import { Blockquote } from '../components/Blockquote'
-import { Border } from '../components/Border'
-import { Button } from '../components/Button'
 import { ContactSection } from '../components/ContactSection'
 import { Container } from '../components/Container'
 import { FadeIn, FadeInStagger } from '../components/FadeIn'
-import { formatDate } from '../lib/formatDate'
 import { SectionIntro } from '../components/SectionIntro'
 import { StylizedImage } from '../components/StylizedImage'
 import imageLaptop from '../images/laptop.jpg'
@@ -21,13 +16,9 @@ import imageBg from '../images/Background.jpg'
 import ModalPac from '../components/ModalPac'
 import ModalBG from '../components/ModalBG'
 import ModalCIB from '../components/ModalCIB'
-
-
 import Layout from '../components/Layout';
 import ButtonUp from '../components/ButtonUp'
 import {useTranslations} from 'next-intl';
-import VideoPlayer from "../components/VideoPlayer";
-import { Modal } from '@nextui-org/react'
 import { GithubOutlined } from '@ant-design/icons'
 
 
@@ -45,8 +36,7 @@ function Values() {
       </div>
 
       <SectionIntro
-      eyebrow="Projects"
-        title="My work brings:"
+        title="Projects"
       >
       </SectionIntro>
 
@@ -76,7 +66,7 @@ function Services() {
       <Container className="mt-40">
         <div className="lg:flex lg:items-center lg:justify-end">
           <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
-          <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
+          <FadeIn className="w-[33.75rem] flex-none lg:w-[35rem]">
               <StylizedImage
                 src={imageLaptop}
                 sizes="(min-width: 1024px) 41rem, 31rem"

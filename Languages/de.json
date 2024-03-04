@@ -21,5 +21,20 @@
         "text1" : "Die Softwareentwicklung ist eine spannende Reise für mich. Ich liebe es, neue Projekte zu starten und mit klugen Köpfen zusammenzuarbeiten. Jede Erfahrung hat mir mehr über die Welt der Technik beigebracht.",
         "text2" : "Mein Laptop ist habe ich immer dabei - von gemütlichen Cafés bis zu ruhigen Grünanlagen und sogar im Urlaub. Diese Mobilität ermöglicht es mir, Inspiration aus verschiedenen Umgebungen zu schöpfen, was meine Arbeit frisch und innovativ hält.",
         "text3" : "Die Beschäftigung mit der Softwareentwicklung war nicht nur eine Frage des Codierens; es geht darum, Ideen zum Leben zu erwecken, reale Probleme zu lösen und durch Technologie einen Unterschied zu machen."
+    },
+    "work":{       
+        "header": "Meine Arbeit",
+        "sec1": {
+            "title": "Webentwicklung.",
+            "text": "Responsives Webdesign mit sicherem Hosting. Fokus auf benutzerfreundliche Gestaltungen."
+        },
+        "sec2": {
+            "title": "Appentwicklung.",
+            "text": "Entwicklung von Apps mit Schwerpunkt auf UX/UI Design und plattformübergreifender Kompatibilität."
+        },
+        "sec3": {
+            "title": "Individuelle Softwarelösungen.",
+            "text": "Maßgeschneiderte Lösungen mit sicheren Softwareanwendungen."
+        }   
     }
 }

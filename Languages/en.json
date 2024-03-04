@@ -31,15 +31,15 @@
         "header" : "My work",
         "sec1":{   
             "title" : "Web development.",
-            "text" : "Custom, responsive websites with secure hosting. Prioritizing user-friendly designs and reliable support."
+            "text" : "Responsive websites with secure hosting. Prioritizing user-friendly designs."
         },
         "sec2":{   
             "title" : "Application development.",
-            "text" : "Custom app development with a focus on UX/UI design, cross-platform compatibility, secure coding, and ongoing support."
+            "text" : "App development with a focus on UX/UI design and cross-platform compatibility."
         },
         "sec3":{   
             "title" : "Custom Software Solutions.",
-            "text" : "Address custom requests with scalable, secure software solutions and dedicated post-launch support."
+            "text" : "Custom requests with secure software solutions and dedicated post-launch support."
         }
         
         

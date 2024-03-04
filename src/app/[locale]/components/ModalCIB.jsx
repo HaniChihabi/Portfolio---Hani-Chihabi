@@ -16,11 +16,11 @@ export default function modal() {
         <ModalContent>
           
               <ModalBody>
-                <div className="relative rounded-lg pt-[59.25%]">
+                <div className="relative rounded-lg pt-[89.25%]">
                     <ReactPlayer
                     url={videosrc}
                     playing={isOpen} // Control play state based on modal open state
-                    controls={false}
+                    controls={true}
                     light={false}
                     pip={false}
                     loop={true}
