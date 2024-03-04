@@ -69,15 +69,15 @@ export default function Contact() {
   let errorMessage = '';
 
   // Checking for empty fields
-  if (!object.name) errorMessage += t("inquiries.Name") + "\n" ;
-  if (!object.email) errorMessage += t("Email") + "\n";
-  if (!object.company) errorMessage += t("inquiries.Company") + "\n";
-  if (!object.phone) errorMessage += t("Phone") + "\n";
-  if (!object.message) errorMessage += t("Message") + "\n";
+  if (!object.name) errorMessage += t("inquiriesError.Name") + "\n" ;
+  if (!object.email) errorMessage += t("inquiriesError.Email") + "\n";
+  if (!object.company) errorMessage += t("inquiriesError.Company") + "\n";
+  if (!object.phone) errorMessage += t("inquiriesError.Phone") + "\n";
+  if (!object.message) errorMessage += t("inquiriesError.Message") + "\n";
 
   // Checking for valid email
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (object.email && !emailRegex.test(object.email)) errorMessage += t("InvalidEmail");
+  if (object.email && !emailRegex.test(object.email)) errorMessage += t("inquiriesError.InvalidEmail");
 
   // If there are errors, alert them and stop the form submission
   if (errorMessage) {
@@ -121,9 +121,9 @@ export default function Contact() {
          {t("Work inquiries")}
         </h2>
         <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50">
-          <TextInput label="Name" name="name" autoComplete="name" />
+          <TextInput label={t("inquiries.Name")} name="name" autoComplete="name" />
           <TextInput
-            label="Email"
+            label={t("inquiries.Email")}
             type="email"
             name="email"
             autoComplete="email"
@@ -133,12 +133,12 @@ export default function Contact() {
             name="company"
             autoComplete="organization"
           />
-          <TextInput label="Phone" type="tel" name="phone" autoComplete="tel" />
-          <TextInput label="Message" name="message" />
+          <TextInput label={t("inquiries.Phone")} type="tel" name="phone" autoComplete="tel" />
+          <TextInput label={t("inquiries.Message")} name="message" />
           
         </div>
         <Button type="submit" className="mt-10">
-          Let’s work together
+          {t("Work together")}
         </Button>
       </form>
     </FadeIn>

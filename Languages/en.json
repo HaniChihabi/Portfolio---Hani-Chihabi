@@ -58,15 +58,16 @@
         "Text" : "Tell me about your project",
         "Contact" : "Contact"
     },
+    
     "Contact" : {
+        "Work inquiries": "Arbeits djkabjsd",
             "inquiries": {
                 "Name" : "Name ",
                 "Email" : "Email",
                 "Company" : "Company",
                 "Phone" : "Phone",
                 "Message" : "Message"
-            }
-},
+            },
     
         "inquiriesError": {
             "Name" : "Name is required",
@@ -75,8 +76,8 @@
             "Phone" : "Phone is required",
             "Message" : "Message is required",
             "InvalidEmail" : "Email is not valid" 
-        }
-        
-    
+        },
+        "Work together" : "Let’s work together"
+    }
 
 }

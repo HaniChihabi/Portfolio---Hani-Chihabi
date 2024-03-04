@@ -56,21 +56,26 @@
     },
 
     "Contact" : {
+        "Work inquiries": "Arbeitsanfragen",
+
         "inquiries": {
             "Name" : "Name ",
             "Email" : "Email",
-            "Company" : "Company",
-            "Phone" : "Phone",
-            "Message" : "Message"
-        }
-},
+            "Company" : "Firma",
+            "Phone" : "Telefon",
+            "Message" : "Nachricht"
+        },
 
-    "inquiriesError": {
-        "Name" : "Name is required",
-        "Email" : "Email is required",
-        "Company" : "Company is required",
-        "Phone" : "Phone is required",
-        "Message" : "Message is required",
-        "InvalidEmail" : "Email is not valid" 
-    }
+
+        "inquiriesError": {
+            "Name" : "Name fehlt",
+            "Email" : "Email fehlt",
+            "Company" : "Company fehlt",
+            "Phone" : "Phone fehlt",
+            "Message" : "Message fehlt",
+            "InvalidEmail" : "Email nicht valide" 
+        },
+        
+        "Work together" : "Lass uns zusammen arbeiten"
+}
 }
