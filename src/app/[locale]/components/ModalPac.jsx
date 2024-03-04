@@ -1,10 +1,10 @@
 "use client"
 
 import React from "react";
-import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure} from "@nextui-org/react";
+import {Modal, ModalContent, ModalBody, Button, useDisclosure} from "@nextui-org/react";
 import ReactPlayer from "react-player";
 
-export default function modal() {
+export default function ModalComponent() {
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
             //   <VideoApps/>
             let videosrc = "/PacmanVideo.mp4";
