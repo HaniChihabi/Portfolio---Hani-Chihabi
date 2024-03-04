@@ -12,6 +12,10 @@
         "intro2": "ich lege Wert darauf, effektive Lösungen zu entwickeln."
 
     },
+    "AboutMeTitle":
+     {
+        "AboutMeTitle": "Über mich"
+    },
     "Me":{
         "title" : "Mein name ist Hani",
         "text1" : "Ich bin 22 Jahre alt und lebe derzeit in Deutschland. Meine Leidenschaft fürs Lernen motiviert mich jeden Tag.",
@@ -56,8 +60,8 @@
     },
 
     "Contact" : {
+        "ContactTitle": "Kontakt",
         "Work inquiries": "Arbeitsanfragen",
-
         "inquiries": {
             "Name" : "Name ",
             "Email" : "Email",

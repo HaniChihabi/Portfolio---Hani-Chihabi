@@ -11,7 +11,11 @@
         "intro1": " I am a passionate software developer, living in Germany. I build cool projects and \n",
         "intro2": " I focus on crafting \n effective solutions."
     },
-
+    
+    "AboutMeTitle":
+     {
+        "AboutMeTitle": "About me"
+    },
     "Me":{
         "title" : "My name is Hani",
         "text1" : "I'm 22 years old and currently living in Germany. My passion for learning drives me every day.",
@@ -60,6 +64,7 @@
     },
     
     "Contact" : {
+        "ContactTitle": "Contact",
         "Work inquiries": "Arbeits djkabjsd",
             "inquiries": {
                 "Name" : "Name ",

@@ -131,10 +131,11 @@ function Deliver() {
 }
 
 
-export default async function About() {
+export default function About() {
+  const t = useTranslations('AboutMeTitle')
   const intro = (
     <SectionIntro className='relative font-display top-10 left-0'
-      title="About Me"
+      title={t('AboutMeTitle')}
       subtitle="Learn more about our mission and values."
     />
   );

@@ -55,7 +55,7 @@ export default function Contact() {
   const intro = (
     <SectionIntro className='relative font-display top-10 left-0'
 
-      title="Contact"
+      title={t("ContactTitle")}
     />
   );
   async function handleSubmit(event) {
