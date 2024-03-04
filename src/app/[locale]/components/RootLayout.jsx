@@ -173,15 +173,16 @@ function Navigation() {
 }, []);
 
 const [currentLanguage, setCurrentLanguage] = useState('');
-  
+const t = useTranslations('Navigation')
+
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
-        <NavigationItem href={`/${currentLanguage}/work`} className="justify-start"><p>My Work</p></NavigationItem>
-        <NavigationItem href={`/${currentLanguage}/contact`} className="justify-end"><p>Contact</p></NavigationItem>
+        <NavigationItem href={`/${currentLanguage}/work`} className="justify-start"><p>{t('My Work')}</p></NavigationItem>
+        <NavigationItem href={`/${currentLanguage}/contact`} className="justify-end"><p>{t('Contact')}</p></NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        <NavigationItem href={`/${currentLanguage}/about`} className="justify-start"><p>About Me</p></NavigationItem>
+        <NavigationItem href={`/${currentLanguage}/about`} className="justify-start"><p>{t('About Me')}</p></NavigationItem>
         <SocialMedia className="relative right-0 top-0 text-xl" invert />
       </NavigationRow>
     </nav>
@@ -196,6 +197,7 @@ function RootLayoutInner({ children }) {
   let closeRef = useRef(null)
   let navRef = useRef(null)
   let shouldReduceMotion = useReducedMotion()
+  const t = useTranslations('home');
 
   useEffect(() => {
     function onClick(event) {

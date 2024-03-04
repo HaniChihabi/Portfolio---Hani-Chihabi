@@ -11,7 +11,7 @@ import { PageIntro } from '../components/PageIntro'
 import { SocialMedia } from '../components/SocialMedia'
 import Layout from '../components/Layout';
 import { SectionIntro } from '../components/SectionIntro'
-
+import { useTranslations } from 'next-intl'
 
 function TextInput({ label, ...props }) {
   let id = useId()
@@ -51,6 +51,7 @@ function RadioInput({ label, ...props }) {
 
 
 export default function Contact() {
+  const t = useTranslations("Contact")
   const intro = (
     <SectionIntro className='relative font-display top-10 left-0'
 
@@ -68,15 +69,15 @@ export default function Contact() {
   let errorMessage = '';
 
   // Checking for empty fields
-  if (!object.name) errorMessage += 'Name is required. \n';
-  if (!object.email) errorMessage += 'Email is required. \n';
-  if (!object.company) errorMessage += 'Company is required. \n';
-  if (!object.phone) errorMessage += 'Phone is required. \n';
-  if (!object.message) errorMessage += 'Message is required. ';
+  if (!object.name) errorMessage += t("inquiries.Name") + "\n" ;
+  if (!object.email) errorMessage += t("Email") + "\n";
+  if (!object.company) errorMessage += t("inquiries.Company") + "\n";
+  if (!object.phone) errorMessage += t("Phone") + "\n";
+  if (!object.message) errorMessage += t("Message") + "\n";
 
   // Checking for valid email
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (object.email && !emailRegex.test(object.email)) errorMessage += 'Email is not valid. ';
+  if (object.email && !emailRegex.test(object.email)) errorMessage += t("InvalidEmail");
 
   // If there are errors, alert them and stop the form submission
   if (errorMessage) {
@@ -117,7 +118,7 @@ export default function Contact() {
         <FadeIn className="lg:order-last">
       <form onSubmit={handleSubmit}>
         <h2 className="font-display text-base font-semibold text-neutral-950">
-          Work inquiries
+         {t("Work inquiries")}
         </h2>
         <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50">
           <TextInput label="Name" name="name" autoComplete="name" />

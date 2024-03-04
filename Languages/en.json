@@ -1,13 +1,16 @@
 {
+    "Navigation" : {
+        "My Work" : "My work",
+        "About Me" : "About Me",
+        "Contact" : "Contact"
+    },
+
     "home" : {
         "header1" : "Hey, my name is",
         "header2" : "Hani Chihabi",
         "intro1": " I am a passionate software developer, living in Germany. I build cool projects and \n",
         "intro2": " I focus on crafting \n effective solutions."
     },
-
-
-
 
     "Me":{
         "title" : "My name is Hani",
@@ -43,6 +46,37 @@
         }
         
         
-    }
+    },
+
+    "Projects" : {
+        "Efficient" : "Meine Arbeit",
+        "Adaptable" : "Über mich",
+        "Innovative" : "Kontakt"
+    },
+
+    "ContactButton" : {
+        "Text" : "Tell me about your project",
+        "Contact" : "Contact"
+    },
+    "Contact" : {
+            "inquiries": {
+                "Name" : "Name ",
+                "Email" : "Email",
+                "Company" : "Company",
+                "Phone" : "Phone",
+                "Message" : "Message"
+            }
+},
+    
+        "inquiriesError": {
+            "Name" : "Name is required",
+            "Email" : "Email is required",
+            "Company" : "Company is required",
+            "Phone" : "Phone is required",
+            "Message" : "Message is required",
+            "InvalidEmail" : "Email is not valid" 
+        }
+        
+    
 
 }

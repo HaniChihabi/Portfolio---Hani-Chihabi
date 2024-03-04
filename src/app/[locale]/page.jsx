@@ -5,7 +5,6 @@ import { Border } from './components/Border'
 import { SocialMedia } from './components/SocialMedia'
 import React from 'react';
 import {useTranslations} from 'next-intl';
-import LanguageButton from './components/LanguageButton'
 import { Container } from './components/Container'
 import NewModal from './components/Modalnew'
 export default function Home() {

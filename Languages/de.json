@@ -1,4 +1,10 @@
 {
+    "Navigation" : {
+        "My Work" : "Meine Arbeit",
+        "About Me" : "Über mich",
+        "Contact" : "Kontakt"
+    },
+
     "home" : {
         "header1" : "Hey, mein Name ist",
         "header2" : "Hani Chihabi",
@@ -36,5 +42,35 @@
             "title": "Individuelle Softwarelösungen.",
             "text": "Maßgeschneiderte Lösungen mit sicheren Softwareanwendungen."
         }   
+    },
+
+    "Projects" : {
+        "Efficient" : "Meine Arbeit",
+        "Adaptable" : "Über mich",
+        "Innovative" : "Kontakt"
+    },
+
+    "ContactButton" : {
+        "Text" : "Erzähl mir über dein Projekt",
+        "Contact" : "Kontakt"
+    },
+
+    "Contact" : {
+        "inquiries": {
+            "Name" : "Name ",
+            "Email" : "Email",
+            "Company" : "Company",
+            "Phone" : "Phone",
+            "Message" : "Message"
+        }
+},
+
+    "inquiriesError": {
+        "Name" : "Name is required",
+        "Email" : "Email is required",
+        "Company" : "Company is required",
+        "Phone" : "Phone is required",
+        "Message" : "Message is required",
+        "InvalidEmail" : "Email is not valid" 
     }
 }

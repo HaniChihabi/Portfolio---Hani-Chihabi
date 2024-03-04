@@ -1,6 +1,7 @@
 import { RootLayout } from './components/RootLayout';
 import './styles/tailwind.css';
 import { Providers } from './providers';
+import {NextIntlClientProvider, useMessages} from 'next-intl';
 
 export const metadata = {
   title: {
@@ -11,9 +12,15 @@ export const metadata = {
 
 // Define the LocaleLayout component
 function LocaleLayout({ children, locale }) {
+  const messages = useMessages();
+
   return (
-    <html lang={locale} className="h-full bg-neutral-950 text-base antialiased">
-      <body className="flex min-h-full flex-col">{children}</body>
+    <html lang={locale}>
+      <body>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          {children}
+        </NextIntlClientProvider>
+      </body>
     </html>
   );
 }
