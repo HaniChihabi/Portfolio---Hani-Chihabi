@@ -16,6 +16,7 @@ import imageBg from '../images/Background.jpg'
 import ModalPac from '../components/ModalPac'
 import ModalBG from '../components/ModalBG'
 import ModalCIB from '../components/ModalCIB'
+import ModalPT from '../components/ModalPT'
 import Layout from '../components/Layout';
 import ButtonUp from '../components/ButtonUp'
 import {useTranslations} from 'next-intl';
@@ -96,30 +97,32 @@ const team = [
     title: '',
     people: [
       {
+        name: 'Prayer Mauaqit',
+        link: 'https://github.com/HaniChihabi/Prayer-Mauaqit', // Add your GitHub project URL here  
+        videoURL: 'PT'     ,
+        image: { src: imagePrayertimes },
+      },
+      {
+        name: 'BG Remover',
+        link: 'https://github.com/HaniChihabi/Backgroud-Remover', // Add your GitHub project URL here  
+        videoURL: 'BG'     ,
+        image: { src: imageBg },
+      },
+      {
         name: 'Pac-Man',   
-        link: 'https://github.com/HaniChihabi/studio-js', // Add your GitHub project URL here  
+        link: 'https://github.com/HaniChihabi/PacMan', // Add your GitHub project URL here  
         videoURL: 'Pacman'    ,
         image: { src: imagePacman },
       },
       {
         name: 'Can I Ball',
-        link: 'https://github.com/HaniChihabi/studio-js', // Add your GitHub project URL here  
+        link: 'https://github.com/HaniChihabi/CanIBall', // Add your GitHub project URL here  
         videoURL: 'CanIBall'     ,
 
         image: { src: imageCanIBall },
       },
-      {
-        name: 'Prayer Mauaqit',
-        link: 'https://github.com/HaniChihabi/studio-js', // Add your GitHub project URL here  
-        videoURL: 'BG'     ,
-        image: { src: imagePrayertimes },
-      },
-      {
-        name: 'Blake Reid',
-        link: 'https://github.com/HaniChihabi/studio-js', // Add your GitHub project URL here  
-        videoURL: 'BG'     ,
-        image: { src: imageBg },
-      },
+      
+      
       {
         name: 'Kathryn Murphy',
         link: 'https://github.com/HaniChihabi/studio-js', // Add your GitHub project URL here  
@@ -176,13 +179,17 @@ function Team() {
       
     <a href={person.link} target="_blank" rel="noopener noreferrer" className="text-sm text-white underline">
       <GithubOutlined className='mr-5 text-2xl'/>
-    </a>                     
+    </a>   
+    {person.videoURL === 'PT' && (
+      <ModalPT />
+    )}                  
     {person.videoURL === 'Pacman' && (
       <ModalPac />
     )}
     {person.videoURL === 'CanIBall' && (
       <ModalCIB />
     )}
+    
     {person.videoURL === 'BG' && (
       <ModalBG />
     )}

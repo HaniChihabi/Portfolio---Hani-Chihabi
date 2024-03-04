@@ -11,11 +11,15 @@
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
     "@ant-design/icons": "^5.3.1",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
     "@leafac/rehype-shiki": "^2.2.1",
     "@mdx-js/loader": "^3.0.0",
     "@mdx-js/react": "^3.0.0",
+    "@mui/material": "^5.15.11",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.17",
     "@next/mdx": "^14.0.4",
     "@nextui-org/react": "^2.2.9",
     "acorn": "^8.10.0",
@@ -39,6 +43,7 @@
     "remark-rehype-wrap": "0.0.3",
     "remark-unwrap-images": "^4.0.0",
     "shiki": "^0.11.1",
+    "styled-components": "^6.1.8",
     "tailwindcss": "^3.4.1",
     "unified-conditional": "0.0.2"
   },

@@ -7,6 +7,7 @@ import React from 'react';
 import {useTranslations} from 'next-intl';
 import LanguageButton from './components/LanguageButton'
 import { Container } from './components/Container'
+import NewModal from './components/Modalnew'
 export default function Home() {
 const t = useTranslations('home');
   return (
@@ -20,7 +21,7 @@ const t = useTranslations('home');
             {/* <h1 className="font-display font-extralight tracking-tight lg:text-4xl md:text-3xl sm:text-3xl">
             {t('header1')}
             </h1> */}
-            
+            {/* <NewModal/> */}
             <h1 className="font-display font-normal tracking-normal text-neutral-950 lg:text-7xl md:text-6xl sm:text-6xl mb-5">
               {t('header2')}
             </h1>

@@ -12,7 +12,7 @@ export default function ModalComponent() {
     
     <>
       <Button className="h-7" onPress={onOpen}>Preview</Button>
-      <Modal size="5xl" className="pt-10 bg-transparent" shadow='none' radius='none' isOpen={isOpen} isDismissable='true' hideCloseButton="false" backdrop="blur" onOpenChange={onOpenChange} isKeyboardDismissDisabled={true}>
+      <Modal size="5xl" className="pt-10 bg-transparent" shadow='none' radius='200px' isOpen={isOpen} isDismissable='true' hideCloseButton="false" backdrop="blur" onOpenChange={onOpenChange} isKeyboardDismissDisabled={true}>
         <ModalContent>
           
               <ModalBody>
