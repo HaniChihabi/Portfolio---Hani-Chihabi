@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { FadeIn, FadeInStagger } from './components/FadeIn'
 import imageMe from './images/kolnn.jpeg'
 import { Border } from './components/Border'
-import { SocialMedia } from './components/SocialMedia'
+import { SocialMediaNew } from './components/SocialMediaNew'
 import React from 'react';
 import {useTranslations} from 'next-intl';
 import { Container } from './components/Container'
@@ -49,7 +49,7 @@ const t = useTranslations('home');
         </div>
       </div>
       <div className="w-full flex justify-center mt-6">
-            <SocialMedia />
+            <SocialMediaNew />
 
           </div>      
           </FadeIn>

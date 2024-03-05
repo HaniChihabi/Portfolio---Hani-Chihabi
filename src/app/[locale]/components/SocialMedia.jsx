@@ -50,7 +50,7 @@ function DribbbleIcon(props) {
 }
 
 export const socialMediaProfiles = [
-  { title: 'Facebook', href: 'https://facebook.com', icon: FacebookIcon },
+  { title: 'LinkedIn', href: 'https://www.linkedin.com/in/hani-chihabi-8978812b8/', icon: FacebookIcon },
   { title: 'Instagram', href: 'https://instagram.com', icon: InstagramIcon },
   { title: 'GitHub', href: 'https://github.com/HaniChihabi', icon: GitHubIcon },
 ]
