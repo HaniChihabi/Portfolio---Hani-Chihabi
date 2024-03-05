@@ -58,7 +58,7 @@ function Discover() {
   return (
     
     <Section className='text-2xl' title={t('title')} image={{ src: imageCar }}>
-      <div className="space-y-6 text-neutral-600 text-xl">
+      <div className="space-y-6 text-neutral-600 text-l">
       <p>
           {t('text1')}
         </p>
@@ -86,7 +86,7 @@ function Build() {
   const t = useTranslations('Basketball')
   return (
     <Section title={t('title')} image={{ src: imageBasketball, shape: 1 }}>
-      <div className="space-y-6 text-neutral-600 text-xl">
+      <div className="space-y-6 text-neutral-600 text-l">
         <p>
           {t('text1')}
         </p>
@@ -110,7 +110,7 @@ function Deliver() {
   const t = useTranslations('Coding')
   return (
     <Section title={t('title')} image={{ src: imageLaptop, shape: 2 }}>
-      <div className="space-y-6 text-xl text-neutral-600">
+      <div className="space-y-6 text-l text-neutral-600">
         <p>
           {t('text1')}
         </p>
