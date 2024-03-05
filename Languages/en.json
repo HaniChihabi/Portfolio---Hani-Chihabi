@@ -8,8 +8,10 @@
     "home" : {
         "header1" : "Hey, my name is",
         "header2" : "Hani Chihabi",
-        "intro1": " I am a passionate software developer, living in Germany. I build cool projects and \n",
-        "intro2": " I focus on crafting \n effective solutions."
+        "intro1": " Software developer from Germany. \n",
+        "intro2": " I build cool projects and",
+        "intro3": " I focus on crafting \n effective solutions."
+
     },
     
     "AboutMeTitle":

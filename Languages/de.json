@@ -8,8 +8,10 @@
     "home" : {
         "header1" : "Hey, mein Name ist",
         "header2" : "Hani Chihabi",
-        "intro1": "Ich bin ein Softwareentwickler aus Deutschland.  Ich baue coole Projekte und",
-        "intro2": "ich lege Wert darauf, effektive Lösungen zu entwickeln."
+        "intro1": "Softwareentwickler aus Deutschland.",
+        "intro2": "Ich baue coole Projekte und",
+        "intro3": "entwickle effektive Lösungen"
+
 
     },
     "AboutMeTitle":
