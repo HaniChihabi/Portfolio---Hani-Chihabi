@@ -59,59 +59,59 @@ function Services() {
   const t = useTranslations('work');
   return (
     <Container className='flex justify-center items-center cont-bold w-full h-[100vh]'>
-      <div className='text-center font-semibold text-4xl'>
-        <h1>A small selection</h1>
-        <h1>of my work.</h1>
-      </div>
+      <div className='text-center font-medium text-6xl py-24'>
+          <h1>A small selection</h1>
+          <h1>of my work.</h1>
+        </div>
       {/* Adjusted grid gap here */}
       <div className='grid grid-cols-2 gap-x-4 gap-y-0'> 
-        <CardContainer className="inter-var">
-          <CardBody className=" relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6">        
+      <CardContainer className="inter-var">
+          <CardBody className=" relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[35rem] h-auto rounded-xl p-3">        
             <CardItem translateZ="100" className="w-full mt-4">
               <Image
                 src="/sushi1.jpg"
                 height="1000"
                 width="1000"
-                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                className="h-72 w-full object-cover rounded-3xl group-hover/card:shadow-xl"
                 alt="thumbnail"
               />
             </CardItem>
           </CardBody>
         </CardContainer>
         <CardContainer className="inter-var">
-          <CardBody className=" relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6">        
+          <CardBody className=" relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[35rem] h-auto rounded-xl p-3">        
             <CardItem translateZ="100" className="w-full mt-4">
               <Image
                 src="/sushi1.jpg"
                 height="1000"
                 width="1000"
-                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                className="h-72 w-full object-cover rounded-3xl group-hover/card:shadow-xl"
                 alt="thumbnail"
               />
             </CardItem>
           </CardBody>
         </CardContainer>
         <CardContainer className="inter-var">
-          <CardBody className=" relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6">        
+          <CardBody className=" relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[35rem] h-auto rounded-xl p-3">        
             <CardItem translateZ="100" className="w-full mt-4">
               <Image
                 src="/sushi1.jpg"
                 height="1000"
                 width="1000"
-                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                className="h-72 w-full object-cover rounded-3xl group-hover/card:shadow-xl"
                 alt="thumbnail"
               />
             </CardItem>
           </CardBody>
         </CardContainer>
         <CardContainer className="inter-var">
-          <CardBody className=" relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6">        
+          <CardBody className=" relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[35rem] h-auto rounded-xl p-3">        
             <CardItem translateZ="100" className="w-full mt-4">
               <Image
                 src="/sushi1.jpg"
                 height="1000"
                 width="1000"
-                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                className="h-72 w-full object-cover rounded-3xl group-hover/card:shadow-xl"
                 alt="thumbnail"
               />
             </CardItem>
@@ -123,6 +123,12 @@ function Services() {
   );
 }
 
+function clients() {
+  return (
+    <>
+    </>
+  )
+}
 
 
 
@@ -190,7 +196,7 @@ export default function Work() {
     <>
     <Layout>
 
-      <Services />   
+        <Services />   
 
       <Values />
 
