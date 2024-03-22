@@ -2,11 +2,12 @@
 import { CardStack } from "./ui/card-stack";
 import { cn } from "../utils/cn";
 import {Container} from "./Container";
+import Image from "next/image";
 export default function CardStackDemo() {
   return (
-    <div className="flex flex-col items-center justify-center w-full mt-10">
-      <h1 className="text-6xl">What our clients</h1>
-      <h1 className="text-6xl mb-20 text-center">are saying</h1>
+    <div className="flex flex-col items-center justify-center w-full font-medium">
+      <h1 className="text-7xl">What our clients</h1>
+      <h1 className="text-7xl mb-40 text-center">are saying</h1>
       <CardStack items={CARDS} />
     </div>
   );
@@ -39,66 +40,88 @@ const CARDS = [
     name: "Manu Arora",
     designation: "Senior Software Engineer",
     content: (
+      <div>
+      <div className="flex items-center">
+        <div className="relative w-20 h-20 mr-4 mb-5">
+          <Image
+            src="/sushi1.jpg"
+            alt="Manu Arora"
+            layout="fill"
+            className="rounded-xl"
+          />
+        </div>
+      </div>
       <p>
         These cards are amazing, <Highlight>I want to use them</Highlight> in my
         project. Framer motion is a godsend ngl tbh fam 🙏
-      </p>
+      </p></div>
     ),
   },
   {
     id: 1,
-    name: "Elon Musk",
-    designation: "Senior Shitposter",
+    name: "Manu Arora",
+    designation: "Senior Software Engineer",
     content: (
+      <div>
+      <div className="flex items-center">
+        <div className="relative w-20 h-20 mr-4 mb-5">
+          <Image
+            src="/sushi1.jpg"
+            alt="Manu Arora"
+            layout="fill"
+            className="rounded-xl"
+          />
+        </div>
+      </div>
       <p>
-        I dont like this Twitter thing,{" "}
-        <Highlight>deleting it right away</Highlight> because yolo. Instead, I
-        would like to call it <Highlight>X.com</Highlight> so that it can easily
-        be confused with adult sites.
-      </p>
+        These cards are amazing, <Highlight>I want to use them</Highlight> in my
+        project. Framer motion is a godsend ngl tbh fam 🙏
+      </p></div>
     ),
   },
   {
     id: 2,
-    name: "Tyler Durden",
-    designation: "Manager Project Mayhem",
+    name: "Manu Arora",
+    designation: "Senior Software Engineer",
     content: (
+      <div>
+      <div className="flex items-center">
+        <div className="relative w-20 h-20 mr-4 mb-5">
+          <Image
+            src="/sushi1.jpg"
+            alt="Manu Arora"
+            layout="fill"
+            className="rounded-xl"
+          />
+        </div>
+      </div>
       <p>
-        The first rule of
-        <Highlight>Fight Club</Highlight> is that you do not talk about fight
-        club. The second rule of
-        <Highlight>Fight club</Highlight> is that you DO NOT TALK about fight
-        club.
-      </p>
+        These cards are amazing, <Highlight>I want to use them</Highlight> in my
+        project. Framer motion is a godsend ngl tbh fam 🙏
+      </p></div>
+    ),
+  },
+  {
+    id: 3,
+    name: "Manu Arora",
+    designation: "Senior Software Engineer",
+    content: (
+      <div>
+      <div className="flex items-center">
+        <div className="relative w-20 h-20 mr-4 mb-5">
+          <Image
+            src="/sushi1.jpg"
+            alt="Manu Arora"
+            layout="fill"
+            className="rounded-xl"
+          />
+        </div>
+      </div>
+      <p>
+        These cards are amazing, <Highlight>I want to use them</Highlight> in my
+        project. Framer motion is a godsend ngl tbh fam 🙏
+      </p></div>
     ),
   },
   
-  {
-    id: 3,
-    name: "Tyler Durden",
-    designation: "Manager Project Mayhem",
-    content: (
-      <p>
-        The first rule of
-        <Highlight>Fight Club</Highlight> is that you do not talk about fight
-        club. The second rule of
-        <Highlight>Fight club</Highlight> is that you DO NOT TALK about fight
-        club.
-      </p>
-    ),
-  },
-  {
-    id: 4,
-    name: "Tyler Durden",
-    designation: "Manager Project Mayhem",
-    content: (
-      <p>
-        The first rule of
-        <Highlight>Fight Club</Highlight> is that you do not talk about fight
-        club. The second rule of
-        <Highlight>Fight club</Highlight> is that you DO NOT TALK about fight
-        club.
-      </p>
-    ),
-  },
 ];

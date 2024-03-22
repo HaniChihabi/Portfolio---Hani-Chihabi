@@ -115,10 +115,9 @@ function Services() {
   );
 }
 
-function Clients() {
+function clients() {
   return (
     <>
-    <CardStack />
     </>
   )
 }
@@ -189,10 +188,12 @@ export default function Work() {
     <>
     <Layout>
 
-        <Services/> 
-
-        <clients />
-        
+        <section className="py-32">
+        <Services/>   
+        </section>
+        <section className=" bg-slate-50 py-32">
+          <CardStack />
+        </section>
 
       <Values />
 
