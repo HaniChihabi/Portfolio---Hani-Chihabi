@@ -195,7 +195,7 @@ export default function Work() {
           <CardStack />
         </section>
 
-        <section className="bg-black">
+        <section className="h-screen bg-black">
 
         </section>
 
