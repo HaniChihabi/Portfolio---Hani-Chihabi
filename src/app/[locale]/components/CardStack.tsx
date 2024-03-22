@@ -33,95 +33,137 @@ export const Highlight = ({
     </span>
   );
 };
-
 const CARDS = [
   {
     id: 0,
-    name: "Manu Arora",
-    designation: "Senior Software Engineer",
+    name: "John Smith",
+    designation: "CEO, Smith Enterprises",
     content: (
       <div>
-      <div className="flex items-center">
-        <div className="relative w-20 h-20 mr-4 mb-5">
-          <Image
-            src="/sushi1.jpg"
-            alt="Manu Arora"
-            layout="fill"
-            className="rounded-xl"
-          />
+        <div className="flex items-center">
+          <div className="relative w-20 h-20 mr-4 mb-5">
+            <Image
+              src="/sushi1.jpg"
+              alt="John Smith"
+              layout="fill"
+              className="rounded-xl"
+            />
+          </div>
+          <div>
+            <h1>John Smith</h1>
+            <h2>CEO, Smith Enterprises</h2>
+          </div>
         </div>
+        <p>
+          The website exceeded our expectations. The design is elegant,
+          functionality seamless, and the user experience unparalleled. Great job!
+        </p>
       </div>
-      <p>
-        These cards are amazing, <Highlight>I want to use them</Highlight> in my
-        project. Framer motion is a godsend ngl tbh fam 🙏
-      </p></div>
     ),
   },
   {
     id: 1,
-    name: "Manu Arora",
-    designation: "Senior Software Engineer",
+    name: "Alice Johnson",
+    designation: "Marketing Director, Johnson Co.",
     content: (
       <div>
-      <div className="flex items-center">
-        <div className="relative w-20 h-20 mr-4 mb-5">
-          <Image
-            src="/sushi1.jpg"
-            alt="Manu Arora"
-            layout="fill"
-            className="rounded-xl"
-          />
+        <div className="flex items-center">
+          <div className="relative w-20 h-20 mr-4 mb-5">
+            <Image
+              src="/sushi1.jpg"
+              alt="Alice Johnson"
+              layout="fill"
+              className="rounded-xl"
+            />
+          </div>
+          <div>
+            <h1>Alice Johnson</h1>
+            <h2>Marketing Director, Johnson Co.</h2>
+          </div>
         </div>
+        <p>
+          Your website design skills are exceptional. It looks stunning and functions flawlessly. Thank you!
+        </p>
       </div>
-      <p>
-        These cards are amazing, <Highlight>I want to use them</Highlight> in my
-        project. Framer motion is a godsend ngl tbh fam 🙏
-      </p></div>
     ),
   },
   {
     id: 2,
-    name: "Manu Arora",
-    designation: "Senior Software Engineer",
+    name: "Michael Brown",
+    designation: "CTO, Brown Innovations",
     content: (
       <div>
-      <div className="flex items-center">
-        <div className="relative w-20 h-20 mr-4 mb-5">
-          <Image
-            src="/sushi1.jpg"
-            alt="Manu Arora"
-            layout="fill"
-            className="rounded-xl"
-          />
+        <div className="flex items-center">
+          <div className="relative w-20 h-20 mr-4 mb-5">
+            <Image
+              src="/sushi1.jpg"
+              alt="Michael Brown"
+              layout="fill"
+              className="rounded-xl"
+            />
+          </div>
+          <div>
+            <h1>Michael Brown</h1>
+            <h2>CTO, Brown Innovations</h2>
+          </div>
         </div>
+        <p>
+          The website you developed for our company is outstanding. It has streamlined our processes and captivated our audience. Thank you!
+        </p>
       </div>
-      <p>
-        These cards are amazing, <Highlight>I want to use them</Highlight> in my
-        project. Framer motion is a godsend ngl tbh fam 🙏
-      </p></div>
     ),
   },
   {
     id: 3,
-    name: "Manu Arora",
-    designation: "Senior Software Engineer",
+    name: "Emily Wilson",
+    designation: "Founder, Wilson Creations",
     content: (
       <div>
-      <div className="flex items-center">
-        <div className="relative w-20 h-20 mr-4 mb-5">
-          <Image
-            src="/sushi1.jpg"
-            alt="Manu Arora"
-            layout="fill"
-            className="rounded-xl"
-          />
+        <div className="flex items-center">
+          <div className="relative w-20 h-20 mr-4 mb-5">
+            <Image
+              src="/sushi1.jpg"
+              alt="Emily Wilson"
+              layout="fill"
+              className="rounded-xl"
+            />
+          </div>
+          <div>
+            <h1>Emily Wilson</h1>
+            <h2>Founder, Wilson Creations</h2>
+          </div>
         </div>
+        <p>
+          Your expertise in website development is remarkable. The website captures our brand identity perfectly. Thank you!
+        </p>
       </div>
-      <p>
-        These cards are amazing, <Highlight>I want to use them</Highlight> in my
-        project. Framer motion is a godsend ngl tbh fam 🙏
-      </p></div>
     ),
   },
-  
+  {
+    id: 4,
+    name: "David Lee",
+    designation: "Director of Operations, Lee Corp",
+    content: (
+      <div>
+        <div className="flex items-center">
+          <div className="relative w-20 h-20 mr-4 mb-5">
+            <Image
+              src="/sushi1.jpg"
+              alt="David Lee"
+              layout="fill"
+              className="rounded-xl"
+            />
+          </div>
+          <div>
+            <h1>David Lee</h1>
+            <h2>Director of Operations, Lee Corp</h2>
+          </div>
+        </div>
+        <p>
+          Working with you on our website project has been a pleasure. The website delivered has exceeded our expectations. Thank you!
+        </p>
+      </div>
+    ),
+  },
 ];
+
