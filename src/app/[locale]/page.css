@@ -4,9 +4,11 @@
 
 @import 'path/to/your/custom.css'; /* Import your custom CSS */
 
-
+body {
+  zoom: 1 !important;
+}
 /* In your CSS file */
 .custom-shake-duration {
     @apply duration-500; /* Example: duration-500 for 500ms */
   }
-  
+ 

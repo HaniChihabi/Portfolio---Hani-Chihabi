@@ -23,7 +23,7 @@ function TextInput({ label, ...props }) {
         id={id}
         {...props}
         placeholder=" "
-        className="peer block w-full border border-neutral-300 bg-transparent px-6 pb-4 pt-12 text-base/6 text-neutral-950 ring-4 ring-transparent transition focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
+        className="peer block w-full border border-neutral-300 bg-transparent px-6 pb-4 pt-12 text-m text-neutral-950 ring-4 ring-transparent transition focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
       />
       <label
         htmlFor={id}
@@ -52,12 +52,6 @@ function RadioInput({ label, ...props }) {
 
 export default function Contact() {
   const t = useTranslations("Contact")
-  const intro = (
-    <SectionIntro className='relative font-display top-10 left-0'
-
-      title={t("ContactTitle")}
-    />
-  );
   async function handleSubmit(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -111,9 +105,9 @@ export default function Contact() {
 }
   return (
     <>
-      <Layout intro={intro}>
+      <Layout>
         
-      <Container className="block mt-244 sm:mt-56 lg:mt-72">
+      <Container className="block mt-244 sm:mt-56 lg:mt-56">
         <div className="grid grid-cols-1 gap-x-8 gap-y-24 lg:grid-cols-2 relative bottom-28">
         <FadeIn className="lg:order-last">
       <form onSubmit={handleSubmit}>

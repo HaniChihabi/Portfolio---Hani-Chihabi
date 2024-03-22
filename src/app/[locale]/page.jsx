@@ -12,7 +12,7 @@ const t = useTranslations('home');
   return (
       <section className="overflow-hidden h-[90vh]">
         
-      <FadeIn className='  block lg:flex-row items-center justify-center overflow-hidden relative top-52'>
+      <FadeIn className='  block lg:flex-row items-center justify-center overflow-hidden relative top-40'>
         {/* Content Container */}
         
         <div className="flex-1 flex items-center justify-center ml-5">
@@ -21,17 +21,17 @@ const t = useTranslations('home');
             {t('header1')}
             </h1> */}
             {/* <NewModal/> */}
-            <h1 className="font-display font-normal tracking-normal text-neutral-950 lg:text-7xl md:text-6xl sm:text-6xl mb-2">
+            <h1 className="font-display font-normal tracking-normal text-neutral-950 lg:text-6xl md:text-6xl sm:text-6xl mb-2">
               {t('header2')}
             </h1>
 
-            <p className=" text-neutral-600 lg:leading-relaxed md:leading-relaxed sm:leading-relaxed lg:text-2xl md:text-2xl sm:text-2xl relative left-0 bottom-9 lg:pb-0 sm:pb-8 mt-14">
+            <p className=" text-neutral-600 lg:leading-relaxed md:leading-relaxed sm:leading-relaxed lg:text-xl md:text-2xl sm:text-2xl relative left-0 bottom-9 lg:pb-0 sm:pb-8 mt-14">
             {t('intro1')}
             </p>
-            <p className=" text-neutral-600 lg:leading-relaxed md:leading-relaxed sm:leading-relaxed lg:text-2xl md:text-2xl sm:text-2xl relative left-0 bottom-9 lg:pb-0 sm:pb-8">
+            <p className=" text-neutral-600 lg:leading-relaxed md:leading-relaxed sm:leading-relaxed lg:text-xl md:text-2xl sm:text-2xl relative left-0 bottom-9 lg:pb-0 sm:pb-8">
             {t('intro2')}
             </p>
-            <p className="font-display text-neutral-600 lg:leading-relaxed md:leading-relaxed sm:leading-relaxed font-medium lg:text-2xl md:text-2xl sm:text-2xl relative left-0 bottom-9 lg:pb-0 sm:pb-8">
+            <p className="font-display text-neutral-600 lg:leading-relaxed md:leading-relaxed sm:leading-relaxed font-medium lg:text-xl md:text-2xl sm:text-2xl relative left-0 bottom-9 lg:pb-0 sm:pb-8">
             {t('intro3')}
             </p>
           </div>

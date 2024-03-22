@@ -15,7 +15,7 @@ function Section({ title, image, children }) {
     <Container className="group/section [counter-increment:section]">      
       <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-20">
         <div className="flex justify-center">
-          <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
+          <FadeIn className="w-[33.75rem] flex-none lg:w-[35rem]">
             <StylizedImage
               {...image}
               sizes="(min-width: 1024px) 41rem, 31rem"
@@ -58,7 +58,7 @@ function Discover() {
   return (
     
     <Section className='text-2xl' title={t('title')} image={{ src: imageCar }}>
-      <div className="space-y-6 text-neutral-600 text-xl">
+      <div className="space-y-6 text-neutral-600 text-l">
       <p>
           {t('text1')}
         </p>
@@ -85,8 +85,8 @@ function Discover() {
 function Build() {
   const t = useTranslations('Basketball')
   return (
-    <Section title={t('title')} image={{ src: imageBasketball, shape: 1 }}>
-      <div className="space-y-6 text-neutral-600 text-xl">
+    <Section className='relative top-20' title={t('title')} image={{ src: imageBasketball, shape: 1 }} >
+      <div className="space-y-6 text-neutral-600 text-l">
         <p>
           {t('text1')}
         </p>
@@ -110,7 +110,7 @@ function Deliver() {
   const t = useTranslations('Coding')
   return (
     <Section title={t('title')} image={{ src: imageLaptop, shape: 2 }}>
-      <div className="space-y-6 text-xl text-neutral-600">
+      <div className="space-y-6 text-l text-neutral-600">
         <p>
           {t('text1')}
         </p>
@@ -133,17 +133,12 @@ function Deliver() {
 
 export default function About() {
   const t = useTranslations('AboutMeTitle')
-  const intro = (
-    <SectionIntro className='relative font-display top-10 left-0'
-      title={t('AboutMeTitle')}
-      subtitle="Learn more about our mission and values."
-    />
-  );
   return (
     <>
     
-      <Layout intro={intro}>
-      <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-32 lg:space-y-40">
+      <Layout>
+      <div className="mt-24 space-y-32 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-36 lg:space-y-56">
+
         <Discover />
         <Build />
         <Deliver />

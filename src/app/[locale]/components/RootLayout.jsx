@@ -176,7 +176,7 @@ const [currentLanguage, setCurrentLanguage] = useState('');
 const t = useTranslations('Navigation')
 
   return (
-    <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
+    <nav className="mt-px font-display text-4xl font-medium tracking-tight text-white">
       <NavigationRow>
         <NavigationItem href={`/${currentLanguage}/work`} className="justify-start"><p>{t('My Work')}</p></NavigationItem>
         <NavigationItem href={`/${currentLanguage}/contact`} className="justify-end"><p>{t('Contact')}</p></NavigationItem>
