@@ -27,6 +27,7 @@ import { CoolComp } from '../components/CoolComp'
 import { CardBody, CardContainer, CardItem } from "../components/ui/3d-card";
 import Link from "next/link";
 import Card1 from "../components/Card1";
+import CardStack from "../components/CardStack";
 
 function Values() {
   const t = useTranslations('Me')
@@ -188,6 +189,7 @@ export default function Work() {
     <Layout>
 
         <Services/>   
+        <CardStack />
         
 
       <Values />

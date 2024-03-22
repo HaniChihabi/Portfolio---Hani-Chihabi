@@ -25,28 +25,27 @@ export default function Card1() {
             </CardItem>
           </CardBody>
         </CardContainer>
-        <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+        <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="5xl" scrollBehavior="normal" placement="top">
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalBody>
-                <section>
-                <Image
-                src="/sushi1.jpg"
-                height="1000"
-                width="1000"
-                className="h-72 w-full object-cover rounded-3xl group-hover/card:shadow-xl"
-                alt="thumbnail"
-              />
-                </section>
-                <section>
-                    
-                </section>
-                <section>
-                    
-                </section>
-              </ModalBody>
-              <ModalFooter>
+            <ModalBody className="flex flex-col items-center justify-start p-0 gap-0">
+        <section className="w-full h-[40vh] relative flex-shrink-0">
+            <video
+                className="w-full h-full object-cover rounded" // Adjust classes as needed
+                controls // Provides play, pause, etc. controls
+                autoPlay // Automatically start the video (optional)
+                muted // Recommended if autoPlay is enabled
+                loop // Loop the video
+                >
+                <source src="/public/BGRemoverVid.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+
+        </section>  
+        </ModalBody>
+
+        <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>
                   Close
                 </Button>
