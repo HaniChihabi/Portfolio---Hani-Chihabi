@@ -1,3 +1,5 @@
+"use client"
+import React from "react";
 
 import Image from 'next/image'
 import { GridList, GridListItem } from '../components/GridList'
@@ -24,6 +26,7 @@ import { GithubOutlined } from '@ant-design/icons'
 import { CoolComp } from '../components/CoolComp'
 import { CardBody, CardContainer, CardItem } from "../components/ui/3d-card";
 import Link from "next/link";
+import Card1 from "../components/Card1";
 
 function Values() {
   const t = useTranslations('Me')
@@ -65,19 +68,7 @@ function Services() {
         </div>
       {/* Adjusted grid gap here */}
       <div className='grid grid-cols-2 gap-x-4 gap-y-0'> 
-      <CardContainer className="inter-var">
-          <CardBody className=" relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[35rem] h-auto rounded-xl p-3">        
-            <CardItem translateZ="100" className="w-full mt-4">
-              <Image
-                src="/sushi1.jpg"
-                height="1000"
-                width="1000"
-                className="h-72 w-full object-cover rounded-3xl group-hover/card:shadow-xl"
-                alt="thumbnail"
-              />
-            </CardItem>
-          </CardBody>
-        </CardContainer>
+      <Card1 />
         <CardContainer className="inter-var">
           <CardBody className=" relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[35rem] h-auto rounded-xl p-3">        
             <CardItem translateZ="100" className="w-full mt-4">
@@ -196,7 +187,8 @@ export default function Work() {
     <>
     <Layout>
 
-        <Services />   
+        <Services/>   
+        
 
       <Values />
 
