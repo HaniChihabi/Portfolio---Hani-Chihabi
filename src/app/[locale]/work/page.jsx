@@ -115,9 +115,10 @@ function Services() {
   );
 }
 
-function clients() {
+function Clients() {
   return (
     <>
+    <CardStack />
     </>
   )
 }
@@ -188,8 +189,9 @@ export default function Work() {
     <>
     <Layout>
 
-        <Services/>   
-        <CardStack />
+        <Services/> 
+
+        <clients />
         
 
       <Values />

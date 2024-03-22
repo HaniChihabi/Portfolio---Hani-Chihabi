@@ -4,17 +4,14 @@ import { cn } from "../utils/cn";
 import {Container} from "./Container";
 export default function CardStackDemo() {
   return (
-    <div className="h-[40rem] flex items-center justify-center w-full">
-      <div>
-      <div className="p-24 text-6xl text-center">
-        <h1>What my Clients</h1>
-        <h1>are saying</h1>
-      </div>
+    <div className="flex flex-col items-center justify-center w-full mt-10">
+      <h1 className="text-6xl">What our clients</h1>
+      <h1 className="text-6xl mb-20 text-center">are saying</h1>
       <CardStack items={CARDS} />
-      </div>
     </div>
   );
 }
+
 
 // Small utility to highlight the content of specific section of a testimonial content
 export const Highlight = ({
