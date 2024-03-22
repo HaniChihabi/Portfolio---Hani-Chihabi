@@ -39,6 +39,14 @@ export const CardStack = ({
     }, 5000);
   };
 
+  const handleClick = () => {
+    setCards((prevCards: Card[]) => {
+      const clickedCard = prevCards[0];
+      const remainingCards = prevCards.slice(1);
+      return [...remainingCards, clickedCard];
+    });
+  };
+
   return (
     <div className="relative  h-60 w-60 md:h-60 md:w-96">
       {cards.map((card, index) => {
@@ -49,6 +57,7 @@ export const CardStack = ({
             style={{
               transformOrigin: "top center",
             }}
+            onClick={index === 0 ? handleClick : undefined}
             animate={{
               top: index * -CARD_OFFSET,
               scale: 1 - index * SCALE_FACTOR, // decrease scale for cards that are behind

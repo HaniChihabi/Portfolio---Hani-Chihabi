@@ -1,10 +1,17 @@
 "use client";
 import { CardStack } from "./ui/card-stack";
 import { cn } from "../utils/cn";
+import {Container} from "./Container";
 export default function CardStackDemo() {
   return (
     <div className="h-[40rem] flex items-center justify-center w-full">
+      <div>
+      <div className="p-24 text-6xl text-center">
+        <h1>What my Clients</h1>
+        <h1>are saying</h1>
+      </div>
       <CardStack items={CARDS} />
+      </div>
     </div>
   );
 }
