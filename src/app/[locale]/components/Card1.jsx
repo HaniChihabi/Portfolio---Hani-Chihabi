@@ -16,12 +16,13 @@ export default function Card1() {
           <CardBody className=" relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[35rem] h-auto rounded-xl p-3">        
             <CardItem translateZ="100" className="w-full mt-4" onClick={onOpen}>
               <Image
-                src="/sushi1.jpg"
-                height="1000"
-                width="1000"
-                className="h-72 w-full object-cover rounded-3xl group-hover/card:shadow-xl"
-                alt="thumbnail"
-              />
+              src="/sushipage.jpg"
+              layout="intrinsic"
+              width={1000}
+              height={1000}
+              className="h-72 w-full object-cover rounded-3xl group-hover/card:shadow-xl"
+              alt="thumbnail"
+            />
             </CardItem>
           </CardBody>
         </CardContainer>

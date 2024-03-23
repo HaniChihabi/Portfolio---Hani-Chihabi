@@ -1,39 +1,16 @@
-"use client";
-import { CardStack } from "./ui/card-stack";
-import { cn } from "../utils/cn";
-import {Container} from "./Container";
+// File: CardStackDemo.tsx
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
-export default function CardStackDemo() {
-  return (
-    <div className="flex flex-col items-center justify-center w-full font-medium">
-      <h1 className="text-7xl">What our clients</h1>
-      <h1 className="text-7xl mb-40 text-center">are saying</h1>
-      <CardStack items={CARDS} />
-    </div>
-  );
-}
 
-
-// Small utility to highlight the content of specific section of a testimonial content
-export const Highlight = ({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
-  return (
-    <span
-      className={cn(
-        "font-bold bg-emerald-100 text-emerald-700 dark:bg-emerald-700/[0.2] dark:text-emerald-500 px-1 py-0.5",
-        className
-      )}
-    >
-      {children}
-    </span>
-  );
+export type Card = {
+  id: number;
+  name: string;
+  designation: string;
+  content: React.ReactNode;
 };
-const CARDS = [
+
+const CARDS: Card[] = [
   {
     id: 0,
     name: "John Smith",
@@ -41,20 +18,16 @@ const CARDS = [
     content: (
       <div>
         <div className="flex items-center">
-          <div className="relative w-20 h-20 mr-4 mb-5">
+          <div className="relative w-20 h-20 mr-4 mb-10">
             <Image
-              src="/sushi1.jpg"
+              src="/pp1.jpg"
               alt="John Smith"
               layout="fill"
               className="rounded-xl"
             />
           </div>
-          <div>
-            <h1>John Smith</h1>
-            <h2>CEO, Smith Enterprises</h2>
-          </div>
         </div>
-        <p>
+        <p className="text-2xl mb-20">
           The website exceeded our expectations. The design is elegant,
           functionality seamless, and the user experience unparalleled. Great job!
         </p>
@@ -68,20 +41,16 @@ const CARDS = [
     content: (
       <div>
         <div className="flex items-center">
-          <div className="relative w-20 h-20 mr-4 mb-5">
+        <div className="relative w-20 h-20 mr-4 mb-10">
             <Image
-              src="/sushi1.jpg"
+              src="/pp2.jpg"
               alt="Alice Johnson"
               layout="fill"
               className="rounded-xl"
             />
           </div>
-          <div>
-            <h1>Alice Johnson</h1>
-            <h2>Marketing Director, Johnson Co.</h2>
-          </div>
         </div>
-        <p>
+        <p className="text-2xl leading-9 font-normal">
           Your website design skills are exceptional. It looks stunning and functions flawlessly. Thank you!
         </p>
       </div>
@@ -94,20 +63,16 @@ const CARDS = [
     content: (
       <div>
         <div className="flex items-center">
-          <div className="relative w-20 h-20 mr-4 mb-5">
+        <div className="relative w-20 h-20 mr-4 mb-10">
             <Image
-              src="/sushi1.jpg"
+              src="/pp3.jpg"
               alt="Michael Brown"
               layout="fill"
               className="rounded-xl"
             />
           </div>
-          <div>
-            <h1>Michael Brown</h1>
-            <h2>CTO, Brown Innovations</h2>
-          </div>
         </div>
-        <p>
+        <p className="text-2xl">
           The website you developed for our company is outstanding. It has streamlined our processes and captivated our audience. Thank you!
         </p>
       </div>
@@ -120,20 +85,16 @@ const CARDS = [
     content: (
       <div>
         <div className="flex items-center">
-          <div className="relative w-20 h-20 mr-4 mb-5">
+        <div className="relative w-20 h-20 mr-4 mb-10">
             <Image
-              src="/sushi1.jpg"
+              src="/pp4.jpg"
               alt="Emily Wilson"
               layout="fill"
               className="rounded-xl"
             />
           </div>
-          <div>
-            <h1>Emily Wilson</h1>
-            <h2>Founder, Wilson Creations</h2>
-          </div>
         </div>
-        <p>
+        <p className="text-2xl leading-9">
           Your expertise in website development is remarkable. The website captures our brand identity perfectly. Thank you!
         </p>
       </div>
@@ -145,21 +106,17 @@ const CARDS = [
     designation: "Director of Operations, Lee Corp",
     content: (
       <div>
-        <div className="flex items-center">
-          <div className="relative w-20 h-20 mr-4 mb-5">
+        <div className="flex items-center justify-between">
+        <div className="relative w-20 h-20 mr-4 mb-10">
             <Image
-              src="/sushi1.jpg"
+              src="/pp5.jpg"
               alt="David Lee"
               layout="fill"
               className="rounded-xl"
             />
           </div>
-          <div>
-            <h1>David Lee</h1>
-            <h2>Director of Operations, Lee Corp</h2>
-          </div>
         </div>
-        <p>
+        <p className="text-2xl leading-9">
           Working with you on our website project has been a pleasure. The website delivered has exceeded our expectations. Thank you!
         </p>
       </div>
@@ -167,3 +124,88 @@ const CARDS = [
   },
 ];
 
+export const CardStack = ({
+  items,
+  offset,
+  scaleFactor,
+  cardWidth,
+  cardHeight,
+  contentPadding
+}: {
+  items: Card[];
+  offset?: number;
+  scaleFactor?: number;
+  cardWidth?: number;
+  cardHeight?: number;
+  contentPadding?: string;
+}) => {
+  const CARD_OFFSET = offset || 20;
+  const SCALE_FACTOR = scaleFactor || 0.006;
+  const CARD_WIDTH = cardWidth || 450; // Default card width
+  const CARD_HEIGHT = cardHeight || 560; // Default card height
+  const CONTENT_PADDING = contentPadding || "30px"; // Default content padding
+
+  const [cards, setCards] = useState<Card[]>(items);
+
+  const handleClick = () => {
+    setCards((prevCards: Card[]) => {
+      const clickedCard = prevCards[0];
+      const remainingCards = prevCards.slice(1);
+      return [...remainingCards, clickedCard];
+    });
+  };
+
+  return (
+    <div className="relative flex items-center justify-center h-auto w-auto">
+      {cards.map((card, index) => {
+        return (
+          <motion.div
+            key={card.id}
+            className="absolute dark:bg-black bg-white h-60 w-60 md:h-80 md:w-96 rounded-3xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1]  shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col justify-between"
+            style={{
+              width: CARD_WIDTH,
+              height: CARD_HEIGHT,
+              top: index * CARD_OFFSET,
+              transform: `translate(-50%, -50%) scale(${
+                1 - index * SCALE_FACTOR
+              })`,
+              zIndex: cards.length - index,
+            }}
+            onClick={index === 0 ? handleClick : undefined}
+            animate={{
+              top: index * -CARD_OFFSET,
+              scale: 1 - index * SCALE_FACTOR,
+              zIndex: cards.length - index,
+            }}
+          >
+            <div className="font-normal text-neutral-700 dark:text-neutral-200 "
+              style={{ padding: CONTENT_PADDING }}
+            >
+              <div >
+                {card.content}
+              </div>
+              <div className="absolute bottom-7">
+                <p className="text-neutral-500 font-medium dark:text-white">
+                  {card.name}
+                </p>
+                <p className="text-neutral-400 font-normal dark:text-neutral-200">
+                  {card.designation}
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        );
+      })}
+    </div>
+  );
+};
+
+export default function CardStackDemo() {
+  return (
+    <div className="flex flex-col items-center justify-center w-full font-medium">
+      <h1 className="text-7xl">What our clients</h1>
+      <h1 className="text-7xl mb-40 text-center">are saying</h1>
+      <CardStack items={CARDS} />
+    </div>
+  );
+}
