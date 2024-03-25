@@ -148,10 +148,11 @@ export const CardStack = ({
 
   const [cards, setCards] = useState<Card[]>(items);
 
-  const handleClick = () => {
-    setCards((prevCards: Card[]) => {
-      const clickedCard = prevCards[0];
-      const remainingCards = prevCards.slice(1);
+  const handleClick = (clickedId: number) => {
+    setCards((prevCards) => {
+      const clickedIndex = prevCards.findIndex((card) => card.id === clickedId);
+      const clickedCard = prevCards[clickedIndex];
+      const remainingCards = [...prevCards.slice(0, clickedIndex), ...prevCards.slice(clickedIndex + 1)];
       return [...remainingCards, clickedCard];
     });
   };
@@ -173,7 +174,7 @@ export const CardStack = ({
               })`,
               zIndex: cards.length - index,
             }}
-            onClick={index === 0 ? handleClick : undefined}
+            onClick={() => handleClick(card.id)} // Updated onClick handler
             animate={{
               top: index * -CARD_OFFSET,
               scale: 1 - index * SCALE_FACTOR,
