@@ -6,6 +6,12 @@
 
 body {
   zoom: 1 !important;
+  background-color: black
+}
+
+.main-wrapper {
+  min-height: 100vh;
+  background-color: #000; /* Your desired background color */
 }
 
 /* In your CSS file */

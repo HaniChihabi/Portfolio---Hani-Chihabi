@@ -106,7 +106,7 @@ export default function Work() {
 
   return (
     <>
-    <Layout>
+    <Layout className='bg-black h-screen'>
 
         <section className="py-32 bg-slate-0">
         <Services/>   

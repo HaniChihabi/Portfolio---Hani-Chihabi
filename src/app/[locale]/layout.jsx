@@ -16,7 +16,7 @@ function LocaleLayout({ children, locale }) {
 
   return (
     <html lang={locale}>
-      <body>
+      <body className='bg-black'>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
