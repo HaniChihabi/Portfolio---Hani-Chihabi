@@ -1,31 +1,26 @@
 const faqs = [
     {
-      title: "What is Acme?",
+      title: "How Long Will It Take to Build My Website?",
       content:
         "Acme is a design system for building performant, accessible and beautiful web experiences.",
     },
     {
-      title: "How can I apply to the Open Source Discount?",
+      title: "Will My Website Be Mobile-Friendly?",
       content:
         "The Open Source Discount is available for everyone who is building an open source project. You can apply to the discount by sending an email to support@acme.com",
     },
     {
-      title: "Can I use Acme for my freelance projects?",
+      title: "Who Will Own the Website Once It's Completed?",
       content:
         "Yes, you can use Acme for your freelance projects. You can purchase the Freelancer License from our website.",
     },
     {
-      title: "What is your refund policy?",
+      title: "Will I Be Able to Update the Website Myself?",
       content: "We do not provide refunds. However, we can help you with any issues you may have.",
     },
     {
-      title: "Can I cancel my subscription?",
+      title: "Do You Offer Ongoing Maintenance and Support?",
       content: "Yes, you can cancel and renew your subscription at any time.",
-    },
-    {
-      title: "How do I switch from quarterly to yearly subscription?",
-      content:
-        "You can switch from quarterly to yearly subscription by canceling your quarterly subscription and purchasing a yearly subscription.",
     }
   ];
   
