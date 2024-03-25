@@ -23,6 +23,7 @@ const CARDS: Card[] = [
               src="/pp1.jpg"
               alt="John Smith"
               layout="fill"
+              
               className="rounded-xl"
             />
           </div>

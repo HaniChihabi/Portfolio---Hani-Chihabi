@@ -1,4 +1,4 @@
-import {nextui} from "@nextui-org/react";
+import { nextui } from "@nextui-org/react";
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 /** @type {import('tailwindcss').Config} */
@@ -19,6 +19,37 @@ const config = {
       '7xl': ['4rem', { lineHeight: '4.5rem' }],
     },
     extend: {
+      animation: {
+        first: "moveVertical 30s ease infinite",
+        second: "moveInCircle 20s reverse infinite",
+        third: "moveInCircle 40s linear infinite",
+        fourth: "moveHorizontal 40s ease infinite",
+        fifth: "moveInCircle 20s ease infinite",
+      },
+      keyframes: {
+        moveHorizontal: {
+          "0%": {
+            transform: "translateX(-50%) translateY(-10%)",
+          },
+          "50%": {
+            transform: "translateX(50%) translateY(10%)",
+          },
+          "100%": {
+            transform: "translateX(-50%) translateY(-10%)",
+          },
+        },
+        moveInCircle: {
+          "0%": {
+            transform: "rotate(0deg)",
+          },
+          "50%": {
+            transform: "rotate(180deg)",
+          },
+          "100%": {
+            transform: "rotate(360deg)",
+          },
+        },
+      }, // Add a colon here
       borderRadius: {
         '4xl': '2.5rem',
       },
@@ -29,9 +60,9 @@ const config = {
           { fontVariationSettings: '"wdth" 125' },
         ],
       },
-    },
+    }, // Remove the extra comma here
   },
   darkMode: "class",
-  plugins: [nextui()],
+  plugins: [nextui()] // Remove the extra comma here
 }
 export default config;

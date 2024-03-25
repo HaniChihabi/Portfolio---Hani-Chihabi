@@ -19,7 +19,7 @@ import Card1 from "../components/Card1";
 import Card2 from "../components/Card2";
 import Card3 from "../components/Card3";
 import Card4 from "../components/Card4";
-
+import BGAnimation from "../components/BGAnimation";
 import CardStack from "../components/CardStack";
 import  Faq  from "../components/Faq";
 
@@ -85,12 +85,13 @@ export default function Work() {
           <CardStack />
         </section>
 
+        <section className="h-[1500vh]">
+          <BGAnimation />
+        </section>
+
         <section>
           <Faq />
         </section>
-
-      <Values />
-
 
 
       <ContactSection />
