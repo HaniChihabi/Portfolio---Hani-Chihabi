@@ -15,6 +15,10 @@ import Card1 from "../components/Card1";
 import Card2 from "../components/Card2";
 import Card3 from "../components/Card3";
 import Card4 from "../components/Card4";
+import Card5 from "../components/Card5";
+import Card6 from "../components/Card6";
+import Card7 from "../components/Card7";
+import Card8 from "../components/Card8";
 import BGAnimation from "../components/BGAnimation";
 import CardStack from "../components/CardStack";
 import  Faq  from "../components/Faq";
@@ -69,17 +73,17 @@ function Services() {
       {/* Load the additional set of projects if the state is true */}
       {additionalProjectsLoaded && (
         <div className='grid grid-cols-2 gap-x-4 gap-y-0 mt-4'>
-          <Card1 />
-          <Card2 />
-          <Card3 />
-          <Card4 />
+          <Card5 />
+          <Card6 />
+          <Card7 />
+          <Card8 />
         </div>
       )}
       {/* Only render the button if additional projects haven't been loaded yet */}
       {!additionalProjectsLoaded && (
         <div className="flex justify-center w-full mt-4">
-          <button className="px-6 py-2 bg-blue-500 text-white rounded-md" onClick={loadMoreProjects}>
-            Load More Projects
+          <button className="px-6 py-2 text-blue-500 rounded-md text-xl pt-12" onClick={loadMoreProjects}>
+            Load More Projects +
           </button>
         </div>
       )}
