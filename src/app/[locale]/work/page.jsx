@@ -51,12 +51,9 @@ function Values() {
 }
 
 function Services() {
-  // State to track if the additional projects are loaded
-  const [additionalProjectsLoaded, setAdditionalProjectsLoaded] = useState(false);
-
-  const loadMoreProjects = () => {
-    setAdditionalProjectsLoaded(true);
-  };
+  // State to track visibility of sets of cards
+  const [showFirstSet, setShowFirstSet] = useState(false);
+  const [showSecondSet, setShowSecondSet] = useState(false);
 
   return (
     <Container className='flex flex-col justify-center items-center cont-bold w-full h-auto'>
@@ -70,24 +67,36 @@ function Services() {
         <Card3 />
         <Card4 />
       </div>
-      {/* Load the additional set of projects if the state is true */}
-      {additionalProjectsLoaded && (
+      {/* First additional set of projects */}
+      {showFirstSet && (
         <div className='grid grid-cols-2 gap-x-4 gap-y-0 mt-4'>
           <Card5 />
           <Card6 />
+        </div>
+      )}
+      {/* Button to load the first set */}
+      {!showFirstSet && !showSecondSet && (
+        <div className="flex justify-center w-full mt-4">
+          <button className="px-6 py-2 bg-blue-500 text-white rounded-md" onClick={() => setShowFirstSet(true)}>
+            Load More Projects
+          </button>
+        </div>
+      )}
+      {/* Second additional set of projects */}
+      {showSecondSet && (
+        <div className='grid grid-cols-2 gap-x-4 gap-y-0 mt-4'>
           <Card7 />
           <Card8 />
         </div>
       )}
-      {/* Only render the button if additional projects haven't been loaded yet */}
-      {!additionalProjectsLoaded && (
+      {/* Button to load the second set, shown after the first set is loaded */}
+      {showFirstSet && !showSecondSet && (
         <div className="flex justify-center w-full mt-4">
-          <button className="px-6 py-2 text-blue-500 rounded-md text-xl pt-12" onClick={loadMoreProjects}>
-            Load More Projects +
+          <button className="px-6 py-2 bg-blue-500 text-white rounded-md" onClick={() => setShowSecondSet(true)}>
+            Load More Projects
           </button>
         </div>
       )}
-      
     </Container>
   );
 }

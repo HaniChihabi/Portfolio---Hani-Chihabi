@@ -14,7 +14,7 @@ export default function Card8() {
           <CardBody className=" relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[35rem] h-auto rounded-xl p-3">        
             <CardItem translateZ="100" className="w-full mt-4" onClick={onOpen}>
             <Image
-              src="/screen8.jpg"
+              src="/screen14.jpg"
               layout="intrinsic"
               width={1000}
               height={1000}
