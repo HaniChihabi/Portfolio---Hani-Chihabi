@@ -77,8 +77,8 @@ function Services() {
       {/* Button to load the first set */}
       {!showFirstSet && !showSecondSet && (
         <div className="flex justify-center w-full mt-4">
-          <button className="px-6 py-2 bg-blue-500 text-white rounded-md" onClick={() => setShowFirstSet(true)}>
-            Load More Projects
+          <button className="px-6 py-2 text-blue-500 text-xl rounded-md" onClick={() => setShowFirstSet(true)}>
+            Load More Projects +
           </button>
         </div>
       )}
@@ -92,8 +92,8 @@ function Services() {
       {/* Button to load the second set, shown after the first set is loaded */}
       {showFirstSet && !showSecondSet && (
         <div className="flex justify-center w-full mt-4">
-          <button className="px-6 py-2 bg-blue-500 text-white rounded-md" onClick={() => setShowSecondSet(true)}>
-            Load More Projects
+          <button className="px-6 py-2 text-blue-500 text-xl rounded-md" onClick={() => setShowSecondSet(true)}>
+            Load More Projects +
           </button>
         </div>
       )}
