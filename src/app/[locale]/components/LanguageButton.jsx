@@ -1,7 +1,6 @@
 "use client"
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { GlobalOutlined } from '@ant-design/icons';
 import {Avatar} from "@nextui-org/react";
 

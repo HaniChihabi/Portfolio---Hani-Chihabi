@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export type Card = {
   id: number;
@@ -204,10 +205,11 @@ export const CardStack = ({
 };
 
 export default function CardStackDemo() {
+  const t = useTranslations('rating');
   return (
     <div className="flex flex-col items-center justify-center w-full font-medium">
-      <h1 className="text-7xl">What our clients</h1>
-      <h1 className="text-7xl mb-40 text-center">are saying</h1>
+      <h1 className="text-7xl">{t('Text1')}</h1>
+      <h1 className="text-7xl mb-40 text-center">{t('Text2')}</h1>
       <CardStack items={CARDS} />
     </div>
   );

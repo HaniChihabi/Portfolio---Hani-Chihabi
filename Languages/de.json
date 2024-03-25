@@ -50,11 +50,22 @@
         }   
     },
 
-    "Projects" : {
-        "Efficient" : "Meine Arbeit",
-        "Adaptable" : "Über mich",
+    "projects" : {
+        "Text1" : "Ein paar meiner",
+        "Text2" : "Projekte",
         "Innovative" : "Kontakt"
     },
+
+    "rating" : {
+        "Text1" : "Was meine",
+        "Text2" : "Kunden sagen"
+    },
+
+    "FAQ": {
+      "Q1": "What is Acme?",
+      "Q2": "Will My Website Be Mobile-Friendly?"
+    },
+  
 
     "ContactButton" : {
         "Text" : "Erzähl mir über dein Projekt",

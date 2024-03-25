@@ -3,7 +3,6 @@ import React from "react";
 
 import Image from 'next/image'
 import { GridList, GridListItem } from '../components/GridList'
-import { GridPattern } from '../components/GridPattern'
 import { ContactSection } from '../components/ContactSection'
 import { Container } from '../components/Container'
 import { FadeIn, FadeInStagger } from '../components/FadeIn'
@@ -54,12 +53,12 @@ function Services() {
   // State to track visibility of sets of cards
   const [showFirstSet, setShowFirstSet] = useState(false);
   const [showSecondSet, setShowSecondSet] = useState(false);
-
+  const t = useTranslations('projects')
   return (
     <Container className='flex flex-col justify-center items-center cont-bold w-full h-auto'>
       <div className='text-center font-medium text-7xl pb-24'>
-        <h1>A small selection</h1>
-        <h1>of my work.</h1>
+        <h1>{t('Text1')}</h1>
+        <h1>{t('Text2')}</h1>
       </div>
       <div className='grid grid-cols-2 gap-x-4 gap-y-0'>
         <Card1 />
