@@ -50,15 +50,23 @@
             "title" : "Custom Software Solutions.",
             "text" : "Custom requests with secure software solutions and dedicated post-launch support."
         }
-        
-        
     },
 
-    "Projects" : {
-        "Efficient" : "Meine Arbeit",
-        "Adaptable" : "Über mich",
+    "projects" : {
+        "Text1" : "A small selection",
+        "Text2" : "of my work",
         "Innovative" : "Kontakt"
     },
+
+    "rating" : {
+        "Text1" : "What my clients",
+        "Text2" : "are saying"
+    },
+
+    "FAQ": {
+        "Text1": "Frequently asked",
+        "Text2": "Questions"
+      },
 
     "ContactButton" : {
         "Text" : "Tell me about your project",

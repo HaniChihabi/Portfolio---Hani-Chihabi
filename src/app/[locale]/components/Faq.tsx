@@ -3,17 +3,18 @@
 import React from "react";
 import {Accordion, AccordionItem} from "@nextui-org/react";
 import {Icon} from "@iconify/react";
-
+import { useTranslations } from "next-intl";
 import faqs from "./faqs";
 
 export default function Component() {
+  const t = useTranslations("FAQ")
   return (
     <section className="mx-auto w-full max-w-6xl px-0 py-20 sm:py-26 md:px-6 lg:px-8 lg:py-26">
       <div className="mx-auto flex w-full max-w-4xl flex-col gap-6">
         <h2 className="px-2 text-3xl leading-7">
           <span className="inline-block md:hidden">FAQs</span>
-          <span className="hidden md:flex text-7xl font-medium justify-center">Frequently asked </span>
-          <span className="hidden md:flex text-7xl font-medium justify-center mb-20">questions</span>
+          <span className="hidden md:flex text-7xl font-medium justify-center">{t("Text1")}</span>
+          <span className="hidden md:flex text-7xl font-medium justify-center mb-20">{t("Text2")}</span>
         </h2>
         <Accordion
           fullWidth

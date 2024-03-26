@@ -18,7 +18,6 @@ import Card5 from "../components/Card5";
 import Card6 from "../components/Card6";
 import Card7 from "../components/Card7";
 import Card8 from "../components/Card8";
-import BGAnimation from "../components/BGAnimation";
 import CardStack from "../components/CardStack";
 import  Faq  from "../components/Faq";
 import { useState } from "react";

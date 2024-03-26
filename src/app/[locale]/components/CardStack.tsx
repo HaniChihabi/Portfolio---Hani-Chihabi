@@ -1,16 +1,15 @@
 // File: CardStackDemo.tsx
+"use Client"
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-
 export type Card = {
   id: number;
   name: string;
   designation: string;
   content: React.ReactNode;
 };
-
 const CARDS: Card[] = [
   {
     id: 0,
@@ -24,14 +23,11 @@ const CARDS: Card[] = [
               src="/pp1.jpg"
               alt="John Smith"
               layout="fill"
-              
               className="rounded-xl"
             />
           </div>
         </div>
         <p className="text-2xl mb-20">
-          The website exceeded our expectations. The design is elegant,
-          functionality seamless, and the user experience unparalleled. Great job!
         </p>
       </div>
     ),

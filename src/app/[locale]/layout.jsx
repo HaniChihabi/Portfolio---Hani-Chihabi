@@ -29,7 +29,7 @@ function LocaleLayout({ children, locale }) {
 export default function Layout({ children, params: { locale } }) {
   return (
     <LocaleLayout locale={locale}>
-            <Providers>
+      <Providers>
       <RootLayout>{children}</RootLayout>
       </Providers>
 
