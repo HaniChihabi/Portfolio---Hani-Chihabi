@@ -91,7 +91,7 @@ export const CardStack = ({
       {cards.map((card, index) => (
         <motion.div
           key={card.id}
-          className="absolute dark:bg-black bg-white h-60 w-60 md:h-80 md:w-96 rounded-3xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1]  shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col justify-between select-none"
+          className="absolute dark:bg-black bg-white h-60 w-60 md:h-80 md:w-96 rounded-3xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1]  shadow-black/[0.1] dark:shadow-white/[0.05] select-none"
           style={{
             userSelect: 'none',
             width: CARD_WIDTH,
@@ -108,12 +108,13 @@ export const CardStack = ({
             zIndex: cards.length - index,
           }}
         >
-          <div className="relative h-20 w-20 bg-black rounded-xl">
-          <Image src={card.imageSrc} alt={card.name} layout="fill" className="rounded-xl" /></div>
-          <div >
-            <p className="text-xl">{t(card.contentKey)}</p>
+          <div className="relative h-20 w-20 bg-black rounded-xl mb-10">
+          <Image src={card.imageSrc} alt={card.name} layout="fill" className="rounded-xl " />
           </div>
           <div>
+          <p className="text-xl font-normal">{t(card.contentKey)}</p>
+          </div>
+          <div className="absolute bottom-10">
             <p>{card.name}</p>
             <p>{card.designation}</p>
           </div>

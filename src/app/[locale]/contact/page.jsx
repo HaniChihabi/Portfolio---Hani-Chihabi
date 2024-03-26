@@ -111,7 +111,7 @@ export default function Contact() {
   <div className="grid grid-cols-1 gap-x-8 gap-y-24 relative bottom-28 place-items-center">
         <FadeIn className="lg:order-last">
       <form onSubmit={handleSubmit}>
-        <h2 className="font-display text-base flex justify-center font-semibold text-neutral-950">
+        <h2 className="text-7xl flex justify-center font-medium text-neutral-950 mb-10">
          {t("Work inquiries")}
         </h2>
         <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50">
