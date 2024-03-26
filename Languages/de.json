@@ -61,9 +61,24 @@
         "Text2" : "Kunden sagen"
     },
 
-    "FAQ": {
-      "Text1": "Oft gestellte",
-      "Text2": "Fragen"
+    "FAQs": {
+        "Text1": "Oft gestellte",
+        "Text2": "Fragen",
+        
+        "faqTitle1": "ebjlfnsl",
+        "faqContent1": "ljewbfjlb",
+
+        "faqTitle2": "ebjlfnsl",
+        "faqContent2": "ljewbfjlb",
+
+        "faqTitle3": "ebjlfnsl",
+        "faqContent3": "ljewbfjlb",
+
+        "faqTitle4": "ebjlfnsl",
+        "faqContent4": "ljewbfjlb",
+
+        "faqTitle5": "ebjlfnsl",
+        "faqContent5": "ljewbfjlb"
     },
 
     "Cards": {
