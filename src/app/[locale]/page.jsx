@@ -16,12 +16,12 @@ const t = useTranslations('home');
         {/* Content Container */}
         
         <div className="flex-1 flex items-center justify-center ml-5">
-          <div className="max-w-sm md:max-w-4xl lg:max-w-[680px] sm:text-center ">
+          <div className="max-w-sm md:max-w-4xl lg:max-w-[680px] text-center ">
             {/* <h1 className="font-display font-extralight tracking-tight lg:text-4xl md:text-3xl sm:text-3xl">
             {t('header1')}
             </h1> */}
             {/* <NewModal/> */}
-            <h1 className="font-display font-normal tracking-normal text-neutral-950 lg:text-6xl md:text-6xl sm:text-6xl mb-2">
+            <h1 className="font-display font-normal tracking-normal text-neutral-950 lg:text-6xl text-6xl mb-2">
               {t('header2')}
             </h1>
 

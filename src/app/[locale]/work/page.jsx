@@ -127,8 +127,7 @@ export default function Work() {
 
 {/* projects */}
       
-
-<ButtonUp />
+<ButtonUp className="lg:hidden"/>
 </Layout>
     </>
   )

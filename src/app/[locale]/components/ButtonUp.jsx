@@ -1,8 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useMediaQuery } from 'react-responsive';
 
 export default function ButtonUp() {
   const [isVisible, setIsVisible] = useState(false);
+  const isLargeScreen = useMediaQuery({ minWidth: 1024 }); // Set the width according to your "lg" breakpoint
 
   // Function to detect scroll position
   const toggleVisibility = () => {
@@ -19,7 +21,7 @@ export default function ButtonUp() {
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
-  return isVisible ? (
+  return isLargeScreen && isVisible ? (
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       className="justify-center fixed bottom-10 right-10 bg-white hover:bg-slate-50 text-black px-4 rounded-full"
