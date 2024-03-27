@@ -64,7 +64,7 @@ export const HoverEffect = () => {
                 />
               )}
             </AnimatePresence>
-            <div className=" rounded-2xl h-full w-full p-4 overflow-hidden bg-black text-white border border-gray-400 relative z-50 ">
+            <div className=" rounded-2xl h-full w-full p-4 overflow-hidden bg-black text-white border border-gray-600 relative z-50 ">
             <div className="text-center relative z-50"> {/* Adjusted for text-center */}
                 <div className="p-10">
                   <h4 className="text-zinc-100 text-6xl tracking-wide mt-4">

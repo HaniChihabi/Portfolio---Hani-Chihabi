@@ -115,11 +115,11 @@ export default function Work() {
           <CardStack />
         </section>
 
-        <section className="py-24 bg-black h-screen">
+        <section className="py-32 bg-black h-screen">
           <HoverEffect />
         </section>
 
-        <section className="bg-slate-0">
+        <section className="bg-slate-0 py-32">
           <Faq />
         </section>
 

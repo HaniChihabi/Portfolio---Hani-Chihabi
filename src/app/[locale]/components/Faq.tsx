@@ -34,7 +34,7 @@ export default function FAQComponent() {
   const t = useTranslations("FAQs");
 
   return (
-    <section className="mx-auto w-full max-w-6xl px-0 py-20 sm:py-26 md:px-6 lg:px-8 lg:py-26">
+    <section className="mx-auto w-full max-w-6xl px-0 sm:py-26 md:px-6 lg:px-8 ">
       <div className="mx-auto flex w-full max-w-4xl flex-col gap-6">
         <div className="flex justify-center">
         <div className='text-center font-medium text-7xl pb-24'>
