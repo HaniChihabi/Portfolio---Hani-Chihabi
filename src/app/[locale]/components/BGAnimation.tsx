@@ -5,7 +5,7 @@ import { Container } from "./Container";
 export default function BackgroundGradientAnimationDemo() {
     return (
       <BackgroundGradientAnimation className="z-50">
-        <Container className="z-50 py-40">
+  <Container as="div" className="z-50 py-40"> {/* Add the 'as' property */}
           <div className="w-full grid grid-cols-2 gap-4 p-8 rounded-lg h-full z-50 text-white">
             {/* Left side */}
             <div className="grid grid-cols-2 gap-4 col-span-1 text-center z-50 flex justify-center items-center">
