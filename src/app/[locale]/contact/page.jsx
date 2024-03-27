@@ -108,13 +108,13 @@ export default function Contact() {
       <Layout>
         
   <Container className="flex items-center justify-center min-h-screen">
-  <div className="grid grid-cols-1 gap-x-8 gap-y-24 relative bottom-28 place-items-center">
+  <div className="grid grid-cols-1">
         <FadeIn className="lg:order-last">
       <form onSubmit={handleSubmit}>
-        <h2 className="text-7xl flex justify-center font-medium text-neutral-950 mb-10">
+        <h2 className="text-6xl flex justify-center font-medium text-neutral-950">
          {t("Work inquiries")}
         </h2>
-        <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50">
+        <div className="isolate py-16 -space-y-px rounded-2xl bg-white/50">
           <TextInput label={t("inquiries.Name")} name="name" autoComplete="name" />
           <TextInput
             label={t("inquiries.Email")}
@@ -131,7 +131,7 @@ export default function Contact() {
           <TextInput label={t("inquiries.Message")} name="message" />
           
         </div>
-        <Button type="submit" className="mt-10">
+        <Button type="submit" className="mt-0">
           {t("Work together")}
         </Button>
       </form>

@@ -60,7 +60,7 @@ function Services() {
         <h1>{t('Text1')}</h1>
         <h1>{t('Text2')}</h1>
       </div>
-      <div className='grid grid-cols-2 gap-x-4 gap-y-0'>
+      <div className='grid lg:grid-cols-2 gap-x-4 gap-y-0'>
         <Card1 />
         <Card2 />
         <Card3 />
