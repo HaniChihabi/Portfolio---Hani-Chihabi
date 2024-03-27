@@ -55,27 +55,25 @@ const CARDS: Card[] = [
 
 export const CardStack = ({
   items,
-  offset,
-  scaleFactor,
-  cardWidth,
-  cardHeight,
-  contentPadding
+  offset = 20, // Default vertical offset
+  horizontalOffset = 30, // Additional horizontal offset for the fanning effect
+  scaleFactor = 0.006,
+  cardWidth = 400, // Default card width
+  cardHeight = 560, // Default card height
+  contentPadding = "40px", // Default content padding
+  leftShift = 260, // New: Amount to shift the card stack to the left
 }: {
   items: Card[];
   offset?: number;
+  horizontalOffset?: number;
   scaleFactor?: number;
   cardWidth?: number;
   cardHeight?: number;
   contentPadding?: string;
+  leftShift?: number; // New parameter for left shift
 }) => {
-  const CARD_OFFSET = offset || 20;
-  const SCALE_FACTOR = scaleFactor || 0.006;
-  const CARD_WIDTH = cardWidth || 450; // Default card width
-  const CARD_HEIGHT = cardHeight || 560; // Default card height
-  const CONTENT_PADDING = contentPadding || "40px"; // Default content padding
-
   const [cards, setCards] = useState<Card[]>(items);
-  const t = useTranslations('Cards'); // Assuming your namespace for cards is 'Cards'
+  const t = useTranslations('Cards');
 
   const handleClick = (clickedId: number) => {
     setCards((prevCards) => {
@@ -88,49 +86,49 @@ export const CardStack = ({
 
   return (
     <div className="relative flex items-center justify-center h-auto w-auto">
-      {cards.map((card, index) => (
-        <motion.div
-          key={card.id}
-          className="absolute dark:bg-black bg-white h-60 w-60 md:h-80 md:w-96 rounded-3xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1]  shadow-black/[0.1] dark:shadow-white/[0.05] select-none"
-          style={{
-            userSelect: 'none',
-            width: CARD_WIDTH,
-            height: CARD_HEIGHT,
-            top: index * CARD_OFFSET,
-            transform: `translate(-50%, -50%) scale(${1 - index * SCALE_FACTOR})`,
-            zIndex: cards.length - index,
-            padding: CONTENT_PADDING
-          }}
-          onClick={() => handleClick(card.id)}
-          animate={{
-            top: index * -CARD_OFFSET,
-            scale: 1 - index * SCALE_FACTOR,
-            zIndex: cards.length - index,
-          }}
-        >
-          <div className="relative h-20 w-20 bg-black rounded-xl mb-10">
-          <Image src={card.imageSrc} alt={card.name} layout="fill" className="rounded-xl " />
-          </div>
-          <div>
-          <p className="text-xl font-normal">{t(card.contentKey)}</p>
-          </div>
-          <div className="absolute bottom-10">
-            <p>{card.name}</p>
-            <p>{card.designation}</p>
-          </div>
-        </motion.div>
-      ))}
+      <div style={{ transform: `translateX(-${leftShift}px)` }}> {/* Apply the left shift here */}
+        {cards.map((card, index) => (
+          <motion.div
+            key={card.id}
+            className="absolute dark:bg-black bg-white rounded-3xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1] shadow-black/[0.1] dark:shadow-white/[0.05] select-none"
+            style={{
+              width: `${cardWidth}px`,
+              height: `${cardHeight}px`,
+              transform: `scale(${1 - index * scaleFactor}) translateX(${index * horizontalOffset}px)`,
+              zIndex: cards.length - index,
+              padding: contentPadding
+            }}
+            onClick={() => handleClick(card.id)}
+            animate={{
+              x: index * horizontalOffset,
+              scale: 1 - index * scaleFactor,
+              zIndex: cards.length - index,
+            }}
+          >
+            <div className="relative h-20 w-20 rounded-xl mb-10 overflow-hidden">
+              <Image src={card.imageSrc} alt={card.name} layout="fill" className="rounded-xl" />
+            </div>
+            <div>
+              <p className="text-xl font-normal">{t(card.contentKey)}</p>
+            </div>
+            <div className="absolute bottom-10">
+              <p>{card.name}</p>
+              <p>{card.designation}</p>
+            </div>
+          </motion.div>
+        ))}
+      </div>
     </div>
   );
 };
 
 export default function CardStackDemo() {
-  const t = useTranslations('rating'); // Assuming your namespace for the home page is 'HomePage'
+  const t = useTranslations('rating');
 
   return (
     <div className="flex flex-col items-center justify-center w-full font-medium">
-      <h1 className="text-7xl">{t('Text1')}</h1> {/* Example usage of `t` */}
-      <h1 className="text-7xl mb-44">{t('Text2')}</h1> {/* Example usage of `t` */}
+      <h1 className="text-7xl">{t('Text1')}</h1>
+      <h1 className="text-7xl mb-20">{t('Text2')}</h1>
       <CardStack items={CARDS} />
     </div>
   );

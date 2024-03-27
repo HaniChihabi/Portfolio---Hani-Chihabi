@@ -1,7 +1,6 @@
 "use client"
 import React from "react";
 
-import Image from 'next/image'
 import { GridList, GridListItem } from '../components/GridList'
 import { ContactSection } from '../components/ContactSection'
 import { Container } from '../components/Container'
@@ -115,7 +114,7 @@ export default function Work() {
           <CardStack />
         </section>
 
-        <section className="py-32 bg-black h-screen">
+        <section className="py-32 bg-black">
           <HoverEffect />
         </section>
 
