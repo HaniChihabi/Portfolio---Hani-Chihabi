@@ -10,7 +10,7 @@ import NewModal from './components/Modalnew'
 export default function Home() {
 const t = useTranslations('home');
   return (
-      <section className="overflow-hidden h-[90vh]">
+      <section className="overflow-hidden h-[90vh] max-h-screen">
         
       <FadeIn className='  block lg:flex-row items-center justify-center overflow-hidden relative top-40'>
         {/* Content Container */}

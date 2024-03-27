@@ -75,13 +75,14 @@ function Header({
   }, [expanded]); // Re-run effect when expanded changes
 
   const hcLogoClass = clsx(
-    'font-bold text-4xl z-50 transition-all transition duration-300 ease-in-out transform hover:scale-105', // Basic classes
+    'font-bold text-4xl z-50 transition duration-300 ease-in-out transform hover:scale-105', // Correct transition usage
     {
-      'text-black': !expanded, // Color when menu is not expanded
-      'text-white': expanded, // Color when menu is expanded
-      'fade-in scale-up': expanded, // Apply animation classes when expanded
+      'text-black': !expanded,
+      'text-white': expanded,
     }
   );
+  
+  
   // Updated Globe definition
   const globeClasses = clsx(
     'font-bold text-4xl z-50 transition-all duration-300 ease-in-out transform hover:scale-105', // Basic classes

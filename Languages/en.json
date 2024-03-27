@@ -89,11 +89,14 @@
       },      
 
     "Cards": {
-        "cardContentJohnSmith": "The website exceeded our expectations. The design is elegant, functionality seamless, and the user experience unparalleled. Great job!",
-        "cardContentAliceJohnson": "Hani is a true professional. He delivered the project on time and within budget. I highly recommend him for any web development project.",
-        "cardContentMichaelTurner": "I am very impressed with the quality of work. Hani is a great communicator and a pleasure to work with. I will definitely hire him again for future projects.",
-        "cardContentEmilyCarter" : "Hani is a talented developer who goes above and beyond to deliver exceptional results. I am very happy with the website he created for my business. Highly recommended!",
-        "cardContentDavidLee" : "Working with you on our website project has been a pleasure. The website delivered has exceeded our expectations. Thank you!"
+        
+            "cardContentJohnSmith": "Die Website hat unsere Erwartungen übertroffen. Das Design ist elegant, die Funktionalität nahtlos und die Benutzererfahrung unübertroffen. Großartige Arbeit!",
+            "cardContentAliceJohnson": "Hani ist ein echter Profi. Er hat das Projekt pünktlich und innerhalb des Budgets geliefert. Ich kann ihn wärmstens für jedes Webentwicklungsprojekt empfehlen.",
+            "cardContentMichaelTurner": "Ich bin sehr beeindruckt von der Qualität der Arbeit. Hani ist ein großartiger Kommunikator und eine Freude, mit ihm zusammenzuarbeiten. Ich werde ihn auf jeden Fall für zukünftige Projekte wieder einstellen.",
+            "cardContentEmilyCarter" : "Hani ist ein talentierter Entwickler, der alles daran setzt, außergewöhnliche Ergebnisse zu liefern. Ich bin sehr zufrieden mit der Website, die er für mein Unternehmen erstellt hat. Sehr empfehlenswert!",
+            "cardContentDavidLee" : "Die Zusammenarbeit mit Ihnen an unserem Website-Projekt war ein Vergnügen. Die gelieferte Website hat unsere Erwartungen übertroffen. Vielen Dank!"
+          
+          
     },
 
     "approach" : {

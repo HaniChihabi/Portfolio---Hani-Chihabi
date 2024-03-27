@@ -17,7 +17,7 @@ function TextInput({ label, ...props }) {
   let id = useId()
 
   return (
-    <div className="group relative z-0 transition-all focus-within:z-10">
+    <div className="group ox-10 relative button-20 z-0 transition-all focus-within:z-10">
       <input
         type="text"
         id={id}
@@ -107,9 +107,9 @@ export default function Contact() {
     <>
       <Layout>
         
-  <Container className="flex items-center justify-center min-h-screen">
-  <div className="grid grid-cols-1">
-        <FadeIn className="lg:order-last">
+        <Container className="flex items-center justify-center h-screen">
+  <div className="grid grid-cols-1 relative bottom-20">
+        <FadeIn>
       <form onSubmit={handleSubmit}>
         <h2 className="text-6xl flex justify-center font-medium text-neutral-950">
          {t("Work inquiries")}
