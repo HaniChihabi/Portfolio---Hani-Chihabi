@@ -69,19 +69,23 @@
         "Text2": "Questions",
 
         "faqTitle1": "What services do you offer exactly?",
-        "faqContent1": "ljewbfjlb",
-      
-        "faqTitle2": "How much does a project cost?",
-        "faqContent2": "ljewbfjlb",
-      
-        "faqTitle3": "What are the payment terms for a project?",
-        "faqContent3": "ljewbfjlb",
-      
+        "faqContent1": "I am a full-stack developer, which means I can help you with everything from designing your website to developing it and hosting it. I also offer custom software solutions.",
+        
+        "faqTitle2": "Do you work internationally?",
+        "faqContent2": "Yes. I'm based in Germany and i work with clients from all over the world.",
+
+        "faqTitle3": "How much does a project cost?",
+        "faqContent3": "Most of my projects range between $2,000 and $5,000. My minimum engagement fee is $1000.",
+
         "faqTitle4": "How long does a project take?",
         "faqContent4": "Most of my projects take between 1-2 weeks maximum",
+
+        "faqTitle5": "What are the payment terms for a project?",
+        "faqContent5": "50% upfront and 50% after launch. This can be adjusted based on the project size.",
       
-        "faqTitle5": "Do you take on small hourly work?",
-        "faqContent5": "No, I only do fixed-fee projects with a minimum size of one page."
+        "faqTitle6": "Do you take on small hourly work?",
+        "faqContent6": "No, I only do fixed-fee projects with a minimum size of one page."
+        
       },      
 
     "Cards": {

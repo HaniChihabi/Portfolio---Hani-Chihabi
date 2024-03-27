@@ -61,25 +61,31 @@
         "Text2" : "Kunden sagen"
     },
 
-    "FAQs": {
-        "Text1": "Oft gestellte",
-        "Text2": "Fragen",
-
-        "faqTitle1": "Wie lange dauert die Entwicklung einer Website?",
-        "faqContent1": "Abhängig von der Komplexität, kann die Entwicklung einer Website zwischen 1 und maximal 4 Tagen dauern.",
-
-        "faqTitle2": "Wie viel kostet eine Website?",
-        "faqContent2": "Abhängig von der Komplexität, kann die Website zwischen 700 und maximal 1000 kosten.",
-
-        "faqTitle3": "Bieten Sie Wartung und Updates für meine Website an?",
-        "faqContent3": "ljewbfjlb",
-
-        "faqTitle4": "Wie ist der typische Ablauf eines Projekts?",
-        "faqContent4": "ljewbfjlb",
-
-        "faqTitle5": "Wie erfolgt die Kommunikation während des Projekts?",
-        "faqContent5": "ljewbfjlb"
-    },
+    
+        "FAQs": {
+            "Text1": "Häufig gestellte",
+            "Text2": "Fragen",
+    
+            "faqTitle1": "Welche Dienstleistungen bieten Sie genau an?",
+            "faqContent1": "Ich bin ein Full-Stack-Entwickler, was bedeutet, dass ich Ihnen bei allem helfen kann, von der Gestaltung Ihrer Website bis hin zur Entwicklung und Hosting. Ich biete auch individuelle Softwarelösungen an.",
+            
+            "faqTitle2": "Arbeiten Sie international?",
+            "faqContent2": "Ja. Ich bin in Deutschland ansässig und arbeite mit Kunden aus der ganzen Welt zusammen.",
+    
+            "faqTitle3": "Wie viel kostet ein Projekt?",
+            "faqContent3": "Die meisten meiner Projekte liegen zwischen 2.000 und 5.000 Dollar. Meine Mindestgebühr für eine Beauftragung beträgt 1.000 Dollar.",
+    
+            "faqTitle4": "Wie lange dauert ein Projekt?",
+            "faqContent4": "Die meisten meiner Projekte dauern maximal 1-2 Wochen.",
+    
+            "faqTitle5": "Wie lauten die Zahlungsbedingungen für ein Projekt?",
+            "faqContent5": "50% im Voraus und 50% nach dem Start. Dies kann je nach Projektgröße angepasst werden.",
+          
+            "faqTitle6": "Übernehmen Sie kleine stündliche Arbeiten?",
+            "faqContent6": "Nein, ich mache nur Projekte mit Festpreis und einer Mindestgröße von einer Seite."
+        },
+    
+    
 
     "Cards": {
         "cardContentJohnSmith": "The website exceeded our expectations. The design is elegant, functionality seamless, and the user experience unparalleled. Great job!",

@@ -27,6 +27,10 @@ const faqKeys = [
   {
     title: "faqTitle5",
     content: "faqContent5",
+  },
+  {
+    title: "faqTitle6",
+    content: "faqContent6",
   }
 ];
 
@@ -37,7 +41,7 @@ export default function FAQComponent() {
     <section className="mx-auto w-full max-w-6xl px-0 sm:py-26 md:px-6 lg:px-8 ">
       <div className="mx-auto flex w-full max-w-4xl flex-col gap-6">
         <div className="flex justify-center">
-        <div className='text-center font-medium text-7xl pb-24'>
+        <div className='text-center font-medium text-7xl pb-20'>
         <h1>{t('Text1')}</h1>
         <h1>{t('Text2')}</h1>
       </div>
