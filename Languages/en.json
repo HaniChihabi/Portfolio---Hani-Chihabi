@@ -63,27 +63,26 @@
         "Text2" : "are saying"
     },
 
-    "FAQ": {
-        "Text1": "Frequently asked",
-        "Text2": "Questions"
-    },
 
     "FAQs": {
-        "faqTitle1": "ebjlfnsl",
+        "Text1": "Frequently asked",
+        "Text2": "Questions",
+
+        "faqTitle1": "How long does the development of a website take?",
         "faqContent1": "ljewbfjlb",
-
-        "faqTitle2": "ebjlfnsl",
+      
+        "faqTitle2": "How much does a website cost?",
         "faqContent2": "ljewbfjlb",
-
-        "faqTitle3": "ebjlfnsl",
+      
+        "faqTitle3": "Do you offer maintenance and updates for my website?",
         "faqContent3": "ljewbfjlb",
-
-        "faqTitle4": "ebjlfnsl",
+      
+        "faqTitle4": "What is the typical process of a project?",
         "faqContent4": "ljewbfjlb",
-
-        "faqTitle5": "ebjlfnsl",
+      
+        "faqTitle5": "How is communication during the project handled?",
         "faqContent5": "ljewbfjlb"
-    },
+      },      
 
     "Cards": {
         "cardContentJohnSmith": "The website exceeded our expectations. The design is elegant, functionality seamless, and the user experience unparalleled. Great job!",
@@ -91,6 +90,19 @@
         "cardContentMichaelTurner": "I am very impressed with the quality of work. Hani is a great communicator and a pleasure to work with. I will definitely hire him again for future projects.",
         "cardContentEmilyCarter" : "Hani is a talented developer who goes above and beyond to deliver exceptional results. I am very happy with the website he created for my business. Highly recommended!",
         "cardContentDavidLee" : "Working with you on our website project has been a pleasure. The website delivered has exceeded our expectations. Thank you!"
+    },
+
+    "approach" : {
+        "Text1" : "Your brand's digital",
+        "Text2" : "architect",
+        "projectTitle1" : "50 +",
+        "projectDescription1" : "Clients",
+        "projectTitle2" : "3 years",
+        "projectDescription2" : "experience",
+        "projectTitle3" : "80+",
+        "projectDescription3" : "Successful Projects",
+        "projectTitle4" : "100%",
+        "projectDescription4" : "Passion"
     },
 
     "ContactButton" : {

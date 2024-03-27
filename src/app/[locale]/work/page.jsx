@@ -21,6 +21,8 @@ import Card8 from "../components/Card8";
 import CardStack from "../components/CardStack";
 import  Faq  from "../components/Faq";
 import { useState } from "react";
+import BGAnimation from "../components/BGAnimation";
+import { HoverEffect } from "../components/HoverEffect";
 
 function Values() {
   const t = useTranslations('Me')
@@ -109,13 +111,13 @@ export default function Work() {
         <section className="py-32 bg-slate-0">
         <Services/>   
         </section>
-        <section className=" h-[120vh] bg-white py-32 mb-0 bg-slate-50">
+        <section className=" h-[120vh]  py-32 mb-0 bg-slate-50">
           <CardStack />
         </section>
 
-        {/* <section className="">
-          <BGAnimation />
-        </section> */}
+        <section className="py-24 bg-black h-screen">
+          <HoverEffect />
+        </section>
 
         <section className="bg-slate-0">
           <Faq />

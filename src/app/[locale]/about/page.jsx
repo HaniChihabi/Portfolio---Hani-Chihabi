@@ -6,6 +6,7 @@ import { StylizedImage } from '../components/StylizedImage'
 import { Blockquote } from '../components/Blockquote'
 import imageBasketball from '../images/basketball.jpg'
 import imageCar from '../images/car.jpeg'
+
 import Layout from '../components/Layout';
 import ButtonUp from '../components/ButtonUp'
 import {useTranslations} from 'next-intl';
@@ -116,7 +117,6 @@ function Deliver() {
         </p>
         <p>
           {t('text2')}
-
         </p>
         <p>
           {t('text3')}

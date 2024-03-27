@@ -30,16 +30,7 @@ export default function Card7() {
             <>
             <ModalBody className="flex flex-col items-center justify-start p-0 gap-0">
         <section className="w-full h-[40vh] relative flex-shrink-0">
-            <video
-                className="w-full h-full object-cover rounded" // Adjust classes as needed
-                controls // Provides play, pause, etc. controls
-                autoPlay // Automatically start the video (optional)
-                muted // Recommended if autoPlay is enabled
-                loop // Loop the video
-                >
-                <source src="/public/BGRemoverVid.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
+            
 
         </section>  
         </ModalBody>

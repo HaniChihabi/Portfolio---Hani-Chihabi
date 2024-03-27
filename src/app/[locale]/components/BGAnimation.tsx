@@ -6,36 +6,33 @@ export default function BackgroundGradientAnimationDemo() {
     return (
       <BackgroundGradientAnimation className="z-50">
         <Container className="z-50 py-40">
-          <div className="w-full grid grid-cols-2 gap-4 p-8 rounded-lg h-full z-50 ">
+          <div className="w-full grid grid-cols-2 gap-4 p-8 rounded-lg h-full z-50 text-white">
             {/* Left side */}
-            <div className="grid grid-cols-2 gap-4 col-span-1 text-center z-50">
-                <div className="bg-white rounded-lg p-20 col-span-1">
-                    <h1>Div 1</h1>
+            <div className="grid grid-cols-2 gap-4 col-span-1 text-center z-50 flex justify-center items-center">
+                <div className="rounded-lg p-20 col-span-1 bg-black border-1 border-gray-500 ">
+                    <h1 className="text-6xl">20+</h1>
                     <p>happy clients</p>
                 </div>
-                <div className="bg-white rounded-lg p-20 col-span-1">
-                    <h1>Div 1</h1>
+                <div className="bg-black rounded-lg p-20 col-span-1 border-1 border-gray-500">
+                    <h1 className="text-6xl">3</h1>
+                    <p>experience</p>
+                </div><div className="bg-black rounded-lg p-20 col-span-1 border-1 border-gray-500">
+                    <h1 className="text-6xl">20+</h1>
                     <p>happy clients</p>
-                </div><div className="bg-white rounded-lg p-20 col-span-1">
-                    <h1>Div 1</h1>
-                    <p>happy clients</p>
-                </div><div className="bg-white rounded-lg p-20 col-span-1">
-                    <h1>Div 1</h1>
+                </div><div className="bg-black rounded-lg p-20 col-span-1 border-1 border-gray-500">
+                    <h1 className="text-6xl">20+</h1>
                     <p>happy clients</p>
                 </div>
             </div>
             {/* Right side */}
-            <div className="col-span-1 bg-white rounded-lg p-8  z-50">
-                <div className="bg-white rounded-lg p-20 col-span-1">
-                    <h1>Div 1</h1>
-                    <p>happy clients</p>
-                </div>
+            <div className="col-span-1 bg-black border-1 border-gray-500 rounded-lg p-8  z-50">
+                
             </div>
-            <div className="col-span-2 bg-white rounded-lg p-8 z-50">Underneath Div</div>
-            <div className="bg-white rounded-lg col-span-1 z-50">Div 1</div>
-              <div className="bg-white rounded-lg p-20 col-span-1 z-50">Div 2</div>
-              <div className="bg-white rounded-lg p-20 col-span-1 z-50">Div 3</div>
-              <div className="bg-white rounded-lg p-20 col-span-1 z-50">Div 4</div>
+            <div className="col-span-2 bg-black border-1 border-gray-500 rounded-lg p-8 z-50">Underneath Div</div>
+            <div className=" rounded-lg col-span-1 z-50 bg-black border-1 border-gray-500">Div 1</div>
+              <div className=" rounded-lg p-20 col-span-1 z-50 bg-black border-1 border-gray-500">Div 2</div>
+              <div className=" rounded-lg p-20 col-span-1 z-50 bg-black border-1 border-gray-500">Div 3</div>
+              <div className="rounded-lg p-20 col-span-1 z-50 bg-black border-1 border-gray-500">Div 4</div>
           </div>
         </Container>
       </BackgroundGradientAnimation>

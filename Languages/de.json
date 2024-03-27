@@ -64,20 +64,20 @@
     "FAQs": {
         "Text1": "Oft gestellte",
         "Text2": "Fragen",
-        
-        "faqTitle1": "ebjlfnsl",
-        "faqContent1": "ljewbfjlb",
 
-        "faqTitle2": "ebjlfnsl",
-        "faqContent2": "ljewbfjlb",
+        "faqTitle1": "Wie lange dauert die Entwicklung einer Website?",
+        "faqContent1": "Abhängig von der Komplexität, kann die Entwicklung einer Website zwischen 1 und maximal 4 Tagen dauern.",
 
-        "faqTitle3": "ebjlfnsl",
+        "faqTitle2": "Wie viel kostet eine Website?",
+        "faqContent2": "Abhängig von der Komplexität, kann die Website zwischen 700 und maximal 1000 kosten.",
+
+        "faqTitle3": "Bieten Sie Wartung und Updates für meine Website an?",
         "faqContent3": "ljewbfjlb",
 
-        "faqTitle4": "ebjlfnsl",
+        "faqTitle4": "Wie ist der typische Ablauf eines Projekts?",
         "faqContent4": "ljewbfjlb",
 
-        "faqTitle5": "ebjlfnsl",
+        "faqTitle5": "Wie erfolgt die Kommunikation während des Projekts?",
         "faqContent5": "ljewbfjlb"
     },
 
@@ -88,6 +88,20 @@
         "cardContentEmilyCarter" : "Hani is a talented developer who goes above and beyond to deliver exceptional results. I am very happy with the website he created for my business. Highly recommended!",
         "cardContentDavidLee" : "Working with you on our website project has been a pleasure. The website delivered has exceeded our expectations. Thank you!"
     },
+
+    "approach" : {
+        "Text1" : "Ihr digitaler",
+        "Text2" : "Architekt ",
+        "projectTitle1" : "50 +",
+        "projectDescription1" : "Kunden",
+        "projectTitle2" : "3 Jahre",
+        "projectDescription2" : "Erfahrung",
+        "projectTitle3" : "80+",
+        "projectDescription3" : "Erfolgreiche Projekte",
+        "projectTitle4" : "100%",
+        "projectDescription4" : "Leidenschaft"
+    },
+    
   
 
     "ContactButton" : {
