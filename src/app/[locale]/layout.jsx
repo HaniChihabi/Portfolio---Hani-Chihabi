@@ -3,6 +3,8 @@ import './styles/tailwind.css';
 import { Providers } from './providers';
 import {NextIntlClientProvider, useMessages} from 'next-intl';
 
+export const dynamic = 'auto'
+// 'auto' | 'force-dynamic' | 'error' | 'force-static'
 export const metadata = {
   title: {
     template: '%s - Studio',
