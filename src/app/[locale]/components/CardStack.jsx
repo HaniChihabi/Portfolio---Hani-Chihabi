@@ -118,12 +118,12 @@ export const CardStack = ({
       <Image src={card.imageSrc} alt={card.name} layout="fill" className="rounded-xl" />
     </div>
             <div>
-    <p className={`${isMobile ? 'text-base leading-tight' : 'text-xl leading-normal'} `} style={{ fontWeight: 'normal' }} >{t(card.contentKey)}</p>
-  </div>
-  <div style={{ bottom: isMobile ? '20px' : '20px' }}>
-    <p className={`${isMobile ? 'text-sm' : 'text-lg'}`}>{card.name}</p>
-    <p className={`${isMobile ? 'text-sm leading-tight' : 'text-lg leading-normal'}`}  >{card.designation}</p>
-  </div>
+              <p className={`${isMobile ? 'text-base leading-tight' : 'text-xl leading-normal'} `} style={{ fontWeight: 'normal' }} >{t(card.contentKey)}</p>
+            </div>
+            <div style={{ bottom: isMobile ? '20px' : '20px' }}>
+              <p className={`${isMobile ? 'text-sm' : 'text-lg'}`}>{card.name}</p>
+              <p className={`${isMobile ? 'text-sm leading-tight' : 'text-lg leading-normal'}`}  >{card.designation}</p>
+            </div>
           </motion.div>
         ))}
       </div>
