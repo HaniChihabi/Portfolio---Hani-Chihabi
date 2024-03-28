@@ -16,7 +16,7 @@ function Section({ title, image, children }) {
     <Container className="group/section [counter-increment:section]">      
       <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-20">
         <div className="flex justify-center">
-          <FadeIn className="w-[33.75rem] flex-none lg:w-[35rem]">
+          <FadeIn className=" flex-none w-[25rem] sm:w-[35rem]">
             <StylizedImage
               {...image}
               sizes="(min-width: 1024px) 41rem, 31rem"
@@ -30,7 +30,7 @@ function Section({ title, image, children }) {
               className="font-display text-base font-semibold before:text-neutral-300 before:content-['/_'] after:text-neutral-950 after:content-[counter(section,decimal-leading-zero)]"
               aria-hidden="true"
             />
-            <h2 className="mt-2 font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
+            <h2 className="mt-2 font-display text-2xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
               {title}
             </h2>
             <div className="mt-6">{children}</div>
@@ -45,7 +45,7 @@ function Culture() {
   const t = useTranslations('Culture')
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32 relative top-10">
-      <blockquote className="relative font-display text-3xl font-medium tracking-tight text-white sm:text-4xl">
+      <blockquote className="relative font-display text-2xl font-medium tracking-tight text-white sm:text-4xl">
         <FadeIn className="flex justify-center sm:before:absolute sm:before:right-full text-white mb-10">
           {t("Welcome")}
         </FadeIn>
