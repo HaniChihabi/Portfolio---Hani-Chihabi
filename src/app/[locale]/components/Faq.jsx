@@ -37,7 +37,7 @@ export default function FAQComponent() {
 
   return (
     <Container className="mx-auto w-full max-w-6xl px-0 sm:py-26 md:px-6 lg:px-8 ">
-      <FadeIn className='text-center font-medium text-5xl sm:text-7xl pb-20'>
+      <FadeIn className='text-center font-medium text-5xl sm:text-7xl pb-16'>
         <h1>{t('Text1')}</h1>
         <h1>{t('Text2')}</h1>
       </FadeIn>

@@ -10,9 +10,9 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <Menu as="div" className="relative inline-block text-left">
+    <Menu as="div" className="relative inline-block text-center">
       <div>
-        <Menu.Button className="inline-flex justify-center gap-x-1.5 text-2xl sm:text-4xl mr-16 font-normal text-black shadow-sm">
+        <Menu.Button className="inline-flex justify-center gap-x-1.5 text-2xl sm:text-4xl mr-8 sm:mr-16 font-normal text-black shadow-sm">
         <GlobalOutlined className='transition-transform duration-300 ease-in-out hover:scale-110' />
         </Menu.Button>
       </div>
