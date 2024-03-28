@@ -28,7 +28,7 @@ function LocaleLayout({ children, locale }) {
 // Modify the existing Layout component to include LocaleLayout
 export default function Layout({ children, params: { locale } }) {
   return (
-    <LocaleLayout locale={locale}>
+    <LocaleLayout locale={locale} className="-space-y-32">
       <Providers>
       <RootLayout>{children}</RootLayout>
       </Providers>
