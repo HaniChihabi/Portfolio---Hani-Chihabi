@@ -6,6 +6,23 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { FadeIn } from "./FadeIn";
 
+const useResponsiveWidth = () => {
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    const updateWidth = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', updateWidth);
+    updateWidth(); // Initial setup
+
+    return () => window.removeEventListener('resize', updateWidth);
+  }, []);
+
+  return width;
+};
+
 const CARDS = [
   {
     id: 0,
@@ -48,14 +65,16 @@ export const CardStack = ({
   items,
   offset = 20, // Default vertical offset
   horizontalOffset = 30, // Additional horizontal offset for the fanning effect
-  scaleFactor = 0.006,
-  cardWidth = 400, // Default card width
-  cardHeight = 560, // Default card height
   contentPadding = "40px", // Default content padding
-  leftShift = 260, // New: Amount to shift the card stack to the left
 }) => {
   const [cards, setCards] = useState(items);
   const t = useTranslations('Cards');
+  const screenWidth = useResponsiveWidth();
+  const isMobile = screenWidth < 768;
+  const cardWidth = isMobile ? 290 : 390;
+  const cardHeight = isMobile ? 380 : 480;
+  const scaleFactor = isMobile ? 0.1 : 0.006; // Adjusted scale factor for mobile
+
 
   const handleClick = (clickedId) => {
     setCards((prevCards) => {
@@ -67,9 +86,10 @@ export const CardStack = ({
   };
 
   return (
-    <FadeIn className="relative flex items-center justify-center h-auto w-auto">
-      <div style={{ transform: `translateX(-${leftShift}px)` }}> {/* Apply the left shift here */}
+    <FadeIn className="relative flex items-center justify-center h-auto w-auto ">
+      <div className="flex justify-center" > {/* Apply the left shift here */}
         {cards.map((card, index) => (
+          
           <motion.div
             key={card.id}
             className="absolute dark:bg-black bg-white rounded-3xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1] shadow-black/[0.1] dark:shadow-white/[0.05] select-none"
@@ -87,16 +107,17 @@ export const CardStack = ({
               zIndex: cards.length - index,
             }}
           >
-            <div className="relative h-20 w-20 rounded-xl mb-10 overflow-hidden">
-              <Image src={card.imageSrc} alt={card.name} layout="fill" className="rounded-xl" />
-            </div>
+            <div className="relative h-20 w-20 rounded-xl overflow-hidden" style={{ marginBottom: isMobile ? '15px' : '20px' }}>
+  <Image src={card.imageSrc} alt={card.name} layout="fill" className="rounded-xl" />
+</div>
+
             <div>
-              <p className="text-xl font-normal">{t(card.contentKey)}</p>
-            </div>
-            <div className="absolute bottom-10">
-              <p>{card.name}</p>
-              <p>{card.designation}</p>
-            </div>
+    <p className={`${isMobile ? 'text-base' : 'text-xl'} `} style={{ fontWeight: 'normal' }} >{t(card.contentKey)}</p>
+  </div>
+  <div className="absolute" style={{ bottom: isMobile ? '5px' : '10px' }}>
+    <p className={`${isMobile ? 'text-sm' : 'text-lg'}`}>{card.name}</p>
+    <p className={`${isMobile ? 'text-sm' : 'text-lg'}`}  >{card.designation}</p>
+  </div>
           </motion.div>
         ))}
       </div>

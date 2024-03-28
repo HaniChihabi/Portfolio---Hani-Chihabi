@@ -107,7 +107,7 @@ export default function Work() {
 
   return (
     <>
-    <Layout className='bg-black h-screen'>
+    <Container>
         <section className="py-32 bg-slate-0">
         <Services/>   
         </section>
@@ -123,7 +123,7 @@ export default function Work() {
       <ContactSection />
 {/* projects */}
 <ButtonUp className="lg:hidden"/>
-</Layout>
+</Container>
     </>
   )
 }
