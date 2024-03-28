@@ -70,7 +70,7 @@ function Services() {
       
       {/* First additional set of projects */}
       {showFirstSet && (
-        <FadeIn className='grid grid-cols-2 gap-x-4 gap-y-0 mt-4'>
+        <FadeIn className='grid lg:grid-cols-2 gap-x-4 gap-y-0 mt-4'>
           <Card5 />
           <Card6 />
         </FadeIn>
@@ -85,7 +85,7 @@ function Services() {
       )}
       {/* Second additional set of projects */}
       {showSecondSet && (
-        <FadeIn className='grid grid-cols-2 gap-x-4 gap-y-0 mt-4'>
+        <FadeIn className='grid lg:grid-cols-2 gap-x-4 gap-y-0 mt-4'>
           <Card7 />
           <Card8 />
         </FadeIn>
@@ -107,7 +107,6 @@ export default function Work() {
 
   return (
     <>
-    <Container>
         <section className="py-32 bg-slate-0">
         <Services/>   
         </section>
@@ -123,7 +122,6 @@ export default function Work() {
       <ContactSection />
 {/* projects */}
 <ButtonUp className="lg:hidden"/>
-</Container>
     </>
   )
 }
