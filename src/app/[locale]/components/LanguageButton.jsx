@@ -12,20 +12,12 @@ export default function Example() {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex justify-center gap-x-1.5   text-4xl mr-16 font-normal text-black shadow-sm hover:text-gray-500 ">
-        <GlobalOutlined />
+        <Menu.Button className="inline-flex justify-center gap-x-1.5   text-4xl mr-16 font-normal text-black shadow-sm">
+        <GlobalOutlined className='transition-transform duration-300 ease-in-out hover:scale-110' />
         </Menu.Button>
       </div>
 
-      <Transition
-        as={Fragment}
-        enter="transition ease-out duration-100"
-        enterFrom="transform opacity-0 scale-95"
-        enterTo="transform opacity-100 scale-100"
-        leave="transition ease-in duration-75"
-        leaveFrom="transform opacity-100 scale-100"
-        leaveTo="transform opacity-0 scale-95"
-      >
+      
         <Menu.Items className="absolute right-0 z-10 mt-2 w-44 bg-white border-1">
           <div>
           <Menu.Item>
@@ -60,7 +52,6 @@ export default function Example() {
            
           </div>
         </Menu.Items>
-      </Transition>
     </Menu>
   )
 }
