@@ -64,7 +64,6 @@ const CARDS = [
 export const CardStack = ({
   items,
   offset = 20, // Default vertical offset
-  horizontalOffset = 30, // Additional horizontal offset for the fanning effect
   contentPadding = "40px", // Default content padding
 }) => {
   const [cards, setCards] = useState(items);
@@ -74,6 +73,7 @@ export const CardStack = ({
   const cardWidth = isMobile ? 290 : 390;
   const cardHeight = isMobile ? 380 : 480;
   const scaleFactor = isMobile ? 0.1 : 0.006; // Adjusted scale factor for mobile
+  const horizontalOffset = isMobile ? 20 : 30; // Adjusted horizontal offset for mobile
 
 
   const handleClick = (clickedId) => {
@@ -110,14 +110,13 @@ export const CardStack = ({
             <div 
       className="relative rounded-xl overflow-hidden"
       style={{
-        width: isMobile ? '50px' : '70px', // Smaller width on mobile
-        height: isMobile ? '50px' : '70px', // Smaller height on mobile
+        width: isMobile ? '60px' : '80px', // Smaller width on mobile
+        height: isMobile ? '60px' : '80px', // Smaller height on mobile
         marginBottom: isMobile ? '15px' : '20px',
       }}
     >
       <Image src={card.imageSrc} alt={card.name} layout="fill" className="rounded-xl" />
     </div>
-
             <div>
     <p className={`${isMobile ? 'text-base leading-tight' : 'text-xl leading-normal'} `} style={{ fontWeight: 'normal' }} >{t(card.contentKey)}</p>
   </div>
