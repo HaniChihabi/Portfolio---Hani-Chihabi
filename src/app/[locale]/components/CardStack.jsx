@@ -6,16 +6,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { FadeIn } from "./FadeIn";
 
-export type Card = {
-  id: number;
-  name: string;
-  designation: string;
-  imageSrc: string; // Adding image source here
-  contentKey: string; // Use keys for translation instead of direct content
-};
-
-// Adjusted CARDS array to use content keys
-const CARDS: Card[] = [
+const CARDS = [
   {
     id: 0,
     name: "John Smith",
@@ -53,7 +44,6 @@ const CARDS: Card[] = [
   }
 ];
 
-
 export const CardStack = ({
   items,
   offset = 20, // Default vertical offset
@@ -63,20 +53,11 @@ export const CardStack = ({
   cardHeight = 560, // Default card height
   contentPadding = "40px", // Default content padding
   leftShift = 260, // New: Amount to shift the card stack to the left
-}: {
-  items: Card[];
-  offset?: number;
-  horizontalOffset?: number;
-  scaleFactor?: number;
-  cardWidth?: number;
-  cardHeight?: number;
-  contentPadding?: string;
-  leftShift?: number; // New parameter for left shift
 }) => {
-  const [cards, setCards] = useState<Card[]>(items);
+  const [cards, setCards] = useState(items);
   const t = useTranslations('Cards');
 
-  const handleClick = (clickedId: number) => {
+  const handleClick = (clickedId) => {
     setCards((prevCards) => {
       const clickedIndex = prevCards.findIndex((card) => card.id === clickedId);
       const clickedCard = prevCards[clickedIndex];
