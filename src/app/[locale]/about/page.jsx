@@ -58,8 +58,8 @@ function Discover() {
   const t = useTranslations('Me')
 
   return (
-    
-    <Container className='text-2xl' title={t('title')} image={{ src: imageCar }}>
+    <Container>
+    <Section className='text-2xl' title={t('title')} image={{ src: imageCar }}>
       <div className="space-y-6 text-neutral-600 text-l">
       <p>
           {t('text1')}
@@ -80,6 +80,7 @@ function Discover() {
         <TagListItem>Proofs-of-concept</TagListItem>
         <TagListItem>Forensic audit</TagListItem>
       </TagList> */}
+    </Section>
     </Container>
   )
 }
@@ -87,7 +88,8 @@ function Discover() {
 function Build() {
   const t = useTranslations('Basketball')
   return (
-    <Container className='relative top-20' title={t('title')} image={{ src: imageBasketball, shape: 1 }} >
+    <Container>
+    <Section className='relative top-20' title={t('title')} image={{ src: imageBasketball, shape: 1 }} >
       <div className="space-y-6 text-neutral-600 text-l">
         <p>
           {t('text1')}
@@ -104,6 +106,7 @@ function Build() {
         Studio were so regular with their progress updates we almost began to
         think they were automated!
       </Blockquote>
+    </Section>
     </Container>
   )
 }
@@ -111,7 +114,8 @@ function Build() {
 function Deliver() {
   const t = useTranslations('Coding')
   return (
-    <Container title={t('title')} image={{ src: imageLaptop, shape: 2 }}>
+    <Container>
+    <Section title={t('title')} image={{ src: imageLaptop, shape: 2 }}>
       <div className="space-y-6 text-l text-neutral-600">
         <p>
           {t('text1')}
@@ -127,6 +131,7 @@ function Deliver() {
       {/* <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
         Welcome to my journey
       </h3> */}
+    </Section>
     </Container>
   )
 }
