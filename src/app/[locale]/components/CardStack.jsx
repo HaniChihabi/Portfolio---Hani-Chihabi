@@ -130,8 +130,8 @@ export default function CardStackDemo() {
 
   return (
     <FadeIn className="flex flex-col items-center justify-center w-full font-medium">
-      <h1 className="text-7xl">{t('Text1')}</h1>
-      <h1 className="text-7xl mb-20">{t('Text2')}</h1>
+      <h1 className="text-5xl sm:text-7xl">{t('Text1')}</h1>
+      <h1 className="text-5xl sm:text-7xl mb-20">{t('Text2')}</h1>
       <CardStack items={CARDS} />
     </FadeIn>
   );

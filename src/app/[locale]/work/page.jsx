@@ -56,7 +56,7 @@ function Services() {
   const t = useTranslations('projects')
   return (
     <Container className='flex flex-col justify-center items-center cont-bold w-full h-auto'>
-      <FadeIn className='text-center font-medium text-7xl pb-24'>
+      <FadeIn className='text-center font-medium text-5xl sm:text-7xl pb-24'>
         <h1>{t('Text1')}</h1>
         <h1>{t('Text2')}</h1>
       </FadeIn>
