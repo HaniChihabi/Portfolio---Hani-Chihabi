@@ -24,7 +24,7 @@ export default function Card7() {
             </CardItem>
           </CardBody>
         </CardContainer>
-        <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="5xl" scrollBehavior="normal" placement="top">
+        <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="5xl" scrollBehavior="normal" placement="top" hideCloseButton="true">
         <ModalContent>
           {(onClose) => (
             <>

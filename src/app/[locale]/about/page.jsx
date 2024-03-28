@@ -42,12 +42,13 @@ function Section({ title, image, children }) {
 }
 
 function Culture() {
+  const t = useTranslations('Culture')
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32 relative top-10">
       <blockquote className="relative font-display text-3xl font-medium tracking-tight text-white sm:text-4xl">
-        <p className="flex justify-center sm:before:absolute sm:before:right-full text-white mb-10">
-          Welcome to my journey
-        </p>
+        <FadeIn className="flex justify-center sm:before:absolute sm:before:right-full text-white mb-10">
+          {t("Welcome")}
+        </FadeIn>
       </blockquote>
     </div>
   )

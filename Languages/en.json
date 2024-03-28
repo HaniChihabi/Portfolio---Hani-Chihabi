@@ -116,6 +116,10 @@
         "Text" : "Tell me about your project",
         "Contact" : "Contact"
     },
+
+    "Culture" :{
+        "Welcome" : "Welcome to my journey"
+    },
     
     "Contact" : {
         "ContactTitle": "Contact",

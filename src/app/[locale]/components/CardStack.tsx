@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { FadeIn } from "./FadeIn";
 
 export type Card = {
   id: number;
@@ -85,7 +86,7 @@ export const CardStack = ({
   };
 
   return (
-    <div className="relative flex items-center justify-center h-auto w-auto">
+    <FadeIn className="relative flex items-center justify-center h-auto w-auto">
       <div style={{ transform: `translateX(-${leftShift}px)` }}> {/* Apply the left shift here */}
         {cards.map((card, index) => (
           <motion.div
@@ -118,7 +119,7 @@ export const CardStack = ({
           </motion.div>
         ))}
       </div>
-    </div>
+    </FadeIn>
   );
 };
 
@@ -126,10 +127,10 @@ export default function CardStackDemo() {
   const t = useTranslations('rating');
 
   return (
-    <div className="flex flex-col items-center justify-center w-full font-medium">
+    <FadeIn className="flex flex-col items-center justify-center w-full font-medium">
       <h1 className="text-7xl">{t('Text1')}</h1>
       <h1 className="text-7xl mb-20">{t('Text2')}</h1>
       <CardStack items={CARDS} />
-    </div>
+    </FadeIn>
   );
 }

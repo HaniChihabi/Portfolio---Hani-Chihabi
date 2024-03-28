@@ -2,6 +2,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { FadeIn } from "./FadeIn";
+
 export const projects = [
     {
       titleKey: "projectTitle1",
@@ -32,11 +34,11 @@ export const HoverEffect = () => {
   return (
     
     <div className="max-w-5xl mx-auto px-20">
-    <div className="flex flex-col items-center justify-center w-full font-medium text-white">
+    <FadeIn className="flex flex-col items-center justify-center w-full font-medium text-white">
       <h1 className="text-7xl">{t('Text1')}</h1> {/* Example usage of `t` */}
       <h1 className="text-7xl mb-10">{t('Text2')}</h1> {/* Example usage of `t` */}
-    </div>
-      <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-2  py-10">
+    </FadeIn>
+      <FadeIn className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-2  py-10">
         {projects.map((project, idx) => (
           <div
             key={project?.link}
@@ -78,7 +80,7 @@ export const HoverEffect = () => {
             </div>
           </div>
         ))}
-      </div>
+      </FadeIn>
       
     </div>
   );

@@ -5,7 +5,7 @@ import React from "react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import { Icon } from "@iconify/react";
 import { useTranslations } from "next-intl";
-
+import {FadeIn} from "./FadeIn";
 // Define your FAQ keys structure
 const faqKeys = [
   {
@@ -39,12 +39,13 @@ export default function FAQComponent() {
 
   return (
     <section className="mx-auto w-full max-w-6xl px-0 sm:py-26 md:px-6 lg:px-8 ">
-      <div className="mx-auto flex w-full max-w-4xl flex-col gap-6">
-        <div className="flex justify-center">
-        <div className='text-center font-medium text-7xl pb-20'>
+      <FadeIn className='text-center font-medium text-7xl pb-20'>
         <h1>{t('Text1')}</h1>
         <h1>{t('Text2')}</h1>
-      </div>
+      </FadeIn>
+      <FadeIn className="mx-auto flex w-full max-w-4xl flex-col gap-6">
+        <div className="flex justify-center">
+        
         </div>
         <Accordion
           fullWidth
@@ -69,7 +70,7 @@ export default function FAQComponent() {
             </AccordionItem>
           ))}
         </Accordion>
-      </div>
+      </FadeIn>
     </section>
   );
 }

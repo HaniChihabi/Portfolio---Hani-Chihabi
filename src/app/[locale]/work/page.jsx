@@ -56,22 +56,24 @@ function Services() {
   const t = useTranslations('projects')
   return (
     <Container className='flex flex-col justify-center items-center cont-bold w-full h-auto'>
-      <div className='text-center font-medium text-7xl pb-24'>
+      <FadeIn className='text-center font-medium text-7xl pb-24'>
         <h1>{t('Text1')}</h1>
         <h1>{t('Text2')}</h1>
-      </div>
-      <div className='grid lg:grid-cols-2 gap-x-4 gap-y-0'>
+      </FadeIn>
+      
+        <FadeIn className='grid lg:grid-cols-2 gap-x-4 gap-y-0'>
         <Card1 />
         <Card2 />
         <Card3 />
         <Card4 />
-      </div>
+        </FadeIn>
+      
       {/* First additional set of projects */}
       {showFirstSet && (
-        <div className='grid grid-cols-2 gap-x-4 gap-y-0 mt-4'>
+        <FadeIn className='grid grid-cols-2 gap-x-4 gap-y-0 mt-4'>
           <Card5 />
           <Card6 />
-        </div>
+        </FadeIn>
       )}
       {/* Button to load the first set */}
       {!showFirstSet && !showSecondSet && (
@@ -83,10 +85,10 @@ function Services() {
       )}
       {/* Second additional set of projects */}
       {showSecondSet && (
-        <div className='grid grid-cols-2 gap-x-4 gap-y-0 mt-4'>
+        <FadeIn className='grid grid-cols-2 gap-x-4 gap-y-0 mt-4'>
           <Card7 />
           <Card8 />
-        </div>
+        </FadeIn>
       )}
       {/* Button to load the second set, shown after the first set is loaded */}
       {showFirstSet && !showSecondSet && (
