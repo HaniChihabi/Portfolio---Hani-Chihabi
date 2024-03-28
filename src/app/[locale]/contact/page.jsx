@@ -17,17 +17,17 @@ function TextInput({ label, ...props }) {
   let id = useId()
 
   return (
-    <div className="group ox-10 relative button-20 z-0 transition-all focus-within:z-10">
+    <div className="group  relative button-20 z-0 transition-all focus-within:z-10">
       <input
         type="text"
         id={id}
         {...props}
         placeholder=" "
-        className="peer block w-full border border-neutral-300 bg-transparent px-40 pb-4 pt-12 text-m text-neutral-950 ring-4 ring-transparent transition focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
+        className="peer block lg:min-w-[30vw] border border-neutral-300 bg-transparent px-10 pb-4 pt-12 text-m text-neutral-950 ring-4 ring-transparent transition focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
       />
       <label
         htmlFor={id}
-        className="pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 text-neutral-500 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-950 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-neutral-950"
+        className="pointer-events-none  absolute left-6 top-1/2 -mt-3 origin-left text-base/6 text-neutral-500 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-950 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-neutral-950"
       >
         {label}
       </label>
@@ -107,14 +107,14 @@ export default function Contact() {
     <>
       <Layout>
         
-        <Container className="flex items-center justify-center h-screen">
-  <div className="grid grid-cols-1 relative bottom-20">
+        <Container className="flex items-center justify-center h-screen ">
+  <div className="grid grid-cols-1 relative bottom-20 ">
         <FadeIn>
       <form onSubmit={handleSubmit}>
         <h2 className="text-6xl flex justify-center font-medium text-neutral-950">
          {t("Work inquiries")}
         </h2>
-        <div className="isolate py-16 -space-y-px rounded-2xl bg-white/50">
+        <div className="isolate py-16 -space-y-px rounded-2xl bg-white/50 relative left-12 md:left-0 ">
           <TextInput label={t("inquiries.Name")} name="name" autoComplete="name" />
           <TextInput
             label={t("inquiries.Email")}
@@ -131,9 +131,12 @@ export default function Contact() {
           <TextInput label={t("inquiries.Message")} name="message" />
           
         </div>
-        <Button type="submit" className="mt-0">
-          {t("Work together")}
-        </Button>
+        <div className="flex justify-center">
+          <Button type="submit" className="justify-center">
+            {t("Work together")}
+          </Button>
+        </div>
+
       </form>
     </FadeIn>
         </div>
