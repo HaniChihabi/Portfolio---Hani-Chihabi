@@ -8,39 +8,31 @@ import {useTranslations} from 'next-intl';
 import { Container } from './components/Container'
 import NewModal from './components/Modalnew'
 export default function Home() {
-const t = useTranslations('home');
+  const t = useTranslations('home');
   return (
-      <section className="overflow-hidden h-[85vh] max-h-screen">
-        
-      <FadeIn className='  block lg:flex-row items-center justify-center overflow-hidden relative top-40'>
+    <section className="overflow-hidden h-[85vh] max-h-screen flex justify-center items-center">
+      <FadeIn className="block lg:flex-row items-center justify-center w-full p-4 lg:p-0">
         {/* Content Container */}
-        
-        <div className="flex-1 flex items-center justify-center ml-5">
-          <div className="max-w-sm md:max-w-4xl lg:max-w-[680px] text-center ">
-            {/* <h1 className="font-display font-extralight tracking-tight lg:text-4xl md:text-3xl sm:text-3xl">
-            {t('header1')}
-            </h1> */}
-            {/* <NewModal/> */}
-            <h1 className="font-display font-normal tracking-normal text-neutral-950 lg:text-6xl text-6xl mb-2">
+        <div className="flex flex-1 items-center justify-center lg:ml-5">
+          <div className="text-center w-full px-4 lg:px-0">
+            <h1 className="font-display text-3xl lg:text-6xl text-neutral-950 mb-4 lg:mb-2">
               {t('header2')}
             </h1>
-
-            <p className=" text-neutral-600 lg:leading-relaxed md:leading-relaxed sm:leading-relaxed lg:text-xl md:text-2xl sm:text-2xl relative left-0 bottom-9 lg:pb-0 sm:pb-8 mt-14">
-            {t('intro1')}
+            <p className="text-neutral-600 text-sm lg:text-xl leading-relaxed mt-2">
+              {t('intro1')}
             </p>
-            <p className=" text-neutral-600 lg:leading-relaxed md:leading-relaxed sm:leading-relaxed lg:text-xl md:text-2xl sm:text-2xl relative left-0 bottom-9 lg:pb-0 sm:pb-8">
-            {t('intro2')}
+            <p className="text-neutral-600 text-sm lg:text-xl leading-relaxed">
+              {t('intro2')}
             </p>
-            <p className="font-display text-neutral-600 lg:leading-relaxed md:leading-relaxed sm:leading-relaxed font-medium lg:text-xl md:text-2xl sm:text-2xl relative left-0 bottom-9 lg:pb-0 sm:pb-8">
-            {t('intro3')}
+            <p className="font-display text-neutral-600 text-sm lg:text-xl leading-relaxed font-medium">
+              {t('intro3')}
             </p>
           </div>
         </div>
 
-       {/* Image Container */}
-       <div className="flex-1 flex items-center justify-center">
-        <div className="h-full w-full max-w-lg flex justify-center items-center">
-          <div className='h-[200px] w-[200px] relative rounded-4xl overflow-hidden mt-0'>
+        {/* Image Container */}
+        <div className="flex flex-1 items-center justify-center">
+          <div className='mt-4 lg:mt-0 h-40 w-40 lg:h-[200px] lg:w-[200px] relative rounded-4xl overflow-hidden'>
             <Image 
               src={imageMe}
               alt="A descriptive alt text"
@@ -49,13 +41,10 @@ const t = useTranslations('home');
             />
           </div>
         </div>
-      </div>
-      <div className="w-full flex justify-center mt-6">
-            <SocialMedia />
-
-          </div>      
-          </FadeIn>
-      
-      </section>
-  )
+        <div className="mt-4 w-full flex justify-center">
+          <SocialMedia />
+        </div>
+      </FadeIn>
+    </section>
+  );
 }
