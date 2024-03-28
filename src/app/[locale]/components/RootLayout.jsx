@@ -248,7 +248,7 @@ function RootLayoutInner({ children }) {
           inert={expanded ? undefined : ''}
         >
           <motion.div layout className="bg-neutral-800">
-            <div ref={navRef} className="bg-neutral-950 pb-8 pt-8 sm:pb-14 sm:pt-14">
+            <div ref={navRef} className="bg-neutral-950 pb-16 pt-14 sm:pb-16 sm:pt-14">
               <Header
                 invert
                 panelId={panelId}
