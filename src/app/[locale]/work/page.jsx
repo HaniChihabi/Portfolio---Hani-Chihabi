@@ -108,27 +108,20 @@ export default function Work() {
   return (
     <>
     <Layout className='bg-black h-screen'>
-
         <section className="py-32 bg-slate-0">
         <Services/>   
         </section>
         <section className=" h-[120vh]  py-32 mb-0 bg-slate-50">
           <CardStack />
         </section>
-
         <section className="py-32 bg-black">
           <HoverEffect />
         </section>
-
         <section className="bg-slate-0 py-32">
           <Faq />
         </section>
-
-
       <ContactSection />
-
 {/* projects */}
-      
 <ButtonUp className="lg:hidden"/>
 </Layout>
     </>

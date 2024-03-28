@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { FadeIn } from "./FadeIn";
+import { Container } from "./Container";
 
 export const projects = [
     {
@@ -33,7 +34,7 @@ export const projects = [
     const t = useTranslations("approach");
   
     return (
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Adjusted padding based on screen size */}
+      <Container className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Adjusted padding based on screen size */}
         <FadeIn className="flex flex-col items-center justify-center w-full font-medium text-white text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl">{t('Text1')}</h1> {/* Responsive font size */}
           <h1 className="mb-10 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">{t('Text2')}</h1>
@@ -68,7 +69,7 @@ export const projects = [
             </div>
           ))}
         </FadeIn>
-      </div>
+      </Container>
     );
   };
   
