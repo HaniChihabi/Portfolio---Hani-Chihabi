@@ -1,13 +1,10 @@
-// File: FAQComponent.tsx
-"use client";
-
 import React from "react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import { Icon } from "@iconify/react";
 import { useTranslations } from "next-intl";
 import {FadeIn} from "./FadeIn";
 import {Container} from "./Container";
-// Define your FAQ keys structure
+
 const faqKeys = [
   {
     title: "faqTitle1",
