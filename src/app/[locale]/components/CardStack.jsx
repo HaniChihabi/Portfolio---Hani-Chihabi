@@ -92,7 +92,7 @@ export const CardStack = ({
           
           <motion.div
             key={card.id}
-            className="absolute dark:bg-black bg-white rounded-3xl p-4 shadow-xl border border-neutral-200 dark:border-white/[0.1] shadow-black/[0.1] dark:shadow-white/[0.05] select-none"
+            className="absolute flex flex-col justify-between dark:bg-black bg-white rounded-3xl shadow-xl border border-neutral-200 dark:border-white/[0.1] shadow-black/[0.1] dark:shadow-white/[0.05] select-none"
             style={{
               width: `${cardWidth}px`,
               height: `${cardHeight}px`,
@@ -107,16 +107,23 @@ export const CardStack = ({
               zIndex: cards.length - index,
             }}
           >
-            <div className="relative h-20 w-20 rounded-xl overflow-hidden" style={{ marginBottom: isMobile ? '15px' : '20px' }}>
-  <Image src={card.imageSrc} alt={card.name} layout="fill" className="rounded-xl" />
-</div>
+            <div 
+      className="relative rounded-xl overflow-hidden"
+      style={{
+        width: isMobile ? '50px' : '70px', // Smaller width on mobile
+        height: isMobile ? '50px' : '70px', // Smaller height on mobile
+        marginBottom: isMobile ? '15px' : '20px',
+      }}
+    >
+      <Image src={card.imageSrc} alt={card.name} layout="fill" className="rounded-xl" />
+    </div>
 
             <div>
-    <p className={`${isMobile ? 'text-base' : 'text-xl'} `} style={{ fontWeight: 'normal' }} >{t(card.contentKey)}</p>
+    <p className={`${isMobile ? 'text-base leading-tight' : 'text-xl leading-normal'} `} style={{ fontWeight: 'normal' }} >{t(card.contentKey)}</p>
   </div>
-  <div className="absolute" style={{ bottom: isMobile ? '5px' : '10px' }}>
+  <div style={{ bottom: isMobile ? '20px' : '20px' }}>
     <p className={`${isMobile ? 'text-sm' : 'text-lg'}`}>{card.name}</p>
-    <p className={`${isMobile ? 'text-sm' : 'text-lg'}`}  >{card.designation}</p>
+    <p className={`${isMobile ? 'text-sm leading-tight' : 'text-lg leading-normal'}`}  >{card.designation}</p>
   </div>
           </motion.div>
         ))}
