@@ -27,23 +27,23 @@ import LanguageButton from './LanguageButton'
 
 const RootLayoutContext = createContext(null)
 
+function MenuIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="select-none w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" {...props}>
+      <path d="M2 6h20v2H2zM2 16h20v2H2z" />
+    </svg>
+  );
+}
+
 function XIcon(props) {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="select-none" {...props}>
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="select-none w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" {...props}>
       <path d="m5.636 4.223 14.142 14.142-1.414 1.414L4.222 5.637z" />
       <path d="M4.222 18.363 18.364 4.22l1.414 1.414L5.636 19.777z" />
     </svg>
-  )
+  );
 }
 
-function MenuIcon(props) {
-  return (
-    
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="select-none" {...props}>
-      <path d="M2 6h20v2H2zM2 16h20v2H2z" />
-    </svg>
-  )
-}
 
 function Header({
   panelId,
@@ -75,7 +75,7 @@ function Header({
   }, [expanded]); // Re-run effect when expanded changes
 
   const hcLogoClass = clsx(
-    'font-bold text-4xl z-50 transition duration-300 ease-in-out transform hover:scale-105', // Correct transition usage
+    'font-bold text-2xl sm:text-4xl z-50 transition duration-300 ease-in-out transform hover:scale-105', // Correct transition usage
     {
       'text-black': !expanded,
       'text-white': expanded,
@@ -134,7 +134,7 @@ const [currentLanguage, setCurrentLanguage] = useState('');
             )}
             aria-label="Toggle navigation"
           >
-            <Icon className={clsx('h-6 w-6', invert ? 'fill-white' : 'fill-white')} />
+            <Icon className={clsx('h-4 w-4 sm:h-6 sm:w-6', invert ? 'fill-white' : 'fill-white')} />
           </button>
         </div>
       </div>
@@ -248,7 +248,7 @@ function RootLayoutInner({ children }) {
           inert={expanded ? undefined : ''}
         >
           <motion.div layout className="bg-neutral-800">
-            <div ref={navRef} className="bg-neutral-950 pb-16 pt-14">
+            <div ref={navRef} className="bg-neutral-950 pb-8 pt-8 sm:pb-14 sm:pt-14">
               <Header
                 invert
                 panelId={panelId}
