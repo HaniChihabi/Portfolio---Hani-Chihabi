@@ -30,7 +30,7 @@ export const projects = [
   ];
 
   export const HoverEffect = () => {
-    let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+    let [hoveredIndex, setHoveredIndex] = useState(null);
     const t = useTranslations("approach");
   
     return (
@@ -72,4 +72,3 @@ export const projects = [
       </Container>
     );
   };
-  
