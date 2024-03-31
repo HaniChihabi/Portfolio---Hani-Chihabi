@@ -17,13 +17,13 @@ function TextInput({ label, ...props }) {
   let id = useId()
 
   return (
-    <div className="group  relative button-20 z-0 transition-all focus-within:z-10">
+    <div className="group relative button-20 z-0 transition-all focus-within:z-10">
       <input
         type="text"
         id={id}
         {...props}
         placeholder=" "
-        className="peer block w-full lg:w-auto lg:min-w-[30vw] border border-neutral-300 bg-transparent px-4 lg:px-10 pb-4 pt-12 text-m text-neutral-950 ring-4 ring-transparent transition focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
+        className="peer block w-full lg:w-auto max-w-[vw] border border-neutral-300 bg-transparent px-8 pb-4 pt-6 sm:pt-12 text-m text-neutral-950 ring-4 ring-transparent transition focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
         />
       <label
         htmlFor={id}
@@ -111,10 +111,10 @@ export default function Contact() {
   <div className="grid grid-cols-1 relative bottom-7 justify-center">
         <FadeIn>
       <form onSubmit={handleSubmit}>
-        <h2 className="text-6xl flex justify-center font-medium text-neutral-950">
+        <h2 className="text-6xl flex justify-center relative top-20 font-medium text-neutral-950">
          {t("Work inquiries")}
         </h2>
-        <div className="isolate py-16 -space-y-px rounded-2xl bg-white/50 relative ">
+        <div className="isolate sm:py-16 -space-y-px rounded-2xl bg-white/50 relative ">
           <TextInput label={t("inquiries.Name")} name="name" autoComplete="name" />
           <TextInput
             label={t("inquiries.Email")}
