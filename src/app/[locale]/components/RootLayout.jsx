@@ -155,14 +155,17 @@ function NavigationRow({ children }) {
 }
 
 function NavigationItem({ href, children, className }) {
-  
+  const hoverEffectClasses = "transition-transform duration-300 ease-in-out transform hover:scale-110";
+
   return (
     <Link
       href={href}
-      className={`group relative isolate -mx-6 w-1/2 px-6 py-8 sm:py-16 even:mt-px sm:mx-0 sm:px-0 sm:odd:pr-16 sm:even:mt-0  sm:even:pl-16 flex items-center ${className}`}
+      className={`group relative isolate -mx-6 w-1/3 px-6 py-8 sm:py-16 even:mt-px sm:mx-0 sm:px-0 sm:odd:pr-16 sm:even:mt-0  sm:even:pl-16 flex items-center ${className}`}
     >
+            <div className={hoverEffectClasses}>
       {children}
-      <span className="absolute inset-y-0 -z-10 w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100" />
+      </div>
+      <span className="absolute inset-y-0 -z-10 bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100" />
     </Link>
   )
 }
@@ -179,13 +182,14 @@ const t = useTranslations('Navigation')
   return (
     <nav className="mt-px font-display text-2xl sm:text-4xl font-medium tracking-tight text-white bg-black">
       <NavigationRow>
-        <NavigationItem href={`/${currentLanguage}/work`} className="justify-start"><p>{t('My Work')}</p></NavigationItem>
+        <NavigationItem href={`/${currentLanguage}/work`} className="justify-center"><p>{t('My Work')}</p></NavigationItem>
+        <NavigationItem href={`/${currentLanguage}/about`} className="justify-center"><p>{t('About Me')}</p></NavigationItem>
         <NavigationItem href={`/${currentLanguage}/contact`} className="justify-end"><p>{t('Contact')}</p></NavigationItem>
+
       </NavigationRow>
-      <NavigationRow>
-        <NavigationItem href={`/${currentLanguage}/about`} className="justify-start"><p>{t('About Me')}</p></NavigationItem>
+      {/* <NavigationRow>
         <SocialMedia className="relative right-0 top-0 text-xl" invert />
-      </NavigationRow>
+      </NavigationRow> */}
     </nav>
   )
 }
