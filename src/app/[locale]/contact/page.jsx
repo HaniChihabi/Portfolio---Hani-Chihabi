@@ -108,10 +108,10 @@ export default function Contact() {
       <Layout>
         
         <Container className="flex items-center justify-center ">
-  <div className="grid grid-cols-1 relative bottom-7 justify-center">
+  <div className="grid grid-cols-1 relative bottom-7 top-20 justify-center">
         <FadeIn>
       <form onSubmit={handleSubmit}>
-        <h2 className="text-6xl flex justify-center relative top-20 font-medium text-neutral-950">
+        <h2 className="text-6xl flex justify-center font-medium text-neutral-950">
          {t("Work inquiries")}
         </h2>
         <div className="isolate sm:py-16 -space-y-px rounded-2xl bg-white/50 relative ">
