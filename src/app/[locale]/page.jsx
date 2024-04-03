@@ -10,6 +10,7 @@ import NewModal from './components/Modalnew'
 import Mainpage from './components/Mainpage'
 import Contactpage from './components/Contactpage'
 import Workpage from './components/Workpage'
+import { ContactSection } from './components/ContactSection'
 
 export default function Home() {
   const t = useTranslations('home');
@@ -20,6 +21,9 @@ export default function Home() {
     </section>
     <section id='work'>
       <Workpage />
+    </section>
+    <section id='contactsection'>
+      <ContactSection />
     </section>
   </main>      
   );

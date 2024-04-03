@@ -119,7 +119,6 @@ export default function Work() {
         <section className="bg-slate-0 py-24 sm:py-32">
           <Faq />
         </section>
-      <ContactSection />
 {/* projects */}
 <ButtonUp className="lg:hidden"/>
     </>
