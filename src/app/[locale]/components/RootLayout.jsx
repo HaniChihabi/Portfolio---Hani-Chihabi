@@ -160,6 +160,7 @@ function NavigationItem({ href, children, className }) {
   return (
     <Link
       href={href}
+      passHref
       className={`group relative isolate -mx-6 w-1/2 px-6 py-8 sm:py-16 even:mt-px sm:mx-0 sm:px-0 sm:odd:pr-16 sm:even:mt-0  sm:even:pl-16 flex items-center ${className}`}
     >
             <div className={hoverEffectClasses}>
@@ -187,7 +188,6 @@ const t = useTranslations('Navigation')
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href={`/${currentLanguage}/about`} className="justify-start"><p>{t('About Me')}</p></NavigationItem>
-        <SocialMedia className="relative right-0 top-0 text-xl" invert />
       </NavigationRow>
     </nav>
   )
