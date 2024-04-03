@@ -23,7 +23,7 @@ function TextInput({ label, ...props }) {
         id={id}
         {...props}
         placeholder=" "
-        className="peer block w-full  border border-neutral-300 bg-transparent px-8 pb-4 pt-6 sm:pt-12 text-m text-neutral-950 ring-4 ring-transparent transition focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
+        className="peer block w-full px-6 border border-neutral-300 bg-transparent  pb-4 pt-6 sm:pt-12 text-m text-neutral-950 ring-4 ring-transparent transition focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
         />
       <label
         htmlFor={id}
@@ -37,6 +37,8 @@ function TextInput({ label, ...props }) {
 
 function RadioInput({ label, ...props }) {
   return (
+    <div className="flex items-center space-x-4">
+
     <label className="flex gap-x-3">
       <input
         type="radio"
@@ -45,6 +47,7 @@ function RadioInput({ label, ...props }) {
       />
       <span className="text-base/6 text-neutral-950">{label}</span>
     </label>
+    </div>
   )
 }
 
