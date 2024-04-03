@@ -9,7 +9,7 @@ import { Container } from './Container'
 export default function Mainpage() {
     const t = useTranslations('home');
     return (
-        <FadeIn className="flex h-[100vh] lg:flex-row items-center justify-center w-full p-4 lg:p-0">
+        <FadeIn className="flex h-[90vh] lg:flex-row items-center justify-center w-full p-4 lg:p-0">
           {/* Content Container */}
           <div className='block relative bottom-20'>
           <div className="flex flex-1 items-center justify-center lg:ml-5">
