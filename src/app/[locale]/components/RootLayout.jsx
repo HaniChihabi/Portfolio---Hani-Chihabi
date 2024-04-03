@@ -183,8 +183,8 @@ const t = useTranslations('Navigation')
   return (
     <nav className="mt-px font-display text-2xl sm:text-4xl font-medium tracking-tight text-white bg-black">
       <NavigationRow>
-        <NavigationItem href={`/${currentLanguage}/#work`} className="justify-start"><p>{t('My Work')}</p></NavigationItem>
-        <NavigationItem href={`/${currentLanguage}/contact`} className="justify-end"><p>{t('Contact')}</p></NavigationItem>
+        <NavigationItem href={`/${currentLanguage}//#work`} className="justify-start"><p>{t('My Work')}</p></NavigationItem>
+        <NavigationItem href={`/${currentLanguage}//#contact`} className="justify-end"><p>{t('Contact')}</p></NavigationItem>
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href={`/${currentLanguage}/about`} className="justify-start"><p>{t('About Me')}</p></NavigationItem>

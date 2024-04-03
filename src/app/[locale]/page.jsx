@@ -18,7 +18,7 @@ export default function Home() {
     <section className='relative'>
       <Mainpage />
     </section>
-    <section>
+    <section id='work'>
       <Workpage />
     </section>
   </main>      

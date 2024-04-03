@@ -9,12 +9,12 @@ import { Container } from './Container'
 export default function Mainpage() {
     const t = useTranslations('home');
     return (
-        <FadeIn className="flex h-[80vh] lg:flex-row items-center justify-center w-full p-4 lg:p-0">
+        <FadeIn className="flex h-[100vh] lg:flex-row items-center justify-center w-full p-4 lg:p-0">
           {/* Content Container */}
-          <div className='block'>
+          <div className='block relative bottom-20'>
           <div className="flex flex-1 items-center justify-center lg:ml-5">
             <div className="text-center w-full px-4 lg:px-0">
-              <h1 className="font-display text-3xl lg:text-6xl text-neutral-950 mb-4 lg:mb-2">
+              <h1 className="font-display text-3xl lg:text-7xl text-neutral-950 mb-4 lg:mb-5">
                 {t('header2')}
               </h1>
               <p className="text-neutral-600 text-sm lg:text-xl leading-relaxed mt-2">
@@ -23,7 +23,7 @@ export default function Mainpage() {
               <p className="text-neutral-600 text-sm lg:text-xl leading-relaxed">
                 {t('intro2')}
               </p>
-              <p className="font-display text-neutral-600 text-sm lg:text-xl leading-relaxed font-medium">
+              <p className="font-display text-neutral-600 text-sm lg:text-xl leading-relaxed font-medium mb-5">
                 {t('intro3')}
               </p>
             </div>

@@ -55,7 +55,7 @@ function Services() {
   const [showSecondSet, setShowSecondSet] = useState(false);
   const t = useTranslations('projects')
   return (
-    <Container className='flex flex-col justify-center items-center cont-bold w-full h-auto'id='work'>
+    <Container className='flex flex-col justify-center items-center cont-bold w-full h-auto'>
       <FadeIn className='text-center font-medium text-5xl sm:text-7xl mb-16' >
         <h1>{t('Text1')}</h1>
         <h1>{t('Text2')}</h1>
@@ -107,10 +107,10 @@ export default function Work() {
 
   return (
     <>
-        <section className="py-24 sm:py-32 bg-slate-0">
+        <section className="py-24 sm:py-32 bg-slate-50">
         <Services/>   
         </section>
-        <section className=" py-24 sm:py-32 mb-0 bg-slate-50 h-screen">
+        <section className=" py-24 sm:py-32 mb-0 bg-slate-0 h-screen">
           <CardStack />
         </section>
         <section className="py-24 sm:py-32 bg-black">
