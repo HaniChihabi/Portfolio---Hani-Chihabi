@@ -110,7 +110,7 @@ export default function Work() {
         <section className="py-24 sm:py-32 bg-slate-0">
         <Services/>   
         </section>
-        <section className=" py-24 sm:py-32 mb-0 bg-slate-50">
+        <section className=" py-24 sm:py-32 mb-0 bg-slate-50 h-screen">
           <CardStack />
         </section>
         <section className="py-24 sm:py-32 bg-black">

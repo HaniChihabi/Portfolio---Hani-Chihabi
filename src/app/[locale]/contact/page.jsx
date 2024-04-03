@@ -107,8 +107,8 @@ export default function Contact() {
     <>
       <Layout>
         
-        <Container className="flex items-center justify-center ">
-  <div className="grid grid-cols-1 relative bottom-7 top-20 justify-center">
+        <Container className="flex items-center justify-center contact-page h-[calc(100vh-10rem)]">
+  <div className="grid grid-cols-1 relative bottom-7 top-0 justify-center">
         <FadeIn>
       <form onSubmit={handleSubmit}>
         <h2 className="text-6xl flex justify-center font-medium text-neutral-950">
