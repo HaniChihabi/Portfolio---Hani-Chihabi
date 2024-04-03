@@ -35,7 +35,7 @@ export function ContactSection() {
               <Button href={`/${currentLanguage}/contact`} onPress={onOpen} invert>
               {t("Contact")}
               </Button>
-              <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="5xl" scrollBehavior="normal" placement="top" hideCloseButton="true">
+              <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="5xl" scrollBehavior="normal" placement='center'>
         <ModalContent>
           {(onClose) => (
             <>
