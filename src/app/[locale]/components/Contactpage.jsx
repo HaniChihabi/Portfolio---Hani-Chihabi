@@ -111,10 +111,10 @@ export default function Contact() {
   <div className="grid grid-cols-1 relative bottom-7 top-0 justify-center">
         <FadeIn>
       <form onSubmit={handleSubmit}>
-        <h2 className="text-6xl flex justify-center font-medium text-neutral-950">
+        <h2 className="text-4xl sm:text-6xl flex justify-center font-medium text-neutral-950">
          {t("Work inquiries")}
         </h2>
-        <div className="isolate sm:py-16 -space-y-px rounded-2xl bg-white/50 relative ">
+        <div className="isolate sm:py-16 -space-y-px rounded-2xl bg-white/50 relative pt-10">
           <TextInput label={t("inquiries.Name")} name="name" autoComplete="name" />
           <TextInput
             label={t("inquiries.Email")}
@@ -131,7 +131,7 @@ export default function Contact() {
           <TextInput label={t("inquiries.Message")} name="message" />
           
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center pt-10">
           <Button type="submit" className="justify-center">
             {t("Work together")}
           </Button>
