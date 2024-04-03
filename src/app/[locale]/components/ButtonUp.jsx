@@ -24,7 +24,7 @@ export default function ButtonUp() {
   return isLargeScreen && isVisible ? (
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      className="justify-center fixed bottom-10 right-10 bg-white hover:bg-slate-50 text-black px-4 rounded-full"
+      className="justify-center fixed bottom-10 right-10 bg-white hover:bg-slate-50 text-black px-4 rounded-full z-50"
       aria-label="Scroll to top"
       style={{ fontSize: "36px" }}
     >
