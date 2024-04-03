@@ -186,9 +186,9 @@ const t = useTranslations('Navigation')
         <NavigationItem href={`/${currentLanguage}//#work`} className="justify-start"><p>{t('My Work')}</p></NavigationItem>
         <NavigationItem href={`/${currentLanguage}//#contactsection`} className="justify-end"><p>{t('Contact')}</p></NavigationItem>
       </NavigationRow>
-      <NavigationRow>
+      {/* <NavigationRow>
         <NavigationItem href={`/${currentLanguage}/about`} className="justify-start"><p>{t('About Me')}</p></NavigationItem>
-      </NavigationRow>
+      </NavigationRow> */}
     </nav>
   )
 }
