@@ -23,7 +23,7 @@ function TextInput({ label, ...props }) {
         id={id}
         {...props}
         placeholder=" "
-        className="peer block w-full lg:w-auto max-w-[vw] border border-neutral-300 bg-transparent px-8 pb-4 pt-6 sm:pt-12 text-m text-neutral-950 ring-4 ring-transparent transition focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
+        className="peer block w-full  border border-neutral-300 bg-transparent px-8 pb-4 pt-6 sm:pt-12 text-m text-neutral-950 ring-4 ring-transparent transition focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
         />
       <label
         htmlFor={id}
