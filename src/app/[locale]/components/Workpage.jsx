@@ -17,6 +17,10 @@ import Card5 from "../components/Card5";
 import Card6 from "../components/Card6";
 import Card7 from "../components/Card7";
 import Card8 from "../components/Card8";
+import App1 from "../components/App1";
+import App2 from "../components/App2";
+import App3 from "../components/App3";
+import App4 from "../components/App4";
 import CardStack from "../components/CardStack";
 import  Faq  from "../components/Faq";
 import { useState } from "react";
@@ -102,6 +106,25 @@ function Services() {
   );
 }
 
+function Apps() {
+  const t = useTranslations('apps')
+
+  return (
+    <Container className='flex flex-col justify-center items-center cont-bold w-full h-auto'>
+      <FadeIn className='text-center font-medium text-5xl sm:text-7xl mb-16'>
+        <h1>{t('Text1')}</h1>
+        <h1>{t('Text2')}</h1>
+      </FadeIn>
+      <FadeIn className='grid lg:grid-cols-2 gap-x-4 gap-y-0'>
+        <App1 />
+        <App2 />
+        <App3 />
+        <App4 />
+      </FadeIn>
+    </Container>
+  );
+}
+
 export default function Work() {
   const t = useTranslations('work')
 
@@ -113,8 +136,8 @@ export default function Work() {
         <section className="py-24 sm:py-32 bg-black">
           <HoverEffect />
         </section>
-        <section className="py-24 sm:py-32 bg-slate-50 h-screen">
-
+        <section className="py-24 sm:py-32 bg-slate-50">
+          <Apps />
         </section>
         <section className=" py-24 sm:py-32 mb-0 bg-slate-0 h-screen">
           <CardStack />
