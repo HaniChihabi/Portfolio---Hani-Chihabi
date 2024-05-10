@@ -18,7 +18,7 @@ export default function Card5() {
               layout="intrinsic"
               width={1000}
               height={1000}
-              className="h-72 w-full object-cover rounded-3xl group-hover/card:shadow-xl"
+              className="max-h-80 max-w-96 object-cover rounded-3xl group-hover/card:shadow-xl"
               alt="thumbnail"
             />
             </CardItem>
