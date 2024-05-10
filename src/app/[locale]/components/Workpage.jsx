@@ -110,12 +110,16 @@ export default function Work() {
         <section className="py-24 sm:py-32 bg-slate-50">
         <Services/>   
         </section>
-        <section className=" py-24 sm:py-32 mb-0 bg-slate-0 h-screen">
-          <CardStack />
-        </section>
         <section className="py-24 sm:py-32 bg-black">
           <HoverEffect />
         </section>
+        <section className="py-24 sm:py-32 bg-slate-50 h-screen">
+
+        </section>
+        <section className=" py-24 sm:py-32 mb-0 bg-slate-0 h-screen">
+          <CardStack />
+        </section>
+        
         <section className="bg-slate-0 py-24 sm:py-32">
           <Faq />
         </section>

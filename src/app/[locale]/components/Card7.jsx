@@ -12,7 +12,7 @@ export default function CasperaAO() {
                     <Link href="https://hanichihabi-casperai.vercel.app" passHref>
                             <CardItem translateZ="100" className="w-full mt-4">
                                 <Image
-                                    src="/screen12.jpg"
+                                    src="/screen4.jpg"
                                     layout="intrinsic"
                                     width={1000}
                                     height={1000}

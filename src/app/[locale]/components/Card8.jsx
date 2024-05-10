@@ -12,7 +12,7 @@ export default function StudyRoom() {
                     <Link href="http://hanichihabi-studyroom.vercel.app" passHref>
                             <CardItem translateZ="100" className="w-full mt-4">
                                 <Image
-                                    src="/screen14.jpg"
+                                    src="/screen11.jpg"
                                     layout="intrinsic"
                                     width={1000}
                                     height={1000}
