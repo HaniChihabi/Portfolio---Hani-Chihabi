@@ -117,7 +117,7 @@ export default function Contact() {
         <h2 className="text-4xl sm:text-6xl flex justify-center font-medium text-neutral-950">
          {t("Work inquiries")}
         </h2>
-        <div className="isolate sm:py-16 -space-y-px rounded-2xl bg-white/50 relative pt-10">
+        <div className="isolate sm:py-10 -space-y-px rounded-2xl bg-white/50 relative pt-10">
           <TextInput label={t("inquiries.Name")} name="name" autoComplete="name" />
           <TextInput
             label={t("inquiries.Email")}
@@ -134,12 +134,15 @@ export default function Contact() {
           <TextInput label={t("inquiries.Message")} name="message" />
           
         </div>
-        <div className="flex justify-center pt-10">
+        
+        <div className="flex justify-center pt-0">
           <Button type="submit" className="justify-center">
             {t("Work together")}
           </Button>
         </div>
-
+<div className="mt-4 w-full flex justify-center">
+            <SocialMedia />
+          </div>
       </form>
     </FadeIn>
         </div>

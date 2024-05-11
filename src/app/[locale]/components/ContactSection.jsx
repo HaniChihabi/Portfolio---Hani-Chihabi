@@ -5,7 +5,7 @@ import { Container } from '../components/Container'
 import { FadeIn } from '../components/FadeIn'
 import { Offices } from '../components/Offices'
 import { useState, useEffect } from 'react'
-
+import { SocialMedia } from '../components/SocialMedia'
 
 import { CardBody, CardContainer, CardItem } from "../components/ui/3d-card";
 import Link from "next/link";

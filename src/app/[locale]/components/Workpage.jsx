@@ -21,6 +21,7 @@ import App1 from "../components/App1";
 import App2 from "../components/App2";
 import App3 from "../components/App3";
 import App4 from "../components/App4";
+import App5 from "../components/App5";
 import CardStack from "../components/CardStack";
 import  Faq  from "../components/Faq";
 import { useState } from "react";
@@ -112,6 +113,7 @@ function Services() {
 
 function Apps() {
   const t = useTranslations('apps')
+  const [showFirstSet, setShowFirstSet] = useState(false);
 
   return (
     <Container className='flex flex-col justify-center items-center cont-bold w-full h-auto'>
@@ -124,6 +126,18 @@ function Apps() {
         <App3 />
         <App4 />
       </FadeIn>
+
+      {showFirstSet && (
+        <FadeIn className='grid lg:grid-cols-2 gap-x-4 gap-y-0 mt-4'>
+          <App5 />
+        </FadeIn>
+      )}
+      {/* Button to load the first set */}
+        <div className="flex justify-center w-full mt-4">
+          <button className="px-6 py-2 text-blue-500 text-xl rounded-md" onClick={() => setShowFirstSet(true)}>
+            Load More Projects +
+          </button>
+        </div>
     </Container>
   );
 }
@@ -139,10 +153,10 @@ export default function Work() {
         <section className="py-24 sm:py-32 bg-black">
           <HoverEffect />
         </section>
-        <section className="py-24 sm:py-32 bg-slate-50">
+        <section className="py-24 sm:py-32 bg-slate-0">
           <Apps />
         </section>
-        <section className=" py-24 sm:py-32 mb-0 bg-slate-0 h-screen">
+        <section className=" py-24 sm:py-32 mb-0 bg-slate-50 h-screen">
           <CardStack />
         </section>
         

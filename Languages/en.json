@@ -60,8 +60,8 @@
     },
 
     "rating" : {
-        "Text1" : "What my clients",
-        "Text2" : "are saying"
+        "Text1" : "Feedback about",
+        "Text2" : "my work"
     },
 
 
@@ -101,15 +101,15 @@
     },
 
     "approach" : {
-        "Text1" : "Your brand's digital",
-        "Text2" : "architect",
-        "projectTitle1" : "50 +",
-        "projectDescription1" : "Clients",
-        "projectTitle2" : "3 years",
-        "projectDescription2" : "experience",
-        "projectTitle3" : "80+",
-        "projectDescription3" : "Successful Projects",
-        "projectTitle4" : "100%",
+        "Text1" : "Ich develope:",
+        "Text2" : " ",
+        "projectTitle1" : "Frontend",
+        "projectDescription1" : "JavaScript, React, HTML, CSS",
+        "projectTitle2" : "Backend",
+        "projectDescription2" : "Node.js, Firebase, MongoDB, SQL",
+        "projectTitle3" : "Design",
+        "projectDescription3" : "Figma, Wordpress, Photoshop",
+        "projectTitle4" : "With 100%",
         "projectDescription4" : "Passion"
     },
 

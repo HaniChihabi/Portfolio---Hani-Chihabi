@@ -22,7 +22,7 @@ export default function Card6() {
         <main>
             <CardContainer className="inter-var">
                 <CardBody className=" relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[35rem] h-auto rounded-xl p-3">
-                    <CardItem translateZ="100" className="w-full mt-4" onClick={handleOpen}>
+                <CardItem translateZ="100" className="w-full mt-4 cursor-pointer" onClick={handleOpen}>
                         <Image
                             src="/Paperwork.png"
                             layout="intrinsic"
