@@ -1,22 +1,40 @@
-
 import React from "react";
-import { Modal, ModalContent, ModalBody } from "@nextui-org/react";
-import { Button } from "@nextui-org/react";
-import { View } from "@nextui-org/react";   
+import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure, Button} from "@nextui-org/react";
+import { useTranslations } from 'next-intl';
+export default function App() {
+  const {isOpen, onOpen, onOpenChange} = useDisclosure();
+  const t = useTranslations('Modal');
 
-export default function AboutMeModal({ isOpen, onClose }) {
-    return (
-        <View>
-        <Button onClick={onClose}>Close</Button>
-        <Modal isOpen={isOpen} onClose={onClose} size="md" scrollBehavior="normal" placement="center" hideCloseButton={true}>
-            <ModalContent>
-                <ModalBody className="flex flex-col items-center justify-start p-0 gap-0">
-                    <section className="w-full relative flex-shrink-0 max-h">
-                        
-                    </section>
-                </ModalBody>
-            </ModalContent>
-        </Modal>
-        </View>
-    );
+  return (
+    <>
+        <div className=" text-3xl hover:scale-110 transition-transform duration-300 p-5 bg-slate-100 rounded-2xl" onClick={onOpen}>
+        {t("Text1")}       
+      </div>
+      <Modal className="py-10 px-5" isOpen={isOpen} onOpenChange={onOpenChange}>
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">{t("Text1")}</ModalHeader>
+              <ModalBody className="font-light">
+                <p> 
+                {t("Text2")}
+                </p>
+                <p>
+                {t("Text3")}
+                </p>
+                <p>
+                {t("Text4")}
+                </p>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="danger" variant="light" onPress={onClose}>
+                  Close
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
+    </>
+  );
 }

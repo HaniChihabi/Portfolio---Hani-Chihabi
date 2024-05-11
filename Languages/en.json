@@ -7,13 +7,18 @@
 
     "home" : {
         "header1" : "Hey, my name is",
-        "header2" : "Hani Chihabi",
+        "header2" : "Hey, my name is Hani.",
         "intro1": " Software developer from Germany. \n",
-        "intro2": " I build cool projects and",
-        "intro3": " I focus on crafting \n effective solutions."
+        "intro2": " Software development has been an exhilarating journey for me. From the thrill of building new projects to the collaboration with talented peers, each aspect has enriched my experience in the tech world.",
+        "intro3": " Engaging in software development has not just been about coding; it's about bringing ideas to life, solving real-world problems, and making an impact through technology."
 
     },
-    
+    "Modal" : {
+        "Text1" : "I am a...",
+        "Text2" : "Software developer from Germany. I build cool projects and I focus on crafting \n effective solutions.",
+        "Text3": " Software development has been an exhilarating journey for me. From the thrill of building new projects to the collaboration with talented peers, each aspect has enriched my experience in the tech world.",
+        "Text4": " Software development has been an exhilarating journey for me. From the thrill of building new projects to the collaboration with talented peers, each aspect has enriched my experience in the tech world."
+    },
     "AboutMeTitle":
      {
         "AboutMeTitle": "About me"

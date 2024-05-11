@@ -7,12 +7,16 @@
 
     "home" : {
         "header1" : "Hey, mein Name ist",
-        "header2" : "Hani Chihabi",
+        "header2" : "Hey, mein Name ist Hani.",
         "intro1": "Softwareentwickler aus Deutschland.",
         "intro2": "Ich baue coole Projekte und",
         "intro3": "entwickle effektive Lösungen"
-
-
+    },
+    "Modal" : {
+        "Text1" : "Ich bin ein...",
+        "Text2" : "Softwareentwickler aus Deutschland. Ich baue coole Projekte und entwickle effektive Lösungen!",
+        "Text3" : "Die Softwareentwicklung ist eine spannende Reise für mich. Ich liebe es, neue Projekte zu starten und mit klugen Köpfen zusammenzuarbeiten. Jede Erfahrung hat mir mehr über die Welt der Technik beigebracht.",
+        "Text4" : "Die Beschäftigung mit der Softwareentwicklung war nicht nur eine Frage des Codierens; es geht darum, Ideen zum Leben zu erwecken, reale Probleme zu lösen und durch Technologie einen Unterschied zu machen!"
     },
     "AboutMeTitle":
      {
