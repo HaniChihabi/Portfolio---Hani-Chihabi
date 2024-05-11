@@ -64,7 +64,7 @@ const CARDS = [
 export const CardStack = ({
   items,
   offset = 20, // Default vertical offset
-  contentPadding = "40px", // Default content padding
+  contentPadding = "60px", // Default content padding
 }) => {
   const [cards, setCards] = useState(items);
   const t = useTranslations('Cards');
@@ -122,7 +122,7 @@ export const CardStack = ({
             </div>
             <div style={{ bottom: isMobile ? '20px' : '20px' }}>
               <p className={`${isMobile ? 'text-sm' : 'text-lg'}`}>{card.name}</p>
-              <p className={`${isMobile ? 'text-sm leading-tight' : 'text-lg leading-normal'}`}  >{card.designation}</p>
+              <p className={`text-sm ${isMobile ? 'text-sm leading-tight' : 'text-lg leading-normal'}`}  >{card.designation}</p>
             </div>
           </motion.div>
         ))}

@@ -64,6 +64,10 @@ function Services() {
         <h1>{t('Text1')}</h1>
         <h1>{t('Text2')}</h1>
       </FadeIn>
+
+      <FadeIn className='text-center font-medium text-3xl sm:text-5xl mb-16' >
+        <h2>{t('Text3')}</h2>
+      </FadeIn>
       
         <FadeIn className='grid lg:grid-cols-2 gap-x-4 gap-y-0'>
         <Card1 />
@@ -111,9 +115,8 @@ function Apps() {
 
   return (
     <Container className='flex flex-col justify-center items-center cont-bold w-full h-auto'>
-      <FadeIn className='text-center font-medium text-5xl sm:text-7xl mb-16'>
+      <FadeIn className='text-center font-medium text-4xl sm:text-6xl mb-16'>
         <h1>{t('Text1')}</h1>
-        <h1>{t('Text2')}</h1>
       </FadeIn>
       <FadeIn className='grid lg:grid-cols-2 gap-x-4 gap-y-0'>
         <App1 />

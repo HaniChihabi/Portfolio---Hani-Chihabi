@@ -55,6 +55,7 @@
     "projects" : {
         "Text1" : "A small selection",
         "Text2" : "of my work",
+        "Text3" : "Websites",
         "Innovative" : "Kontakt"
     },
 
@@ -141,6 +142,10 @@
             "InvalidEmail" : "Email is not valid" 
         },
         "Work together" : "Let’s work together"
+    },
+
+    "apps" : {
+        "Text1" : "Apps"
     }
 
 }

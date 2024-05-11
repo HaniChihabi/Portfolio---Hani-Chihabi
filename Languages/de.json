@@ -53,13 +53,21 @@
     "projects" : {
         "Text1" : "Ein paar meiner",
         "Text2" : "Projekte",
+        "Text3" : "Websiten",
         "Innovative" : "Kontakt"
     },
 
     "rating" : {
-        "Text1" : "Was meine",
-        "Text2" : "Kunden sagen"
+        "Text1" : "Feedback zu meiner",
+        "Text2" : "Arbeit"
     },
+    "Cards": {
+        "cardContentJohnSmith": "John Smith hat unsere Software als äußerst benutzerfreundlich und leistungsstark empfunden.",
+        "cardContentAliceJohnson": "Alice Johnson lobte unser Marketing-Team für seine kreative Herangehensweise und effektive Strategien.",
+        "cardContentMichaelTurner": "Michael Turner war beeindruckt von der Skalierbarkeit und Stabilität unserer Anwendung.",
+        "cardContentEmilyCarter": "Emily Carter schätzte die Einfachheit und den eleganten Designansatz unserer Software.",
+        "cardContentDavidLee": "David Lee hob hervor, wie reibungslos und effizient unsere Operationen dank der Softwareabläufe verlaufen."
+      },
 
     
         "FAQs": {
@@ -84,27 +92,17 @@
             "faqTitle6": "Übernehmen Sie kleine stündliche Arbeiten?",
             "faqContent6": "Nein, ich mache nur Projekte mit Festpreis und einer Mindestgröße von einer Seite."
         },
-    
-    
-
-    "Cards": {
-        "cardContentJohnSmith": "The website exceeded our expectations. The design is elegant, functionality seamless, and the user experience unparalleled. Great job!",
-        "cardContentAliceJohnson": "Hani is a true professional. He delivered the project on time and within budget. I highly recommend him for any web development project.",
-        "cardContentMichaelTurner": "I am very impressed with the quality of work. Hani is a great communicator and a pleasure to work with. I will definitely hire him again for future projects.",
-        "cardContentEmilyCarter" : "Hani is a talented developer who goes above and beyond to deliver exceptional results. I am very happy with the website, Highly recommended!",
-        "cardContentDavidLee" : "Working with you on our website project has been a pleasure. The website delivered has exceeded our expectations. Thank you!"
-    },
 
     "approach" : {
-        "Text1" : "Ihr digitaler",
-        "Text2" : "Architekt ",
-        "projectTitle1" : "50 +",
-        "projectDescription1" : "Kunden",
-        "projectTitle2" : "3 Jahre",
-        "projectDescription2" : "Erfahrung",
-        "projectTitle3" : "80+",
-        "projectDescription3" : "Erfolgreiche Projekte",
-        "projectTitle4" : "100%",
+        "Text1" : "Ich entwickle:",
+        "Text2" : " ",
+        "projectTitle1" : "Frontend",
+        "projectDescription1" : "JavaScript, React, HTML, CSS",
+        "projectTitle2" : "Backend",
+        "projectDescription2" : "Node.js, Firebase, MongoDB, SQL",
+        "projectTitle3" : "Design",
+        "projectDescription3" : "Figma, Wordpress, Photoshop",
+        "projectTitle4" : "Mit 100%",
         "projectDescription4" : "Leidenschaft"
     },
 
@@ -142,5 +140,10 @@
         },
         
         "Work together" : "Lass uns zusammen arbeiten"
-}
+
+        
+},
+        "apps" : {
+                    "Text1" : "Apps"
+                }
 }
