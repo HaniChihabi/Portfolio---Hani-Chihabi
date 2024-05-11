@@ -26,7 +26,7 @@ const useResponsiveWidth = () => {
 const CARDS = [
   {
     id: 0,
-    name: "John Smith",
+    name: "Said Chihabi",
     designation: "CEO, Smith Enterprises",
     imageSrc: "/pp1.jpg",
     contentKey: "cardContentJohnSmith",
@@ -64,7 +64,7 @@ const CARDS = [
 export const CardStack = ({
   items,
   offset = 20, // Default vertical offset
-  contentPadding = "60px", // Default content padding
+  contentPadding = "30px", // Default content padding
 }) => {
   const [cards, setCards] = useState(items);
   const t = useTranslations('Cards');
@@ -92,7 +92,7 @@ export const CardStack = ({
           
           <motion.div
             key={card.id}
-            className="absolute flex flex-col justify-between dark:bg-black bg-white rounded-3xl shadow-xl border border-neutral-200 dark:border-white/[0.1] shadow-black/[0.1] dark:shadow-white/[0.05] select-none"
+            className="absolute flex flex-col dark:bg-black bg-white rounded-3xl shadow-xl border border-neutral-200 dark:border-white/[0.1] shadow-black/[0.1] dark:shadow-white/[0.05] select-none"
             style={{
               width: `${cardWidth}px`,
               height: `${cardHeight}px`,
@@ -115,12 +115,12 @@ export const CardStack = ({
         marginBottom: isMobile ? '15px' : '20px',
       }}
     >
-      <Image src={card.imageSrc} alt={card.name} layout="fill" className="rounded-xl" />
+      <Image src={card.imageSrc} alt={card.name} layout="fill" className="rounded-xl mb-10" />
     </div>
             <div>
-              <p className={`${isMobile ? 'text-base leading-tight' : 'text-xl leading-normal'} `} style={{ fontWeight: 'normal' }} >{t(card.contentKey)}</p>
+              <p className={`${isMobile ? 'text-base leading-tight' : 'text-xl leading-normal'} font-extralight `} style={{ fontWeight: 'normal', fontSize: '18px', marginTop: '10px' }} >{t(card.contentKey)}</p>
             </div>
-            <div style={{ bottom: isMobile ? '20px' : '20px' }}>
+            <div className="absolute bottom-10" style={{ bottom: isMobile ? '20px' : '20px' }}>
               <p className={`${isMobile ? 'text-sm' : 'text-lg'}`}>{card.name}</p>
               <p className={`text-sm ${isMobile ? 'text-sm leading-tight' : 'text-lg leading-normal'}`}  >{card.designation}</p>
             </div>
@@ -138,7 +138,7 @@ export default function CardStackDemo() {
     <FadeIn className="flex flex-col items-center justify-center w-full font-medium">
       <h1 className="text-5xl sm:text-7xl">{t('Text1')}</h1>
       <h1 className="text-5xl sm:text-7xl mb-20">{t('Text2')}</h1>
-      <CardStack items={CARDS} />
+      <CardStack className="font-extralight" items={CARDS} />
     </FadeIn>
   );
 }

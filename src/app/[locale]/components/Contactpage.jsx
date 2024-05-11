@@ -140,7 +140,7 @@ export default function Contact() {
             {t("Work together")}
           </Button>
         </div>
-<div className="mt-4 w-full flex justify-center">
+        <div className="mt-4 w-full flex justify-center">
             <SocialMedia />
           </div>
       </form>

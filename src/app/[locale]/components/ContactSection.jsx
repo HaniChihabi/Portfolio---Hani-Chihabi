@@ -25,10 +25,10 @@ export function ContactSection() {
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
 
   return (
-      <FadeIn className="-mx-6 rounded-4xl bg-neutral-950 px-6 py-28 sm:mx-0 sm:py-36 md:px-12 flex items-center justify-center relative top-10" >
+      <FadeIn className="-mx-6 rounded-t-4xl bg-neutral-950 px-6 py-28 sm:mx-0 sm:py-36 md:px-12 flex items-center justify-center relative top-10" >
         <div className="mx-auto max-w-4xl">
           <div className="max-w-xl">
-            <h2 className="font-display font-medium text-3xl sm:text-4xl text-white text-center">
+            <h2 className="font-display font-medium text-2xl sm:text-4xl text-white text-center">
               {t("Text")}
             </h2>
             <div className="mt-6 flex justify-center">

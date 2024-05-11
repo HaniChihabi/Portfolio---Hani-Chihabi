@@ -94,19 +94,17 @@
         
       },      
 
-    "Cards": {
-        
-            "cardContentJohnSmith": "Die Website hat unsere Erwartungen übertroffen. Das Design ist elegant, die Funktionalität nahtlos und die Benutzererfahrung unübertroffen. Großartige Arbeit!",
-            "cardContentAliceJohnson": "Hani ist ein echter Profi. Er hat das Projekt pünktlich und innerhalb des Budgets geliefert. Ich kann ihn wärmstens für jedes Webentwicklungsprojekt empfehlen.",
-            "cardContentMichaelTurner": "Ich bin sehr beeindruckt von der Qualität der Arbeit. Hani ist ein großartiger Kommunikator und eine Freude, mit ihm zusammenzuarbeiten. Ich werde ihn auf jeden Fall für zukünftige Projekte wieder einstellen.",
-            "cardContentEmilyCarter" : "Hani ist ein talentierter Entwickler, der alles daran setzt, außergewöhnliche Ergebnisse zu liefern. Ich bin sehr zufrieden mit der Website. Sehr empfehlenswert!",
-            "cardContentDavidLee" : "Die Zusammenarbeit mit Ihnen an unserem Website-Projekt war ein Vergnügen. Die gelieferte Website hat unsere Erwartungen übertroffen. Vielen Dank!"
-          
-          
-    },
+      "Cards": {
+        "cardContentJohnSmith": "As Hani's brother, I've seen him grow into the skilled software engineer he is today. His work ethic and commitment to excellence have always been evident, making him stand out in his field.",
+        "cardContentAliceJohnson": "Hani's ability to create user-friendly websites has helped businesses reach a wider audience. His attention to detail and problem-solving skills make him a valuable asset to any project.",
+        "cardContentMichaelTurner": "Hani's software engineering skills have helped businesses establish a strong online presence. His attention to detail and creativity ensure functional and aesthetically pleasing solutions.",
+        "cardContentEmilyCarter": "Hani's contributions to software engineering have enhanced afterschool programs, making complex concepts more accessible to students.",
+        "cardContentDavidLee": "Hani's dedication to delivering high-quality work and strong communication skills make him a valuable asset to any project."
+        }
+        ,
 
     "approach" : {
-        "Text1" : "Ich develope:",
+        "Text1" : "I develope",
         "Text2" : " ",
         "projectTitle1" : "Frontend",
         "projectDescription1" : "JavaScript, React, HTML, CSS",

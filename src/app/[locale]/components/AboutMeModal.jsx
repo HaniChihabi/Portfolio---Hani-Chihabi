@@ -7,7 +7,7 @@ export default function App() {
 
   return (
     <>
-        <div className=" text-3xl hover:scale-110 transition-transform duration-300 p-5 bg-slate-100 rounded-2xl" onClick={onOpen}>
+        <div className=" text-5xl hover:scale-125 cursor-pointer transition-transform duration-300 p-0 bg-slate-0 rounded-2xl" onClick={onOpen}>
         {t("Text1")}       
       </div>
       <Modal className="py-10 px-5" isOpen={isOpen} onOpenChange={onOpenChange}>
