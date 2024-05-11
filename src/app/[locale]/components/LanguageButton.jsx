@@ -18,16 +18,18 @@ export default function Example() {
       </div>
 
       
-        <Menu.Items className="absolute right-0 z-10 mt-2 w-44 bg-white border-1">
+        <Menu.Items className="absolute right-0 z-10 mt-2 w-40 bg-white">
           <div>
           <Menu.Item>
   {({ active }) => (
     <a
       href="/en"
       className={classNames(
-        active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-        'block px-4 py-2 text-m',
-        'inline-flex items-center' // This ensures items are aligned inline and centered
+        active ? ' text-gray-900' : 'text-gray-700',
+        'block px-6 py-2 text-m',
+        'inline-flex items-center',
+        'hover:scale-110' // This ensures items are aligned inline and centered
+        // This ensures items are aligned inline and centered
       )}
     >
       <Avatar alt="USA" className="w-7 h-7 mr-2" src="https://flagcdn.com/us.svg" /> English
@@ -39,9 +41,11 @@ export default function Example() {
     <a
       href="/de"
       className={classNames(
-        active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+        active ? '´ text-gray-900' : 'text-gray-700',
         'block px-4 py-2 text-m',
-        'inline-flex items-center' // This ensures alignment and centering here as well
+        'inline-flex items-center',
+        'hover:scale-110'
+         // This ensures alignment and centering here as well
       )}
     >
       <Avatar alt="Germany" className="w-7 h-7 mr-2" src="https://flagcdn.com/de.svg" /> Deutsch

@@ -7,14 +7,14 @@ export default function App() {
 
   return (
     <>
-        <div className=" text-5xl hover:scale-125 cursor-pointer transition-transform duration-300 p-0 bg-slate-0 rounded-2xl" onClick={onOpen}>
+        <div className=" text-5xl hover:scale-125 cursor-pointer transition-transform duration-300 p-0 bg-slate-0 rounded-2xl font-display" onClick={onOpen}>
         {t("Text1")}       
       </div>
       <Modal className="py-10 px-5" isOpen={isOpen} onOpenChange={onOpenChange}>
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">{t("Text1")}</ModalHeader>
+              <ModalHeader className="flex flex-col gap-1 font-display"><h1 className="font-display">{t("Text1")}</h1></ModalHeader>
               <ModalBody className="font-light">
                 <p> 
                 {t("Text2")}

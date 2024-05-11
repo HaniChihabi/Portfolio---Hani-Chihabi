@@ -18,7 +18,7 @@ export default function Mainpage() {
     return (
         <FadeIn className="flex h-[90vh] lg:flex-row items-center justify-center w-full p-4 lg:p-0">
           {/* Content Container */}
-          <div className='block relative bottom-20'>
+          <div className='block relative bottom-10'>
 
             {/* Image Container */}
           <div className="flex flex-1 items-center justify-center">
@@ -34,18 +34,15 @@ export default function Mainpage() {
 
           <div className="flex flex-1 items-center justify-center lg:ml-5">
             <div className="text-center w-full px-4 lg:px-0">
-              <h1 className="font-display text-4xl lg:text-5xl text-neutral-950 mb-0 lg:mb-0">
+              <h1 className="text-center font-normal text-4xl lg:text-5xl text-neutral-950 mb-0 lg:mb-0">
                 {t('header2')}
               </h1>
-               {/* <p className="text-neutral-600 text-sm lg:text-xl leading-relaxed mt-2 mb-0">
-                {t('intro1')}
-              </p> */}
             </div>
           </div>
           
 
           
-          <div className="mt-4 flex justify-center">
+          <div className="mt-2 flex justify-center">
               <AboutMeModal />
           </div>
           
