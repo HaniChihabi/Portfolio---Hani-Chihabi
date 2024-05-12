@@ -14,7 +14,7 @@ export default function App() {
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1 font-display"><h1 className="font-display">{t("Text1")}</h1></ModalHeader>
+              <ModalHeader className="flex flex-col gap-1 font-display text-center"><h1 className="font-display">{t("Text1")}</h1></ModalHeader>
               <ModalBody className="font-light">
                 <p> 
                 {t("Text2")}

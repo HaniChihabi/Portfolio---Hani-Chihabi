@@ -9,7 +9,7 @@ export default function CasperaAO() {
             <CardContainer className="inter-var">
                 <CardBody className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[35rem] h-auto rounded-xl p-3">        
                     {/* Use the Link component to wrap the clickable area */}
-                    <Link href="https://hanichihabi-casperai.vercel.app" passHref>
+                    <Link href="https://last-websites-ftyt.vercel.app/" passHref>
                             <CardItem translateZ="100" className="w-full mt-4">
                                 <Image
                                     src="/screen4.jpg"

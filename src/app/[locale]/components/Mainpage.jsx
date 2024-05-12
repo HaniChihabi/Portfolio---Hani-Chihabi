@@ -34,7 +34,7 @@ export default function Mainpage() {
 
           <div className="flex flex-1 items-center justify-center lg:ml-5">
             <div className="text-center w-full px-4 lg:px-0">
-              <h1 className="text-center font-normal text-4xl lg:text-5xl text-neutral-950 mb-0 lg:mb-0">
+              <h1 className="text-center font-semibold text-4xl lg:text-xl text-neutral-950 mb-0 lg:mb-0">
                 {t('header2')}
               </h1>
             </div>

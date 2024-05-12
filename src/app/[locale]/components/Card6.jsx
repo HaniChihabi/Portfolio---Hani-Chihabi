@@ -5,46 +5,28 @@ import Image from 'next/image'
 import React from "react";
 import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure} from "@nextui-org/react";
 
-export default function Card6() {
+export default function Card2() {
     const {isOpen, onOpen, onOpenChange} = useDisclosure();
 
     return (
-        <main>
-        <CardContainer className="inter-var">
-          <CardBody className=" relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[35rem] h-auto rounded-xl p-3">        
-            <CardItem translateZ="100" className="w-full mt-4" onClick={onOpen}>
-            <Image
-              src="/screen10.jpg"
-              layout="intrinsic"
-              width={1000}
-              height={1000}
-              className="max-h-80 max-w-96 object-cover rounded-3xl group-hover/card:shadow-xl"
-              alt="thumbnail"
-            />
-            </CardItem>
+      <main>
+      <CardContainer className="inter-var">
+          <CardBody className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[35rem] h-auto rounded-xl p-3">        
+              {/* Use the Link component to wrap the clickable area */}
+              <Link href="https://last-websites-14bg.vercel.app/" passHref>
+                      <CardItem translateZ="100" className="w-full mt-4">
+                          <Image
+                              src="/screen10.jpg"
+                              layout="intrinsic"
+                              width={1000}
+                              height={1000}
+                              className="max-h-80 max-w-96 object-cover rounded-3xl group-hover/card:shadow-xl"
+                              alt="thumbnail"
+                          />
+                      </CardItem>
+              </Link>
           </CardBody>
-        </CardContainer>
-        <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="5xl" scrollBehavior="normal" placement="top" hideCloseButton="true">
-        <ModalContent>
-          {(onClose) => (
-            <>
-            <ModalBody className="flex flex-col items-center justify-start p-0 gap-0">
-        <section className="w-full h-[40vh] relative flex-shrink-0">
-        </section>  
-        </ModalBody>
-
-        <ModalFooter>
-                <Button color="danger" variant="light" onPress={onClose}>
-                  Close
-                </Button>
-                <Button color="primary" onPress={onClose}>
-                  Action
-                </Button>
-              </ModalFooter>
-            </>
-          )}
-        </ModalContent>
-      </Modal>
-        </main>
+      </CardContainer>
+  </main>
     )
 }
