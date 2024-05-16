@@ -7,6 +7,7 @@
 
     "home" : {
         "header1" : "Hey, my name is",
+        "Text1" : "...",
         "header2" : "Hey, my name is Hani!",
         "intro1": " Software developer from Germany. \n",
         "intro2": " Software development has been an exhilarating journey for me. From the thrill of building new projects to the collaboration with talented peers, each aspect has enriched my experience in the tech world.",
@@ -96,10 +97,10 @@
 
       "Cards": {
         "cardContentJohnSmith": "As Hani's brother, I've seen him grow into the skilled software engineer he is today. His work ethic and commitment to excellence have always been evident, making him stand out in his field.",
-        "cardContentAliceJohnson": "Hani's ability to create user-friendly websites has helped businesses reach a wider audience. His attention to detail and problem-solving skills make him a valuable asset to any project.",
-        "cardContentMichaelTurner": "Hani's software engineering skills have helped businesses establish a strong online presence. His attention to detail and creativity ensure functional and aesthetically pleasing solutions.",
-        "cardContentEmilyCarter": "Hani's contributions to software engineering have enhanced afterschool programs, making complex concepts more accessible to students.",
-        "cardContentDavidLee": "Hani's dedication to delivering high-quality work and strong communication skills make him a valuable asset to any project."
+        "cardContentAliceJohnson": "He is always clear, friendly, and professional in his interactions. His ability to explain complex ideas in an understandable way makes working with him very pleasant.",
+        "cardContentMichaelTurner": "Hani builds extremely cool websites. They are aesthetically pleasing and fun to navigate through.",
+        "cardContentEmilyCarter": "Hani's passion for software development is clearly noticeable. He always brings enthusiasm to his projects and finds practical solutions to complex problems. It's impressive how he continuously evolves.",
+        "cardContentDavidLee": "Hani has taught me a lot about IT. His patience and ability to explain complex topics simply have greatly helped me develop a better understanding. It's always fun to learn from him."
         }
         ,
 
@@ -107,9 +108,9 @@
         "Text1" : "I develope",
         "Text2" : " ",
         "projectTitle1" : "Frontend",
-        "projectDescription1" : "JavaScript, React, HTML, CSS",
+        "projectDescription1" : "React, Next.js, Javascript, Typescript, Tailwind, CSS",
         "projectTitle2" : "Backend",
-        "projectDescription2" : "Node.js, Firebase, MongoDB, SQL",
+        "projectDescription2" : "Node.js, Firebase",
         "projectTitle3" : "Design",
         "projectDescription3" : "Figma, Wordpress, Photoshop",
         "projectTitle4" : "With 100%",

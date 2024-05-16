@@ -7,6 +7,7 @@
 
     "home" : {
         "header1" : "Hey, mein Name ist",
+        "Text1" : "...",
         "header2" : "Hey, mein Name ist Hani!",
         "intro1": "Softwareentwickler aus Deutschland.",
         "intro2": "Ich baue coole Projekte und",
@@ -66,11 +67,11 @@
         "Text2" : "Arbeit"
     },
     "Cards": {
-        "cardContentJohnSmith": "John Smith hat unsere Software als äußerst benutzerfreundlich und leistungsstark empfunden.",
-        "cardContentAliceJohnson": "Alice Johnson lobte unser Marketing-Team für seine kreative Herangehensweise und effektive Strategien.",
-        "cardContentMichaelTurner": "Michael Turner war beeindruckt von der Skalierbarkeit und Stabilität unserer Anwendung.",
-        "cardContentEmilyCarter": "Emily Carter schätzte die Einfachheit und den eleganten Designansatz unserer Software.",
-        "cardContentDavidLee": "David Lee hob hervor, wie reibungslos und effizient unsere Operationen dank der Softwareabläufe verlaufen."
+        "cardContentJohnSmith": "Als Hanis Bruder habe ich miterlebt, wie er sich zu dem kompetenten Softwareingenieur entwickelt hat, der er heute ist. Seine Arbeitsmoral und sein Engagement für Exzellenz waren immer offensichtlich und machen ihn in seinem Bereich einzigartig.",
+        "cardContentAliceJohnson": "Er ist stets klar, freundlich und professionell in seinen Interaktionen. Seine Fähigkeit, komplexe Ideen verständlich zu vermitteln, macht die Zusammenarbeit mit ihm sehr angenehm.",
+        "cardContentMichaelTurner": "Hani baut extrem coole Webseiten. Zum einen sind die ästhetisch und zum anderen macht es Spass sich durchzuklicken.",
+        "cardContentEmilyCarter": "Hani's Leidenschaft für Softwareentwicklung ist deutlich spürbar. Er bringt stets Enthusiasmus in seine Projekte ein und findet praktische Lösungen für komplexe Probleme. Es ist beeindruckend, wie er sich kontinuierlich weiterentwickelt.",
+        "cardContentDavidLee": "Hani hat mir viel über IT beigebracht. Seine Geduld und Fähigkeit, komplexe Themen einfach zu erklären, haben mir sehr geholfen, ein besseres Verständnis zu entwickeln. Es macht immer Spaß, von ihm zu lernen."
       },
 
     
@@ -101,9 +102,9 @@
         "Text1" : "Ich entwickle:",
         "Text2" : " ",
         "projectTitle1" : "Frontend",
-        "projectDescription1" : "JavaScript, React, HTML, CSS",
+        "projectDescription1" : "React, React Native, Next.js, Javascript, Typescript, Tailwind, CSS",
         "projectTitle2" : "Backend",
-        "projectDescription2" : "Node.js, Firebase, MongoDB, SQL",
+        "projectDescription2" : "Node.js, Firebase",
         "projectTitle3" : "Design",
         "projectDescription3" : "Figma, Wordpress, Photoshop",
         "projectTitle4" : "Mit 100%",

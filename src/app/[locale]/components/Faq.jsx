@@ -14,22 +14,22 @@ const faqKeys = [
     title: "faqTitle2",
     content: "faqContent2",
   },
-  {
-    title: "faqTitle3",
-    content: "faqContent3",
-  },
-  {
-    title: "faqTitle4",
-    content: "faqContent4",
-  },
-  {
-    title: "faqTitle5",
-    content: "faqContent5",
-  },
-  {
-    title: "faqTitle6",
-    content: "faqContent6",
-  }
+  // {
+  //   title: "faqTitle3",
+  //   content: "faqContent3",
+  // },
+  // {
+  //   title: "faqTitle4",
+  //   content: "faqContent4",
+  // },
+  // {
+  //   title: "faqTitle5",
+  //   content: "faqContent5",
+  // },
+  // {
+  //   title: "faqTitle6",
+  //   content: "faqContent6",
+  // }
 ];
 
 export default function FAQComponent() {
