@@ -39,7 +39,7 @@ export default function Card6() {
                     <ModalBody className="flex flex-col items-center justify-start p-0 gap-0">
                         <section className="w-full relative flex-shrink-0 max-h">
                             <ReactPlayer
-                                url="./BGremoverVid.mp4"
+                                url="./BGRemoverVid.mp4"
                                 width="100%"
                                 height="100%"
                                 controls={true}
